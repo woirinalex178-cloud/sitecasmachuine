@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClairArgent — Finance personnelle & business, simplement</title>
+<meta name="description" content="Conseils pratiques en finance personnelle et business, et un simulateur de budget gratuit basé sur la règle 50/30/20.">
+<link rel="canonical" href="https://www.celesteroom.com/">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="logo">Clair<span>Argent</span></div>
+    <nav class="main">
+      <a href="index.html">Accueil</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Reprends le contrôle de ton argent, sans jargon.</h1>
+    <p class="lead">Des guides pratiques sur l'épargne, le freelance et les outils business — et un simulateur de budget gratuit pour démarrer en 30 secondes.</p>
+    <a href="#outil" class="btn">Essayer le simulateur gratuit</a>
+  </div>
+</section>
+
+<section id="outil">
+  <div class="wrap">
+    <h2>Simulateur de budget 50/30/20</h2>
+    <p class="sub">Renseigne ton revenu mensuel : l'outil répartit ton budget et projette ton épargne dans le temps.</p>
+
+    <div class="tool">
+      <h3>Ta simulation</h3>
+      <div class="field">
+        <label for="revenu">Revenu mensuel net (€)</label>
+        <input type="number" id="revenu" placeholder="Ex : 2200">
+      </div>
+      <div class="field">
+        <label for="taux">Taux de rendement annuel visé (%)</label>
+        <input type="number" id="taux" value="3" step="0.1">
+      </div>
+      <div class="field">
+        <label for="annees">Durée de projection (années)</label>
+        <input type="number" id="annees" value="5">
+      </div>
+      <button class="btn" onclick="calculerBudget()">Calculer</button>
+
+      <div class="tool-result" id="tool-result">
+        <p>Besoins essentiels (50%) : <b id="res-besoins">-</b></p>
+        <p>Envies / loisirs (30%) : <b id="res-envies">-</b></p>
+        <p>Épargne mensuelle (20%) : <b id="res-epargne">-</b></p>
+        <p class="big" id="res-capital">-</p>
+        <small>Capital projeté si tu épargnes ce montant chaque mois au taux indiqué. Simulation indicative, hors fiscalité et frais — ne constitue pas un conseil personnalisé.</small>
+      </div>
+    </div>
+
+    <div class="ad-slot">Emplacement publicité (Google AdSense) — à activer une fois le compte validé</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Trois piliers</h2>
+    <p class="sub">Le site tourne autour de trois thématiques, sans blabla.</p>
+    <div class="grid cols-3">
+      <div class="card">
+        <span class="tag">Épargne</span>
+        <h3>Faire des économies sans se priver</h3>
+        <p>Méthodes simples pour mettre de l'argent de côté chaque mois, automatiquement.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Freelance</span>
+        <h3>Gérer son activité sereinement</h3>
+        <p>Comptabilité, déclarations, outils : l'essentiel pour les indépendants.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Business</span>
+        <h3>Lancer un revenu complémentaire</h3>
+        <p>Side-business, tunnels de vente, outils no-code pour démarrer sans se ruiner.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Derniers articles</h2>
+    <p class="sub">Contenu écrit, sans promesse irréaliste.</p>
+    <div class="grid cols-3 post-list">
+      <div class="card">
+        <div class="meta">Épargne</div>
+        <h3><a href="blog/epargner-200-euros-par-mois.html">Comment épargner 200 € par mois sans effort</a></h3>
+        <p>La méthode en 4 étapes pour épargner sans y penser.</p>
+      </div>
+      <div class="card">
+        <div class="meta">Freelance</div>
+        <h3><a href="blog/freelance-declarer-revenus.html">Freelance : déclarer ses revenus simplement</a></h3>
+        <p>Le b.a.-ba pour ne pas se tromper dans ses déclarations.</p>
+      </div>
+      <div class="card">
+        <div class="meta">Business</div>
+        <h3><a href="blog/creer-side-business-rentable.html">Créer un side-business rentable en partant de zéro</a></h3>
+        <p>Une méthode pas à pas, sans jargon marketing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>© 2026 ClairArgent. Contenu à but informatif, ne constitue pas un conseil financier personnalisé.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
