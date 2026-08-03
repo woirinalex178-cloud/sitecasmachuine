@@ -15,14 +15,23 @@ function alerteChamp(id){
 }
 
 function animerNombre(el, cible){
+  const finale = Math.round(cible).toLocaleString('fr-FR') + ' €';
   const duree = 900, debut = performance.now();
+  let termine = false;
+
   function frame(now){
     const p = Math.min((now - debut) / duree, 1);
     const eased = 1 - Math.pow(1 - p, 3);
     el.textContent = Math.round(cible * eased).toLocaleString('fr-FR') + ' €';
     if(p < 1) requestAnimationFrame(frame);
+    else termine = true;
   }
-  requestAnimationFrame(frame);
+
+  if(typeof requestAnimationFrame === 'function') requestAnimationFrame(frame);
+
+  // Filet de sécurité : si l'animation ne tourne pas (onglet en arrière-plan,
+  // mode économie d'énergie), on force l'affichage de la valeur finale.
+  setTimeout(() => { if(!termine) el.textContent = finale; }, 1000);
 }
 
 function afficher(id){
