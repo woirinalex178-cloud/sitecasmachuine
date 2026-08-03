@@ -62,22 +62,26 @@
 
         <div class="fields">
           <div class="field full">
-            <label for="revenu">Revenu mensuel net</label>
+            <label for="revenu"><span class="step-badge">1</span>Revenu mensuel net</label>
             <div class="input-wrap"><input type="number" id="revenu" placeholder="2 200" inputmode="numeric"><span class="unit">€</span></div>
+            <span class="hint">Ce que tu touches réellement sur ton compte chaque mois, primes comprises.</span>
           </div>
           <div class="field">
-            <label for="taux">Rendement annuel visé</label>
+            <label for="taux"><span class="step-badge">2</span>Rendement annuel</label>
             <div class="input-wrap"><input type="number" id="taux" value="3" step="0.1" inputmode="decimal"><span class="unit">%</span></div>
+            <span class="hint">1,7 % pour un Livret A. Davantage si tu investis, avec un risque.</span>
           </div>
           <div class="field">
-            <label for="annees">Durée de projection</label>
+            <label for="annees"><span class="step-badge">3</span>Durée</label>
             <div class="input-wrap"><input type="number" id="annees" value="5" inputmode="numeric"><span class="unit">ans</span></div>
+            <span class="hint">Sur combien de temps tu projettes ton épargne.</span>
           </div>
         </div>
 
         <button class="btn wide" onclick="calculerBudget()">Calculer ma répartition</button>
 
         <div class="tool-result" id="tool-result">
+          <div class="result-label">Ton résultat</div>
           <div class="split-bar">
             <span class="seg-besoins" id="bar-besoins" style="width:0"></span>
             <span class="seg-envies" id="bar-envies" style="width:0"></span>
@@ -117,7 +121,7 @@
           <div><h3>Ton revenu net réel</h3><p>Taux 2026, modifiables si besoin</p></div>
         </div>
 
-        <label style="display:block;font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:9px">Type d'activité</label>
+        <label style="display:flex;align-items:center;gap:7px;font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:9px"><span class="step-badge">1</span>Type d'activité</label>
         <div class="seg-group" id="seg-activite">
           <button class="seg" onclick="choisirActivite(this,12.3)">Vente de marchandises</button>
           <button class="seg active" onclick="choisirActivite(this,21.2)">Services BIC</button>
@@ -127,22 +131,26 @@
 
         <div class="fields">
           <div class="field full">
-            <label for="ca-mensuel">Chiffre d'affaires mensuel</label>
+            <label for="ca-mensuel"><span class="step-badge">2</span>Chiffre d'affaires mensuel</label>
             <div class="input-wrap"><input type="number" id="ca-mensuel" placeholder="3 000" inputmode="numeric"><span class="unit">€</span></div>
+            <span class="hint">Ce que tu factures, pas ce que tu gardes. Montant encaissé sur le mois.</span>
           </div>
           <div class="field">
-            <label for="taux-cotis">Taux de cotisations</label>
+            <label for="taux-cotis"><span class="step-badge">3</span>Cotisations</label>
             <div class="input-wrap"><input type="number" id="taux-cotis" value="21.2" step="0.1" inputmode="decimal"><span class="unit">%</span></div>
+            <span class="hint">Rempli selon l'activité choisie. Divise par deux si tu bénéficies de l'ACRE.</span>
           </div>
           <div class="field">
-            <label for="taux-impot">Versement libératoire</label>
+            <label for="taux-impot"><span class="step-badge">4</span>Impôt</label>
             <div class="input-wrap"><input type="number" id="taux-impot" value="1.7" step="0.1" inputmode="decimal"><span class="unit">%</span></div>
+            <span class="hint">Versement libératoire. Mets 0 si tu n'y as pas opté.</span>
           </div>
         </div>
 
         <button class="btn wide" onclick="calculerCharges()">Calculer mon net</button>
 
         <div class="tool-result" id="charges-result">
+          <div class="result-label">Ton résultat</div>
           <div class="split-bar">
             <span class="seg-net" id="bar-net" style="width:0"></span>
             <span class="seg-cotis" id="bar-cotis" style="width:0"></span>
@@ -181,26 +189,31 @@
 
         <div class="fields">
           <div class="field">
-            <label for="objectif-net">Objectif net mensuel</label>
+            <label for="objectif-net"><span class="step-badge">1</span>Objectif net mensuel</label>
             <div class="input-wrap"><input type="number" id="objectif-net" placeholder="2 500" inputmode="numeric"><span class="unit">€</span></div>
+            <span class="hint">Ce que tu veux réellement toucher, une fois tout payé.</span>
           </div>
           <div class="field">
-            <label for="jours-mois">Jours facturés / mois</label>
+            <label for="jours-mois"><span class="step-badge">2</span>Jours facturés / mois</label>
             <div class="input-wrap"><input type="number" id="jours-mois" value="15" inputmode="numeric"><span class="unit">j</span></div>
+            <span class="hint">Uniquement les jours vendus. 15 est une base réaliste.</span>
           </div>
           <div class="field">
-            <label for="tjm-charges">Charges totales</label>
+            <label for="tjm-charges"><span class="step-badge">3</span>Charges totales</label>
             <div class="input-wrap"><input type="number" id="tjm-charges" value="23" step="0.1" inputmode="decimal"><span class="unit">%</span></div>
+            <span class="hint">Cotisations et impôt cumulés, en part du chiffre d'affaires.</span>
           </div>
           <div class="field">
-            <label for="frais-mensuels">Frais pro mensuels</label>
+            <label for="frais-mensuels"><span class="step-badge">4</span>Frais pro mensuels</label>
             <div class="input-wrap"><input type="number" id="frais-mensuels" value="150" inputmode="numeric"><span class="unit">€</span></div>
+            <span class="hint">Logiciels, assurance, comptable, matériel, télétravail.</span>
           </div>
         </div>
 
         <button class="btn wide" onclick="calculerTJM()">Calculer mon TJM</button>
 
         <div class="tool-result" id="tjm-result">
+          <div class="result-label">Ton résultat</div>
           <div class="highlight-box" style="margin-bottom:22px">
             <div class="cap">TJM à facturer</div>
             <div class="big" id="tjm-val">—</div>
@@ -236,26 +249,31 @@
 
         <div class="fields">
           <div class="field">
-            <label for="obj-montant">Montant visé</label>
+            <label for="obj-montant"><span class="step-badge">1</span>Montant visé</label>
             <div class="input-wrap"><input type="number" id="obj-montant" placeholder="20 000" inputmode="numeric"><span class="unit">€</span></div>
+            <span class="hint">Apport immobilier, matelas de sécurité, projet précis.</span>
           </div>
           <div class="field">
-            <label for="obj-deja">Déjà épargné</label>
+            <label for="obj-deja"><span class="step-badge">2</span>Déjà épargné</label>
             <div class="input-wrap"><input type="number" id="obj-deja" value="0" inputmode="numeric"><span class="unit">€</span></div>
+            <span class="hint">Ce capital continue de produire des intérêts.</span>
           </div>
           <div class="field">
-            <label for="obj-annees">Échéance</label>
+            <label for="obj-annees"><span class="step-badge">3</span>Échéance</label>
             <div class="input-wrap"><input type="number" id="obj-annees" value="5" inputmode="numeric"><span class="unit">ans</span></div>
+            <span class="hint">Dans combien d'années tu veux avoir cette somme.</span>
           </div>
           <div class="field">
-            <label for="obj-taux">Rendement annuel</label>
+            <label for="obj-taux"><span class="step-badge">4</span>Rendement annuel</label>
             <div class="input-wrap"><input type="number" id="obj-taux" value="3" step="0.1" inputmode="decimal"><span class="unit">%</span></div>
+            <span class="hint">Reste prudent : une hypothèse trop haute fausse tout le plan.</span>
           </div>
         </div>
 
         <button class="btn wide" onclick="calculerObjectif()">Calculer mon versement</button>
 
         <div class="tool-result" id="obj-result">
+          <div class="result-label">Ton résultat</div>
           <div class="highlight-box" style="margin-bottom:22px">
             <div class="cap">À mettre de côté chaque mois</div>
             <div class="big" id="obj-mensuel">—</div>
@@ -279,6 +297,28 @@
       <a class="btn" href="https://www.indy.fr/affiliation/" rel="sponsored noopener" target="_blank">Découvrir Indy
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
       </a>
+    </div>
+
+    <div class="newsletter reveal" style="margin-top:60px">
+      <div class="icon-box green">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+      </div>
+      <h2>Prévenu quand les taux changent</h2>
+      <p class="pitch">Les calculateurs sont mis à jour à chaque évolution des barèmes. Un email par mois pour savoir ce qui a bougé.</p>
+
+      <form class="nl-form" id="nl-form" novalidate>
+        <input type="email" id="nl-email" placeholder="ton@email.fr" autocomplete="email" aria-label="Adresse email">
+        <button type="submit" class="btn" id="nl-btn">S'inscrire</button>
+      </form>
+
+      <div class="nl-msg" id="nl-msg" role="status" aria-live="polite"></div>
+
+      <div class="nl-perks">
+        <span><svg viewBox="0 0 24 24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>1 email par mois</span>
+        <span><svg viewBox="0 0 24 24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Désinscription en 1 clic</span>
+      </div>
+
+      <p class="nl-legal">Ton adresse sert uniquement à t'envoyer cette newsletter. Voir la <a href="confidentialite.html">politique de confidentialité</a>.</p>
     </div>
 
   </div>
