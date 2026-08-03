@@ -267,4 +267,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Newsletter : soumission au clavier et au clic
   const nlForm = document.getElementById('nl-form');
   if(nlForm) nlForm.addEventListener('submit', inscrireNewsletter);
+
+  // Filet de sécurité : si l'observateur d'apparition ne se déclenche pas
+  // (navigateur ancien, onglet restauré, script d'extension), on force
+  // l'affichage. Sans ça, le contenu resterait invisible.
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => el.classList.add('visible'));
+  }, 2500);
 });
