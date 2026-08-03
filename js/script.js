@@ -168,6 +168,75 @@ function calculerObjectif(){
   animerNombre(document.getElementById('obj-mensuel'), mensuel);
 }
 
+/* =========================================================
+   NEWSLETTER
+   ---------------------------------------------------------
+   Pour activer la collecte automatique des emails, colle
+   ci-dessous l'URL de ton formulaire (Formspree, Buttondown,
+   Brevo, n8n webhook public...). Exemple :
+   const NEWSLETTER_ENDPOINT = "https://formspree.io/f/xxxxxxx";
+
+   Tant que la valeur reste vide, le formulaire bascule sur
+   l'envoi d'un email pré-rempli : ça fonctionne dès maintenant,
+   sans aucun compte à créer.
+   ========================================================= */
+const NEWSLETTER_ENDPOINT = "";
+const NEWSLETTER_EMAIL    = "woirinalex178@gmail.com";
+
+function messageNewsletter(type, texte){
+  const box = document.getElementById('nl-msg');
+  if(!box) return;
+  box.className = 'nl-msg show ' + type;
+  box.textContent = texte;
+}
+
+async function inscrireNewsletter(event){
+  if(event) event.preventDefault();
+
+  const champ = document.getElementById('nl-email');
+  if(!champ) return false;
+
+  const email = champ.value.trim();
+  const valide = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+
+  if(!valide){
+    messageNewsletter('err', "Cette adresse email ne semble pas valide. Vérifie la saisie.");
+    champ.focus();
+    return false;
+  }
+
+  const bouton = document.getElementById('nl-btn');
+  const libelle = bouton ? bouton.textContent : '';
+  if(bouton){ bouton.disabled = true; bouton.textContent = 'Envoi...'; }
+
+  try {
+    if(NEWSLETTER_ENDPOINT){
+      const rep = await fetch(NEWSLETTER_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ email, source: 'clairargent', date: new Date().toISOString() })
+      });
+      if(!rep.ok) throw new Error('reponse ' + rep.status);
+      messageNewsletter('ok', "C'est noté. Tu recevras le prochain récap dès sa parution.");
+      champ.value = '';
+    } else {
+      // Mode sans backend : ouvre le client mail avec un message pré-rempli
+      const sujet = encodeURIComponent('Inscription newsletter ClairArgent');
+      const corps  = encodeURIComponent(
+        "Bonjour,\n\nJe souhaite m'inscrire à la newsletter ClairArgent.\n\nEmail : " + email + "\n"
+      );
+      window.location.href = 'mailto:' + NEWSLETTER_EMAIL + '?subject=' + sujet + '&body=' + corps;
+      messageNewsletter('ok', "Ton logiciel de messagerie s'ouvre : il ne reste qu'à envoyer l'email.");
+    }
+  } catch(err){
+    messageNewsletter('err', "L'envoi a échoué. Réessaie dans un moment, ou écris directement à " + NEWSLETTER_EMAIL + ".");
+  } finally {
+    if(bouton){ bouton.disabled = false; bouton.textContent = libelle; }
+  }
+
+  return false;
+}
+
 /* ---------- Apparition au scroll + raccourcis clavier ---------- */
 document.addEventListener('DOMContentLoaded', () => {
   const cibles = document.querySelectorAll('.reveal');
@@ -194,4 +263,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // Newsletter : soumission au clavier et au clic
+  const nlForm = document.getElementById('nl-form');
+  if(nlForm) nlForm.addEventListener('submit', inscrireNewsletter);
 });
