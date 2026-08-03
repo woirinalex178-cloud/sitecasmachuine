@@ -3,18 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ClairArgent — Finance personnelle & business, simplement</title>
-<meta name="description" content="Conseils pratiques en finance personnelle et business, et un simulateur de budget gratuit basé sur la règle 50/30/20.">
-<link rel="canonical" href="https://www.celesteroom.com/">
+<title>ClairArgent — Finance personnelle & business, sans jargon</title>
+<meta name="description" content="Guides pratiques sur l'épargne, le freelance et les outils business. Simulateur de budget 50/30/20 gratuit, résultat en 30 secondes.">
+<link rel="canonical" href="https://sitecasmachuine.vercel.app/">
+<meta property="og:title" content="ClairArgent — Finance personnelle & business, sans jargon">
+<meta property="og:description" content="Guides pratiques et simulateur de budget gratuit pour reprendre le contrôle de ton argent.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site">
   <div class="wrap">
-    <div class="logo">Clair<span>Argent</span></div>
+    <a href="index.html" class="logo"><span class="logo-mark">C</span>ClairArgent</a>
     <nav class="main">
       <a href="index.html">Accueil</a>
+      <a href="outils.html">Outils</a>
+      <a href="baremes.html">Barèmes</a>
       <a href="blog/index.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -23,65 +30,229 @@
 
 <section class="hero">
   <div class="wrap">
-    <h1>Reprends le contrôle de ton argent, sans jargon.</h1>
-    <p class="lead">Des guides pratiques sur l'épargne, le freelance et les outils business — et un simulateur de budget gratuit pour démarrer en 30 secondes.</p>
-    <a href="#outil" class="btn">Essayer le simulateur gratuit</a>
+    <div class="badge"><span class="dot"></span>4 calculateurs gratuits, sans inscription</div>
+    <h1>Reprends le contrôle<br>de ton argent, <em>sans jargon</em>.</h1>
+    <p class="lead">Des guides concrets sur l'épargne, le freelance et les outils business — et des calculateurs qui répondent en 30 secondes.</p>
+    <div class="hero-actions">
+      <a href="#outil" class="btn">Calculer mon budget
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="outils.html" class="btn ghost">Voir les 4 outils</a>
+    </div>
+    <div class="trust">
+      <span><svg viewBox="0 0 24 24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>100% gratuit</span>
+      <span><svg viewBox="0 0 24 24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Sans inscription</span>
+      <span><svg viewBox="0 0 24 24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Aucune donnée collectée</span>
+    </div>
+  </div>
+</section>
+
+<section style="padding:20px 0 50px">
+  <div class="wrap">
+    <div class="maj-badge" style="display:flex;width:fit-content;margin:0 auto 22px">
+      <span class="dot" style="width:6px;height:6px;border-radius:50%;background:var(--accent)"></span>
+      Chiffres officiels au 2 août 2026
+    </div>
+    <div class="stats reveal">
+      <div class="stat">
+        <div class="num">1,70 %</div>
+        <div class="lab">Livret A</div>
+        <div class="sub">Nouveau taux au 1<sup>er</sup> août</div>
+        <span class="delta up">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          +0,20 pt
+        </span>
+      </div>
+      <div class="stat">
+        <div class="num">2,50 %</div>
+        <div class="lab">LEP</div>
+        <div class="sub">Sous conditions de revenus</div>
+        <span class="delta flat">Inchangé</span>
+      </div>
+      <div class="stat violet">
+        <div class="num">25,6 %</div>
+        <div class="lab">Cotisations libéral BNC</div>
+        <div class="sub">En hausse depuis janvier</div>
+        <span class="delta up">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          +1 pt
+        </span>
+      </div>
+      <div class="stat amber">
+        <div class="num">83 600 €</div>
+        <div class="lab">Plafond micro services</div>
+        <div class="sub">Valable jusqu'en 2028</div>
+        <span class="delta flat">Seuil annuel</span>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:24px">
+      <a href="baremes.html" class="btn ghost">Voir tous les barèmes
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
 <section id="outil">
   <div class="wrap">
-    <h2>Simulateur de budget 50/30/20</h2>
-    <p class="sub">Renseigne ton revenu mensuel : l'outil répartit ton budget et projette ton épargne dans le temps.</p>
+    <div class="section-head reveal">
+      <div class="eyebrow">Outil gratuit</div>
+      <h2>Simulateur de budget 50/30/20</h2>
+      <p>La méthode la plus utilisée pour répartir un salaire : 50% besoins, 30% envies, 20% épargne. Entre ton revenu, l'outil fait le reste.</p>
+    </div>
 
-    <div class="tool">
-      <h3>Ta simulation</h3>
-      <div class="field">
-        <label for="revenu">Revenu mensuel net (€)</label>
-        <input type="number" id="revenu" placeholder="Ex : 2200">
+    <div class="tool-shell reveal">
+      <div class="tool-head">
+        <div class="icon-box green">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 9l-5 5-3-3-4 4"/></svg>
+        </div>
+        <div>
+          <h3>Ta répartition budgétaire</h3>
+          <p>Calcul instantané, rien n'est enregistré</p>
+        </div>
       </div>
-      <div class="field">
-        <label for="taux">Taux de rendement annuel visé (%)</label>
-        <input type="number" id="taux" value="3" step="0.1">
+
+      <div class="fields">
+        <div class="field full">
+          <label for="revenu">Revenu mensuel net</label>
+          <div class="input-wrap">
+            <input type="number" id="revenu" placeholder="2 200" inputmode="numeric">
+            <span class="unit">€</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="taux">Rendement annuel visé</label>
+          <div class="input-wrap">
+            <input type="number" id="taux" value="3" step="0.1" inputmode="decimal">
+            <span class="unit">%</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="annees">Durée de projection</label>
+          <div class="input-wrap">
+            <input type="number" id="annees" value="5" inputmode="numeric">
+            <span class="unit">ans</span>
+          </div>
+        </div>
       </div>
-      <div class="field">
-        <label for="annees">Durée de projection (années)</label>
-        <input type="number" id="annees" value="5">
-      </div>
-      <button class="btn" onclick="calculerBudget()">Calculer</button>
+
+      <button class="btn wide" onclick="calculerBudget()">Calculer ma répartition</button>
 
       <div class="tool-result" id="tool-result">
-        <p>Besoins essentiels (50%) : <b id="res-besoins">-</b></p>
-        <p>Envies / loisirs (30%) : <b id="res-envies">-</b></p>
-        <p>Épargne mensuelle (20%) : <b id="res-epargne">-</b></p>
-        <p class="big" id="res-capital">-</p>
-        <small>Capital projeté si tu épargnes ce montant chaque mois au taux indiqué. Simulation indicative, hors fiscalité et frais — ne constitue pas un conseil personnalisé.</small>
+        <div class="split-bar">
+          <span class="seg-besoins" id="bar-besoins" style="width:0"></span>
+          <span class="seg-envies"  id="bar-envies"  style="width:0"></span>
+          <span class="seg-epargne" id="bar-epargne" style="width:0"></span>
+        </div>
+
+        <div class="legend">
+          <div class="legend-item">
+            <div class="lbl"><i style="background:#7c6cf5"></i>Besoins · 50%</div>
+            <div class="val" id="res-besoins">—</div>
+          </div>
+          <div class="legend-item">
+            <div class="lbl"><i style="background:#f5b544"></i>Envies · 30%</div>
+            <div class="val" id="res-envies">—</div>
+          </div>
+          <div class="legend-item">
+            <div class="lbl"><i style="background:#34e0a1"></i>Épargne · 20%</div>
+            <div class="val" id="res-epargne">—</div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="cap">Capital projeté</div>
+          <div class="big" id="res-capital">—</div>
+          <div class="note">Si tu épargnes ce montant chaque mois au taux indiqué.</div>
+          <div class="invested">Versé : <b id="res-verse">—</b> &nbsp;·&nbsp; Intérêts générés : <b id="res-interets">—</b></div>
+        </div>
+
+        <p style="color:var(--muted-2);font-size:.8rem;margin-top:18px;text-align:center;line-height:1.6">
+          Simulation indicative, hors fiscalité et frais. Ne constitue pas un conseil en investissement.<br>Le rendement passé ne préjuge pas du rendement futur — un placement comporte un risque de perte en capital.
+        </p>
       </div>
     </div>
 
-    <div class="ad-slot">Emplacement publicité (Google AdSense) — à activer une fois le compte validé</div>
+    <div class="ad-slot">Emplacement publicitaire (Google AdSense) — à activer après validation du compte</div>
   </div>
 </section>
 
-<section>
+<section style="padding-top:0">
   <div class="wrap">
-    <h2>Trois piliers</h2>
-    <p class="sub">Le site tourne autour de trois thématiques, sans blabla.</p>
+    <div class="section-head reveal">
+      <div class="eyebrow">Boîte à outils</div>
+      <h2>3 autres calculateurs</h2>
+      <p>Pensés pour les indépendants et ceux qui veulent y voir clair dans leurs chiffres.</p>
+    </div>
+
     <div class="grid cols-3">
-      <div class="card">
-        <span class="tag">Épargne</span>
-        <h3>Faire des économies sans se priver</h3>
-        <p>Méthodes simples pour mettre de l'argent de côté chaque mois, automatiquement.</p>
+      <a href="outils.html#charges" class="card featured reveal">
+        <div class="icon-box violet">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h6"/></svg>
+        </div>
+        <h3>Charges de micro-entreprise</h3>
+        <p>Ce qu'il te reste vraiment après cotisations et impôt, avec les taux 2026 par type d'activité.</p>
+        <span class="read-more">Ouvrir l'outil
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <a href="outils.html#tjm" class="card featured reveal">
+        <div class="icon-box amber">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <h3>Quel TJM facturer ?</h3>
+        <p>Tu donnes ton objectif net, l'outil calcule le tarif journalier à facturer pour l'atteindre.</p>
+        <span class="read-more">Ouvrir l'outil
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <a href="outils.html#objectif" class="card featured reveal">
+        <div class="icon-box green">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        </div>
+        <h3>Atteindre un objectif d'épargne</h3>
+        <p>Un montant, une échéance : combien mettre de côté chaque mois, intérêts composés inclus.</p>
+        <span class="read-more">Ouvrir l'outil
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Les thématiques</div>
+      <h2>Trois piliers, zéro blabla</h2>
+      <p>Le site tourne autour de trois sujets concrets, traités sans promesse irréaliste.</p>
+    </div>
+
+    <div class="grid cols-3">
+      <div class="card reveal">
+        <div class="icon-box green">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2z"/><path d="M16 12h.01"/><path d="M3 10h18"/></svg>
+        </div>
+        <h3>Épargner sans se priver</h3>
+        <p>Des méthodes simples pour mettre de l'argent de côté chaque mois, automatiquement, sans changer ton mode de vie.</p>
       </div>
-      <div class="card">
-        <span class="tag">Freelance</span>
-        <h3>Gérer son activité sereinement</h3>
-        <p>Comptabilité, déclarations, outils : l'essentiel pour les indépendants.</p>
+
+      <div class="card reveal">
+        <div class="icon-box violet">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h6"/><path d="M9 11h3"/></svg>
+        </div>
+        <h3>Gérer son activité de freelance</h3>
+        <p>Comptabilité, déclarations, mise de côté pour les charges : l'essentiel administratif pour les indépendants.</p>
       </div>
-      <div class="card">
-        <span class="tag">Business</span>
+
+      <div class="card reveal">
+        <div class="icon-box amber">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
         <h3>Lancer un revenu complémentaire</h3>
-        <p>Side-business, tunnels de vente, outils no-code pour démarrer sans se ruiner.</p>
+        <p>Side-business, offre validée, outils no-code : une méthode réaliste pour démarrer sans budget.</p>
       </div>
     </div>
   </div>
@@ -89,23 +260,38 @@
 
 <section>
   <div class="wrap">
-    <h2>Derniers articles</h2>
-    <p class="sub">Contenu écrit, sans promesse irréaliste.</p>
-    <div class="grid cols-3 post-list">
-      <div class="card">
-        <div class="meta">Épargne</div>
+    <div class="section-head reveal">
+      <div class="eyebrow">Le blog</div>
+      <h2>Derniers guides publiés</h2>
+      <p>Du contenu écrit, actionnable, sans recette miracle.</p>
+    </div>
+
+    <div class="grid cols-3">
+      <div class="card post-card reveal">
+        <span class="tag">Épargne</span>
         <h3><a href="blog/epargner-200-euros-par-mois.html">Comment épargner 200 € par mois sans effort</a></h3>
-        <p>La méthode en 4 étapes pour épargner sans y penser.</p>
+        <p>La méthode en 4 étapes pour épargner sans y penser, en inversant l'ordre de ton budget.</p>
+        <span class="read-more">Lire l'article
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
       </div>
-      <div class="card">
-        <div class="meta">Freelance</div>
+
+      <div class="card post-card reveal">
+        <span class="tag violet">Freelance</span>
         <h3><a href="blog/freelance-declarer-revenus.html">Freelance : déclarer ses revenus simplement</a></h3>
-        <p>Le b.a.-ba pour ne pas se tromper dans ses déclarations.</p>
+        <p>Les bases pour ne pas se tromper dans ses déclarations et éviter les mauvaises surprises.</p>
+        <span class="read-more">Lire l'article
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
       </div>
-      <div class="card">
-        <div class="meta">Business</div>
+
+      <div class="card post-card reveal">
+        <span class="tag amber">Business</span>
         <h3><a href="blog/creer-side-business-rentable.html">Créer un side-business rentable en partant de zéro</a></h3>
-        <p>Une méthode pas à pas, sans jargon marketing.</p>
+        <p>Une trame pas à pas : problème précis, validation rapide, tunnel simple, réinvestissement.</p>
+        <span class="read-more">Lire l'article
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
       </div>
     </div>
   </div>
@@ -113,12 +299,33 @@
 
 <footer class="site">
   <div class="wrap">
-    <div class="links">
-      <a href="mentions-legales.html">Mentions légales</a>
-      <a href="confidentialite.html">Confidentialité</a>
-      <a href="contact.html">Contact</a>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-mark">C</span>ClairArgent</div>
+        <p>Finance personnelle et business expliqués simplement, pour prendre de meilleures décisions avec son argent.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Outils</h5>
+          <a href="outils.html#budget">Budget 50/30/20</a>
+          <a href="outils.html#charges">Charges micro-entreprise</a>
+          <a href="outils.html#tjm">TJM freelance</a>
+          <a href="outils.html#objectif">Objectif d'épargne</a>
+        </div>
+        <div class="footer-col">
+          <h5>Le site</h5>
+          <a href="baremes.html">Barèmes 2026</a>
+          <a href="blog/index.html">Blog</a>
+          <a href="contact.html">Contact</a>
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
+        </div>
+      </div>
     </div>
-    <p>© 2026 ClairArgent. Contenu à but informatif, ne constitue pas un conseil financier personnalisé.</p>
+    <div class="footer-bottom">
+      © 2026 ClairArgent. Contenu à but informatif — ne constitue pas un conseil financier personnalisé.<br>
+      Certains liens sont des liens d'affiliation : le site peut percevoir une commission, sans surcoût pour toi.
+    </div>
   </div>
 </footer>
 
