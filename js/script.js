@@ -168,6 +168,79 @@ function calculerObjectif(){
   animerNombre(document.getElementById('obj-mensuel'), mensuel);
 }
 
+
+/* =========================================================
+   OUTIL 5 — SEUIL DE TVA (franchise en base)
+   Seuils 2026, vérifiés sur service-public.gouv.fr :
+   services 37 500 / 41 250 · marchandises 85 000 / 93 500.
+   La réforme du seuil unique à 25 000 € a été abandonnée.
+   ========================================================= */
+const SEUILS_TVA = {
+  services: { base: 37500, majore: 41250, libelle: 'prestations de services' },
+  vente:    { base: 85000, majore: 93500, libelle: 'vente de marchandises' }
+};
+let activiteTva = 'services';
+
+function choisirActiviteTva(bouton, cle){
+  activiteTva = cle;
+  const groupe = document.getElementById('seg-tva');
+  if(groupe) groupe.querySelectorAll('.seg').forEach(b => b.classList.remove('active'));
+  bouton.classList.add('active');
+  const res = document.getElementById('tva-result');
+  if(res && res.classList.contains('show')) calculerTva();
+}
+
+function calculerTva(){
+  const ca   = parseFloat(document.getElementById('tva-ca').value) || 0;
+  let mois   = parseInt(document.getElementById('tva-mois').value) || 12;
+  mois = Math.min(12, Math.max(1, mois));
+
+  const s = SEUILS_TVA[activiteTva];
+  const projection = ca / mois * 12;
+  const marge = s.base - ca;
+
+  // Barre : part sous le seuil, part dans la tolérance, part au-delà
+  const echelle = s.majore * 1.25;
+  const pct = v => Math.max(0, Math.min(100, v / echelle * 100));
+  const sousSeuil = Math.min(ca, s.base);
+  const tolerance = Math.max(0, Math.min(ca, s.majore) - s.base);
+  const audela    = Math.max(0, ca - s.majore);
+  document.getElementById('tva-bar-ok').style.width   = pct(sousSeuil) + '%';
+  document.getElementById('tva-bar-tol').style.width  = pct(tolerance) + '%';
+  document.getElementById('tva-bar-over').style.width = pct(audela) + '%';
+
+  let statut, detail, notice, cap;
+  if(ca > s.majore){
+    cap = 'Situation';
+    statut = 'TVA obligatoire';
+    detail = 'Le seuil majoré de ' + eur(s.majore) + ' est dépassé.';
+    notice = "Au-delà du seuil majoré, la TVA est due <b>dès le premier jour du mois du dépassement</b> — sans aucune tolérance. Toutes les opérations de ce mois-là sont concernées, <b>y compris les factures déjà émises avant le dépassement</b>. Il faut demander un numéro de TVA intracommunautaire, refacturer ce qui doit l'être et déclarer la TVA collectée.";
+  } else if(ca > s.base){
+    cap = 'Situation';
+    statut = 'Zone de tolérance';
+    detail = 'Entre ' + eur(s.base) + ' et ' + eur(s.majore) + ' : la franchise est maintenue cette année.';
+    notice = "Tu restes en franchise pour l'année en cours. Tu ne bascules à la TVA au 1<sup>er</sup> janvier suivant que si tu dépasses <b>à nouveau</b> le seuil de base cette seconde année. En revanche, si tu franchis " + eur(s.majore) + " avant la fin de l'année, la TVA devient due immédiatement.";
+  } else {
+    cap = 'Situation';
+    statut = 'Pas de TVA à facturer';
+    detail = 'Il te reste ' + eur(marge) + ' avant le seuil de ' + eur(s.base) + '.';
+    notice = projection > s.base
+      ? "⚠️ Attention : à ce rythme, ta projection sur douze mois (" + eur(projection) + ") <b>dépasse le seuil</b>. Anticipe dès maintenant plutôt que de le découvrir en décembre."
+      : "À ce rythme, tu termines l'année sous le seuil. Le seuil s'apprécie sur le chiffre d'affaires <b>réellement encaissé</b> du 1<sup>er</sup> janvier au 31 décembre.";
+  }
+
+  document.getElementById('tva-cap').textContent     = cap;
+  document.getElementById('tva-statut').textContent  = statut;
+  document.getElementById('tva-detail').textContent  = detail;
+  document.getElementById('tva-notice').innerHTML    = notice;
+  document.getElementById('tva-seuil').textContent   = eur(s.base);
+  document.getElementById('tva-majore').textContent  = eur(s.majore);
+  document.getElementById('tva-marge').textContent   = marge > 0 ? eur(marge) : 'seuil dépassé';
+  document.getElementById('tva-projection').textContent = eur(projection);
+
+  afficher('tva-result');
+}
+
 /* =========================================================
    NEWSLETTER
    ---------------------------------------------------------
