@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Outils gratuits — Budget, charges micro-entreprise, TJM freelance | ClairArgent</title>
-<meta name="description" content="4 calculateurs gratuits : répartition de budget 50/30/20, charges de micro-entreprise, TJM freelance et objectif d'épargne. Sans inscription, rien n'est enregistré.">
+<meta name="description" content="5 calculateurs gratuits : répartition de budget 50/30/20, charges de micro-entreprise, TJM freelance et objectif d'épargne. Sans inscription, rien n'est enregistré.">
 <link rel="canonical" href="https://clairargent.fr/outils">
 <meta property="og:title" content="4 outils financiers gratuits — ClairArgent">
 <meta property="og:description" content="Budget, charges micro-entreprise, TJM freelance, objectif d'épargne. Calcul instantané, sans inscription.">
@@ -30,14 +30,15 @@
 
 <section class="hero" style="padding:76px 0 34px">
   <div class="wrap">
-    <div class="badge"><span class="dot"></span>4 outils · 100% gratuits</div>
+    <div class="badge"><span class="dot"></span>5 outils · 100% gratuits</div>
     <h1 style="font-size:clamp(2rem,5vw,3.3rem)">Des calculs qui prennent<br><em>30 secondes</em></h1>
-    <p class="lead">Budget, charges de micro-entreprise, TJM freelance, objectif d'épargne. Tout se calcule dans ton navigateur : aucune donnée n'est envoyée ni enregistrée.</p>
+    <p class="lead">Budget, charges de micro-entreprise, TJM freelance, objectif d'épargne, seuil de TVA. Tout se calcule dans ton navigateur : aucune donnée n'est envoyée ni enregistrée.</p>
     <div class="tool-nav" style="margin-top:26px">
       <a href="#budget">Budget 50/30/20</a>
       <a href="#charges">Charges micro-entreprise</a>
       <a href="#tjm">TJM freelance</a>
       <a href="#objectif">Objectif d'épargne</a>
+      <a href="#tva">Seuil de TVA</a>
     </div>
   </div>
 </section>
@@ -302,6 +303,74 @@
             <div class="res-row"><span class="k">Valeur future de ton capital actuel</span><span class="v" id="obj-futur-deja">—</span></div>
           </div>
           <div class="notice">Le rendement saisi est une <b>hypothèse, pas une garantie</b>. Un placement sans risque rapporte moins qu'un placement exposé aux marchés, qui peut perdre de la valeur. Ajuste le taux selon le support envisagé, et garde une marge de sécurité.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 5. SEUIL DE TVA ============ -->
+    <div class="tool-block" id="tva">
+      <div class="section-head reveal">
+        <div class="eyebrow">Outil 5</div>
+        <h2>Dois-tu facturer la TVA ?</h2>
+        <p>Le seuil de TVA est bien plus bas que le plafond de la micro-entreprise. Beaucoup le découvrent trop tard.</p>
+      </div>
+
+      <div class="tool-shell reveal">
+        <div class="tool-head">
+          <div class="icon-box green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div><h3>Ta situation vis-à-vis de la TVA</h3><p>Seuils 2026, franchise en base</p></div>
+        </div>
+
+        <div class="seg-group" id="seg-tva">
+          <button class="seg active" onclick="choisirActiviteTva(this,'services')">Prestations de services</button>
+          <button class="seg" onclick="choisirActiviteTva(this,'vente')">Vente de marchandises</button>
+        </div>
+
+        <div class="fields">
+          <div class="field">
+            <label for="tva-ca"><span class="step-badge">1</span>Chiffre d'affaires encaissé cette année</label>
+            <div class="input-wrap"><input type="number" id="tva-ca" placeholder="28 000" inputmode="numeric"><span class="unit">€</span></div>
+            <span class="hint">Le montant réellement encaissé depuis le 1er janvier, pas le facturé.</span>
+          </div>
+          <div class="field">
+            <label for="tva-mois"><span class="step-badge">2</span>Mois déjà écoulés</label>
+            <div class="input-wrap"><input type="number" id="tva-mois" value="6" min="1" max="12" inputmode="numeric"><span class="unit">mois</span></div>
+            <span class="hint">Sert à projeter ton chiffre d'affaires sur l'année entière.</span>
+          </div>
+        </div>
+
+        <button class="btn wide" onclick="calculerTva()">Vérifier ma situation</button>
+
+        <div class="tool-result" id="tva-result">
+          <div class="result-label">Ton résultat</div>
+          <div class="split-bar">
+            <span class="seg-net" id="tva-bar-ok" style="width:0"></span>
+            <span class="seg-impot" id="tva-bar-tol" style="width:0"></span>
+            <span class="seg-cotis" id="tva-bar-over" style="width:0"></span>
+          </div>
+          <div class="highlight-box" style="margin-bottom:22px">
+            <div class="cap" id="tva-cap">Situation</div>
+            <div class="big" id="tva-statut">—</div>
+            <div class="note" id="tva-detail">—</div>
+          </div>
+          <div class="res-rows">
+            <div class="res-row"><span class="k">Seuil de franchise</span><span class="v" id="tva-seuil">—</span></div>
+            <div class="res-row"><span class="k">Seuil majoré (tolérance)</span><span class="v" id="tva-majore">—</span></div>
+            <div class="res-row"><span class="k">Marge restante avant le seuil</span><span class="v" id="tva-marge">—</span></div>
+            <div class="res-row"><span class="k">Projection sur 12 mois</span><span class="v" id="tva-projection">—</span></div>
+          </div>
+          <div class="notice" id="tva-notice">—</div>
+
+          <div class="cta-box" style="margin-top:26px">
+            <div class="cta-label">Outil recommandé · lien partenaire</div>
+            <h4>Suivre son chiffre d'affaires sans y penser</h4>
+            <p>Abby suit ton chiffre d'affaires encaissé en temps réel et t'alerte à l'approche des seuils — de TVA comme de la micro-entreprise. C'est le genre de dépassement qu'on ne voit pas venir.</p>
+            <a class="btn" href="https://lb.affilae.com/r/?p=620239042458145515dfbb22&amp;af=936&amp;lp=https%3A%2F%2Fabby.fr%2F%3Futm_campaign%3Daffiliation%26utm_medium%3Dpartner%26utm_source%3Dalex" rel="sponsored noopener" target="_blank">Essayer Abby
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
