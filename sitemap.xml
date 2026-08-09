@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://sitecasmachuine.vercel.app/</loc><priority>1.0</priority></url>
-  <url><loc>https://sitecasmachuine.vercel.app/outils.html</loc><priority>0.9</priority></url>
-  <url><loc>https://sitecasmachuine.vercel.app/baremes.html</loc><priority>0.9</priority></url>
-  <url><loc>https://sitecasmachuine.vercel.app/blog/</loc><priority>0.8</priority></url>
-  <url><loc>https://sitecasmachuine.vercel.app/blog/compte-pro-auto-entrepreneur-obligatoire.html</loc><priority>0.8</priority></url>
-  <url><loc>https://sitecasmachuine.vercel.app/blog/fixer-ses-tarifs-freelance.html</loc><priority>0.8</priority></url>
-  <url><loc>https://sitecasmachuine.vercel.app/blog/epargner-200-euros-par-mois.html</loc><priority>0.7</priority></url>
-  <url><loc>https://sitecasmachuine.vercel.app/blog/freelance-declarer-revenus.html</loc><priority>0.7</priority></url>
-  <url><loc>https://sitecasmachuine.vercel.app/blog/creer-side-business-rentable.html</loc><priority>0.7</priority></url>
-  <url><loc>https://sitecasmachuine.vercel.app/contact.html</loc><priority>0.4</priority></url>
+  <url><loc>https://clairargent.fr/</loc><priority>1.0</priority></url>
+  <url><loc>https://clairargent.fr/outils</loc><priority>0.9</priority></url>
+  <url><loc>https://clairargent.fr/baremes</loc><priority>0.9</priority></url>
+  <url><loc>https://clairargent.fr/blog/</loc><priority>0.8</priority></url>
+  <url><loc>https://clairargent.fr/blog/compte-pro-auto-entrepreneur-obligatoire</loc><priority>0.8</priority></url>
+  <url><loc>https://clairargent.fr/blog/fixer-ses-tarifs-freelance</loc><priority>0.8</priority></url>
+  <url><loc>https://clairargent.fr/blog/epargner-200-euros-par-mois</loc><priority>0.7</priority></url>
+  <url><loc>https://clairargent.fr/blog/freelance-declarer-revenus</loc><priority>0.7</priority></url>
+  <url><loc>https://clairargent.fr/blog/creer-side-business-rentable</loc><priority>0.7</priority></url>
+  <url><loc>https://clairargent.fr/contact</loc><priority>0.4</priority></url>
 </urlset>
