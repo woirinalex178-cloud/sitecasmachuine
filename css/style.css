@@ -74,8 +74,19 @@ nav.main a.nav-cta{
   background:var(--accent);color:#ffffff;font-weight:700;margin-left:8px;
 }
 nav.main a.nav-cta:hover{background:var(--accent-2);transform:translateY(-1px);}
-@media(max-width:640px){
-  nav.main a{padding:8px 10px;font-size:.85rem;}
+@media(max-width:760px){
+  header.site .wrap{
+    height:auto;flex-direction:column;align-items:stretch;
+    gap:8px;padding-top:12px;padding-bottom:12px;
+  }
+  nav.main{
+    overflow-x:auto;overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;-ms-overflow-style:none;
+    margin:0 -4px;padding:0 4px;
+  }
+  nav.main::-webkit-scrollbar{display:none;}
+  nav.main a{flex:0 0 auto;white-space:nowrap;padding:8px 10px;font-size:.85rem;}
   nav.main a.nav-cta{display:none;}
 }
 
