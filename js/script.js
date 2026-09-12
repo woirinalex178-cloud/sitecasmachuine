@@ -348,3 +348,54 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal:not(.visible)').forEach(el => el.classList.add('visible'));
   }, 2500);
 });
+
+/* ClairArgent : bandeau de consentement - pose le 12/09/2026.
+   La balise AdSense reste dans le source (Google la cherche pour verifier
+   le site). Le <head> refuse tout par defaut ; on ne passe a "accorde" que
+   sur un clic explicite. Un refus ne change rien : tout reste refuse.
+   Ce bandeau maison n est pas un CMP certifie Google : le remplacer par le
+   CMP integre a AdSense le jour ou le compte est valide. */
+(function () {
+  var CLE = 'ca-consentement';
+  var choix = null;
+  try { choix = localStorage.getItem(CLE); } catch (e) { choix = null; }
+
+  function accorder() {
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted',
+        ad_personalization: 'granted', analytics_storage: 'granted' });
+    }
+  }
+  function memoriser(v) { try { localStorage.setItem(CLE, v); } catch (e) {} }
+
+  if (choix === 'accepte') { accorder(); return; }
+  if (choix === 'refuse') { return; }
+
+  function poser() {
+    var b = document.createElement('div');
+    b.className = 'consent-bar';
+    b.setAttribute('role', 'dialog');
+    b.setAttribute('aria-label', 'Consentement aux cookies');
+    b.innerHTML =
+      '<p>Ce site utilise des cookies publicitaires (Google AdSense) pour financer son contenu. '
+      + 'Ils ne sont deposes que si tu les acceptes. '
+      + '<a href="/confidentialite">En savoir plus</a></p>'
+      + '<div class="consent-actions">'
+      + '<button type="button" class="consent-refuse">Refuser</button>'
+      + '<button type="button" class="consent-accept">Accepter</button>'
+      + '</div>';
+    document.body.appendChild(b);
+    b.querySelector('.consent-accept').addEventListener('click', function () {
+      memoriser('accepte'); accorder(); b.parentNode.removeChild(b);
+    });
+    b.querySelector('.consent-refuse').addEventListener('click', function () {
+      memoriser('refuse'); b.parentNode.removeChild(b);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', poser);
+  } else {
+    poser();
+  }
+})();
