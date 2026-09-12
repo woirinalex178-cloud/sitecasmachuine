@@ -639,3 +639,13 @@ footer.site{
   .reveal{opacity:1;transform:none;transition:none;}
   *{animation:none!important;}
 }
+
+/* Bandeau de consentement - pose le 12/09/2026 */
+.consent-bar{position:fixed;left:0;right:0;bottom:0;z-index:9999;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;padding:14px 20px;background:#fff;border-top:1px solid var(--border,#e2e6ee);box-shadow:0 -6px 24px rgba(16,24,40,.10);font-size:.92rem;line-height:1.5}
+.consent-bar p{margin:0;flex:1 1 340px;color:var(--muted,#55647a)}
+.consent-bar a{color:#2a78d6}
+.consent-actions{display:flex;gap:10px;flex:0 0 auto}
+.consent-bar button{font:inherit;cursor:pointer;border-radius:8px;padding:10px 18px;border:1px solid var(--border,#e2e6ee);background:#fff;color:#33425c}
+.consent-bar button.consent-accept{background:#7c6cf5;border-color:#7c6cf5;color:#fff;font-weight:600}
+.consent-bar button:hover{filter:brightness(.97)}
+@media(max-width:600px){.consent-bar{padding:12px 14px}.consent-actions{width:100%}.consent-bar button{flex:1}}
