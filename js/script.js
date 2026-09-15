@@ -399,3 +399,50 @@ document.addEventListener('DOMContentLoaded', () => {
     poser();
   }
 })();
+
+
+/* ClairArgent v2 : animations - 15/09/2026. Ajout seul, tout est guarde. */
+(function(){
+var R=matchMedia('(prefers-reduced-motion: reduce)').matches,F=matchMedia('(pointer:fine)').matches,
+N=function(v,d){return v.toLocaleString('fr-FR',{minimumFractionDigits:d,maximumFractionDigits:d});},
+Q=function(s){return document.querySelectorAll(s);},G=function(i){return document.getElementById(i);};
+
+var p=G('ca-prog');
+if(p)addEventListener('scroll',function(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;p.style.width=(m>0?h.scrollTop/m*100:0)+'%';},{passive:true});
+
+var tk=G('ca-tk');
+if(tk){var C=[['Livret A','1,70 %'],['LEP','2,50 %'],['Plafond micro services','83 600 €'],['Plafond micro vente','203 100 €'],['Seuil TVA services','37 500 €'],['Seuil TVA vente','85 000 €'],['Cotisations vente','12,3 %'],['Services BIC','21,2 %'],['CIPAV','23,2 %'],['Libéral BNC','25,6 %'],['Pénalité URSSAF','60,10 €']],
+h=C.map(function(c){return '<span class="ca-chip">'+c[0]+' <b>'+c[1]+'</b></span>';}).join('');tk.innerHTML=h+h;}
+
+function tw(el,a,b,d,s){if(!el)return;if(R){el.textContent=N(b,d)+s;return;}var t=null;requestAnimationFrame(function k(x){if(!t)t=x;var q=Math.min((x-t)/1000,1),e=1-Math.pow(1-q,3);el.textContent=N(a+(b-a)*e,d)+s;if(q<1)requestAnimationFrame(k);});}
+
+var cd=G('ca-card');
+if(cd){
+var S=[['Activité libérale · 40 000 € encaissés','Cotisations sociales (25,6 %)',-10240,29140,72.9],
+['Prestations de services BIC · 40 000 €','Cotisations sociales (21,2 %)',-8480,30900,77.3],
+['Vente de marchandises · 40 000 €','Cotisations sociales (12,3 %)',-4920,34460,86.2]],
+ci=0,pc=0,pr=0,D=Q('.ca-dots i');
+var show=function(n){var s=S[n];G('ca-t').textContent=s[0];G('ca-k').textContent=s[1];
+tw(G('ca-v1'),pc,s[2],0,' €');tw(G('ca-v3'),pr,s[3],0,' €');G('ca-m').style.width=s[4]+'%';pc=s[2];pr=s[3];
+for(var j=0;j<D.length;j++)D[j].className=(j===n?'on':'');};
+setTimeout(function(){tw(G('ca-v0'),0,40000,0,' €');tw(G('ca-v2'),0,-620,0,' €');show(0);},400);
+if(!R)setInterval(function(){ci=(ci+1)%S.length;show(ci);},4200);}
+
+function glare(e){e.addEventListener('mousemove',function(v){var r=e.getBoundingClientRect();
+e.style.setProperty('--mx',((v.clientX-r.left)/r.width*100)+'%');e.style.setProperty('--my',((v.clientY-r.top)/r.height*100)+'%');});}
+
+if(F&&!R){
+if(cd){glare(cd);var sc=cd.parentNode;
+sc.addEventListener('mousemove',function(v){var r=sc.getBoundingClientRect(),x=(v.clientX-r.left)/r.width-.5,y=(v.clientY-r.top)/r.height-.5;
+cd.style.transform='rotateY('+(x*11)+'deg) rotateX('+(-y*11)+'deg)';});
+sc.addEventListener('mouseleave',function(){cd.style.transform='';});}
+Q('.ca-tilt').forEach(function(e){glare(e);
+e.addEventListener('mousemove',function(v){var r=e.getBoundingClientRect(),x=(v.clientX-r.left)/r.width-.5,y=(v.clientY-r.top)/r.height-.5;
+e.style.transform='perspective(700px) rotateY('+(x*6)+'deg) rotateX('+(-y*6)+'deg) translateY(-4px)';});
+e.addEventListener('mouseleave',function(){e.style.transform='';});});
+Q('.ca-mag').forEach(function(b){
+b.addEventListener('mousemove',function(v){var r=b.getBoundingClientRect();
+b.style.transform='translate('+((v.clientX-r.left-r.width/2)*.15)+'px,'+((v.clientY-r.top-r.height/2)*.26)+'px)';});
+b.addEventListener('mouseleave',function(){b.style.transform='';});});
+}
+})();
