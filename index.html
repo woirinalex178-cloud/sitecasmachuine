@@ -17,6 +17,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1130243522190067" crossorigin="anonymous"></script>
 </head>
 <body>
+<div id="ca-prog"></div>
 
 <header class="site">
   <div class="wrap">
@@ -33,23 +34,42 @@
 </header>
 
 <section class="hero">
-  <div class="wrap">
-    <div class="badge"><span class="dot"></span>5 calculateurs gratuits, sans inscription</div>
-    <h1>Reprends le contrôle<br>de ton argent, <em>sans jargon</em>.</h1>
-    <p class="lead">Des guides concrets sur l'épargne, le freelance et les outils business — et des calculateurs qui répondent en 30 secondes.</p>
-    <div class="hero-actions">
-      <a href="#outil" class="btn">Calculer mon budget
+  <div class="ca-orb a"></div><div class="ca-orb b"></div><div class="ca-orb c"></div>
+  <div class="wrap ca-hero-grid">
+    <div class="ca-hero-text">
+    <div class="badge ca-fade"><span class="dot"></span>5 calculateurs gratuits, sans inscription</div>
+    <h1><span class="ca-ln"><span>Reprends le contrôle</span></span><span class="ca-ln"><span>de ton argent, <em>sans jargon</em>.</span></span></h1>
+    <p class="lead ca-fade ca-d1">Des guides concrets sur l'épargne, le freelance et les outils business — et des calculateurs qui répondent en 30 secondes.</p>
+    <div class="hero-actions ca-fade ca-d2">
+      <a href="#outil" class="btn ca-mag">Calculer mon budget
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <a href="/outils" class="btn ghost">Voir les 5 outils</a>
+      <a href="/outils" class="btn ghost ca-mag">Voir les 5 outils</a>
     </div>
-    <div class="trust">
+    <div class="trust ca-fade ca-d3">
       <span><svg viewBox="0 0 24 24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>100% gratuit</span>
       <span><svg viewBox="0 0 24 24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Sans inscription</span>
       <span><svg viewBox="0 0 24 24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Aucune donnée collectée</span>
     </div>
+    </div>
+
+    <div class="ca-scene">
+      <div class="ca-coin"><i>€</i></div>
+      <div class="ca-card" id="ca-card">
+        <h4 id="ca-t">Activité libérale · 40 000 € encaissés</h4>
+        <div class="ca-row"><span class="k">Chiffre d’affaires</span><span class="v" id="ca-v0">0 €</span></div>
+        <div class="ca-row neg"><span class="k" id="ca-k">Cotisations sociales</span><span class="v" id="ca-v1">0 €</span></div>
+        <div class="ca-row neg"><span class="k">CFE estimée</span><span class="v" id="ca-v2">0 €</span></div>
+        <div class="ca-row tot"><span class="k">Il te reste</span><span class="v" id="ca-v3">0 €</span></div>
+        <div class="ca-meter"><i id="ca-m"></i></div>
+        <div class="ca-dots"><i class="on"></i><i></i><i></i></div>
+        <p class="ca-note">Avant impôt sur le revenu. La carte compare les trois régimes en continu.</p>
+      </div>
+    </div>
   </div>
 </section>
+
+<div class="ca-ticker"><div class="ca-track" id="ca-tk"></div></div>
 
 <section style="padding:20px 0 50px">
   <div class="wrap">
@@ -190,7 +210,7 @@
     </div>
 
     <div class="grid cols-3">
-      <a href="/outils#charges" class="card featured reveal">
+      <a href="/outils#charges" class="card featured reveal ca-tilt ca-glare">
         <div class="icon-box violet">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h6"/></svg>
         </div>
@@ -201,7 +221,7 @@
         </span>
       </a>
 
-      <a href="/outils#tjm" class="card featured reveal">
+      <a href="/outils#tjm" class="card featured reveal ca-tilt ca-glare">
         <div class="icon-box amber">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
         </div>
@@ -212,7 +232,7 @@
         </span>
       </a>
 
-      <a href="/outils#objectif" class="card featured reveal">
+      <a href="/outils#objectif" class="card featured reveal ca-tilt ca-glare">
         <div class="icon-box green">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
         </div>
@@ -235,7 +255,7 @@
     </div>
 
     <div class="grid cols-3">
-      <div class="card reveal">
+      <div class="card reveal ca-tilt ca-glare">
         <div class="icon-box green">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2z"/><path d="M16 12h.01"/><path d="M3 10h18"/></svg>
         </div>
@@ -243,7 +263,7 @@
         <p>Des méthodes simples pour mettre de l'argent de côté chaque mois, automatiquement, sans changer ton mode de vie.</p>
       </div>
 
-      <div class="card reveal">
+      <div class="card reveal ca-tilt ca-glare">
         <div class="icon-box violet">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h6"/><path d="M9 11h3"/></svg>
         </div>
@@ -251,7 +271,7 @@
         <p>Comptabilité, déclarations, mise de côté pour les charges : l'essentiel administratif pour les indépendants.</p>
       </div>
 
-      <div class="card reveal">
+      <div class="card reveal ca-tilt ca-glare">
         <div class="icon-box amber">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
         </div>
@@ -271,7 +291,7 @@
     </div>
 
     <div class="grid cols-3">
-      <div class="card post-card featured reveal">
+      <div class="card post-card featured reveal ca-tilt ca-glare">
         <span class="tag violet">Freelance</span>
         <h3><a href="/blog/compte-pro-auto-entrepreneur-obligatoire">Compte pro auto-entrepreneur : obligatoire ou pas ?</a></h3>
         <p>La règle des 10 000 € sur deux ans, et la nuance qui t'évite de payer un compte inutile.</p>
@@ -280,7 +300,7 @@
         </span>
       </div>
 
-      <div class="card post-card featured reveal">
+      <div class="card post-card featured reveal ca-tilt ca-glare">
         <span class="tag amber">Business</span>
         <h3><a href="/blog/fixer-ses-tarifs-freelance">Comment fixer ses tarifs quand on démarre en freelance</a></h3>
         <p>Partir de son objectif net plutôt que du marché, et compter les vrais jours facturables.</p>
@@ -289,7 +309,7 @@
         </span>
       </div>
 
-      <div class="card post-card reveal">
+      <div class="card post-card reveal ca-tilt ca-glare">
         <span class="tag">Épargne</span>
         <h3><a href="/blog/epargner-200-euros-par-mois">Comment épargner 200 € par mois sans effort</a></h3>
         <p>La méthode en 4 étapes pour épargner sans y penser, en inversant l'ordre de ton budget.</p>
