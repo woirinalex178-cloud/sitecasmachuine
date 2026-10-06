@@ -1,0 +1,97 @@
+{
+  "genere": "2026-10-06T20:48:03.193Z",
+  "methode": "Releves des pages tarifaires publiques. Historique reconstitue depuis les archives publiques du web, releve courant depuis les pages en ligne. Chaque prix est date du jour ou la page a ete constatee.",
+  "banques": {
+    "qonto": {
+      "nom": "Qonto",
+      "page": "https://qonto.com/fr/pricing",
+      "releves": [
+        {
+          "date": "2024-01-06",
+          "periode": "202401",
+          "source": "archive",
+          "urlReleve": "https://web.archive.org/web/20240101id_/https://qonto.com/fr/pricing",
+          "confiance": "haute",
+          "remarque": "Les tarifs sont clairement indiqués, mais il n'est pas précisé si les offres sont uniquement pour indépendants.",
+          "offres": [
+            {
+              "nom": "Basic",
+              "prixMensuelEuros": 9,
+              "engagement": "annuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Smart",
+              "prixMensuelEuros": 19,
+              "engagement": "annuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Premium",
+              "prixMensuelEuros": 39,
+              "engagement": "annuel",
+              "cible": "independant"
+            }
+          ]
+        },
+        {
+          "date": "2024-04-22",
+          "periode": "202404",
+          "source": "archive",
+          "urlReleve": "https://web.archive.org/web/20240401id_/https://qonto.com/fr/pricing",
+          "confiance": "haute",
+          "remarque": "Les tarifs sont clairement indiqués et les offres sont bien définies.",
+          "offres": [
+            {
+              "nom": "Basic",
+              "prixMensuelEuros": 9,
+              "engagement": "annuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Smart",
+              "prixMensuelEuros": 19,
+              "engagement": "annuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Premium",
+              "prixMensuelEuros": 39,
+              "engagement": "annuel",
+              "cible": "independant"
+            }
+          ]
+        },
+        {
+          "date": "2024-07-16",
+          "periode": "202407",
+          "source": "archive",
+          "urlReleve": "https://web.archive.org/web/20240701id_/https://qonto.com/fr/pricing",
+          "confiance": "haute",
+          "remarque": "Les tarifs sont clairement indiqués et les offres sont bien définies.",
+          "offres": [
+            {
+              "nom": "Basic",
+              "prixMensuelEuros": 9,
+              "engagement": "annuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Smart",
+              "prixMensuelEuros": 19,
+              "engagement": "annuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Premium",
+              "prixMensuelEuros": 39,
+              "engagement": "annuel",
+              "cible": "independant"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "anomalies": []
+}
