@@ -1,5 +1,5 @@
 {
-  "genere": "2026-10-06T21:02:49.055Z",
+  "genere": "2026-10-06T21:04:12.873Z",
   "methode": "Releves des pages tarifaires publiques. Historique reconstitue depuis les archives publiques du web, releve courant depuis les pages en ligne. Chaque prix est date du jour ou la page a ete constatee.",
   "banques": {
     "qonto": {
@@ -682,31 +682,31 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20240501id_/https://www.indy.fr/prix",
           "confiance": "basse",
-          "remarque": "Les offres ne sont pas clairement définies pour chaque type d'abonnement.",
+          "remarque": "Les offres ne sont pas clairement distinguées par cible.",
           "offres": [
             {
               "nom": "Indy Premium",
               "prixMensuelEuros": 12,
-              "engagement": "inconnu",
-              "cible": "independant"
+              "engagement": "mensuel",
+              "cible": "inconnu"
             },
             {
-              "nom": "Indy Premium",
+              "nom": "Indy Premium (déclarations obligatoires)",
               "prixMensuelEuros": 22,
-              "engagement": "inconnu",
-              "cible": "independant"
+              "engagement": "mensuel",
+              "cible": "inconnu"
             },
             {
-              "nom": "Indy Premium",
+              "nom": "Indy Premium (liasse fiscale)",
               "prixMensuelEuros": 49,
-              "engagement": "inconnu",
-              "cible": "independant"
+              "engagement": "mensuel",
+              "cible": "inconnu"
             },
             {
               "nom": "Indy",
               "prixMensuelEuros": 0,
-              "engagement": "inconnu",
-              "cible": "independant"
+              "engagement": "mensuel",
+              "cible": "inconnu"
             }
           ]
         },
@@ -716,31 +716,31 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20240701id_/https://www.indy.fr/prix",
           "confiance": "basse",
-          "remarque": "Les offres sont ambiguës et il y a des répétitions dans les noms.",
+          "remarque": "Les offres ne sont pas clairement distinguées par cible.",
           "offres": [
             {
               "nom": "Indy Premium",
               "prixMensuelEuros": 12,
-              "engagement": "inconnu",
-              "cible": "independant"
+              "engagement": "mensuel",
+              "cible": "inconnu"
             },
             {
-              "nom": "Indy Premium",
+              "nom": "Indy Premium (profession liberale)",
               "prixMensuelEuros": 22,
-              "engagement": "inconnu",
-              "cible": "independant"
+              "engagement": "mensuel",
+              "cible": "inconnu"
             },
             {
-              "nom": "Indy Premium",
+              "nom": "Indy Premium (société)",
               "prixMensuelEuros": 49,
-              "engagement": "inconnu",
-              "cible": "independant"
+              "engagement": "mensuel",
+              "cible": "inconnu"
             },
             {
-              "nom": "Indy Premium",
-              "prixMensuelEuros": 20,
-              "engagement": "inconnu",
-              "cible": "independant"
+              "nom": "Indy",
+              "prixMensuelEuros": 0,
+              "engagement": "mensuel",
+              "cible": "inconnu"
             }
           ]
         },
@@ -750,31 +750,31 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20241001id_/https://www.indy.fr/prix",
           "confiance": "basse",
-          "remarque": "Les offres sont ambiguës et il y a plusieurs niveaux de prix sans clarté sur l'engagement.",
+          "remarque": "Les offres ne sont pas clairement distinguées par leur cible ou engagement.",
           "offres": [
             {
               "nom": "Indy Premium",
               "prixMensuelEuros": 12,
               "engagement": "inconnu",
-              "cible": "independant"
+              "cible": "inconnu"
             },
             {
-              "nom": "Indy Premium",
+              "nom": "Indy Premium (sans engagement)",
               "prixMensuelEuros": 22,
               "engagement": "inconnu",
-              "cible": "independant"
+              "cible": "inconnu"
             },
             {
-              "nom": "Indy Premium",
-              "prixMensuelEuros": 49,
-              "engagement": "inconnu",
-              "cible": "independant"
-            },
-            {
-              "nom": "Indy Premium",
+              "nom": "Indy Premium (sans engagement, SCI)",
               "prixMensuelEuros": 20,
               "engagement": "inconnu",
-              "cible": "independant"
+              "cible": "inconnu"
+            },
+            {
+              "nom": "Indy Premium (sans engagement, liasse fiscale)",
+              "prixMensuelEuros": 49,
+              "engagement": "inconnu",
+              "cible": "inconnu"
             }
           ]
         },
@@ -860,30 +860,54 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250401id_/https://www.indy.fr/prix",
           "confiance": "basse",
-          "remarque": "Les offres sont ambiguës et il y a plusieurs prix pour le même type d'abonnement.",
+          "remarque": "Les offres sont ambiguës et plusieurs Premium sont présentes avec des prix différents.",
           "offres": [
             {
-              "nom": "Premium",
+              "nom": "Premium (annuel)",
               "prixMensuelEuros": 12,
               "engagement": "annuel",
               "cible": "societe"
             },
             {
-              "nom": "Premium",
+              "nom": "Premium (sans engagement)",
+              "prixMensuelEuros": 16,
+              "engagement": "inconnu",
+              "cible": "societe"
+            },
+            {
+              "nom": "Premium (annuel 2)",
               "prixMensuelEuros": 22,
               "engagement": "annuel",
               "cible": "societe"
             },
             {
-              "nom": "Premium",
+              "nom": "Premium (sans engagement 2)",
+              "prixMensuelEuros": 28,
+              "engagement": "inconnu",
+              "cible": "societe"
+            },
+            {
+              "nom": "Premium (annuel 3)",
               "prixMensuelEuros": 49,
               "engagement": "annuel",
               "cible": "societe"
             },
             {
-              "nom": "Premium",
+              "nom": "Premium (sans engagement 3)",
+              "prixMensuelEuros": 59,
+              "engagement": "inconnu",
+              "cible": "societe"
+            },
+            {
+              "nom": "Premium SCI à l'IR (annuel)",
               "prixMensuelEuros": 20,
               "engagement": "annuel",
+              "cible": "societe"
+            },
+            {
+              "nom": "Premium SCI à l'IR (sans engagement)",
+              "prixMensuelEuros": 27,
+              "engagement": "inconnu",
               "cible": "societe"
             }
           ]
@@ -893,43 +917,73 @@
           "periode": "202507",
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250701id_/https://www.indy.fr/prix",
-          "confiance": "moyenne",
-          "remarque": "Les offres sont multiples et certaines sont ambiguës sur l'engagement.",
+          "confiance": "basse",
+          "remarque": "Les offres Premium sont ambiguës avec plusieurs prix et engagements.",
           "offres": [
             {
-              "nom": "Premium",
+              "nom": "Basic",
+              "prixMensuelEuros": 0,
+              "engagement": "inconnu",
+              "cible": "independant"
+            },
+            {
+              "nom": "Premium (annuel)",
               "prixMensuelEuros": 12,
               "engagement": "annuel",
               "cible": "societe"
             },
             {
-              "nom": "Premium",
+              "nom": "Premium (sans engagement)",
               "prixMensuelEuros": 16,
               "engagement": "inconnu",
               "cible": "societe"
             },
             {
-              "nom": "Premium",
+              "nom": "Premium (annuel, 22€)",
               "prixMensuelEuros": 22,
               "engagement": "annuel",
               "cible": "societe"
             },
             {
-              "nom": "Premium",
+              "nom": "Premium (sans engagement, 28€)",
               "prixMensuelEuros": 28,
               "engagement": "inconnu",
               "cible": "societe"
             },
             {
-              "nom": "Premium",
+              "nom": "Premium (annuel, 49€)",
               "prixMensuelEuros": 49,
               "engagement": "annuel",
               "cible": "societe"
             },
             {
-              "nom": "Premium",
+              "nom": "Premium (sans engagement, 59€)",
               "prixMensuelEuros": 59,
               "engagement": "inconnu",
+              "cible": "societe"
+            },
+            {
+              "nom": "Premium (annuel, 20€)",
+              "prixMensuelEuros": 20,
+              "engagement": "annuel",
+              "cible": "societe"
+            },
+            {
+              "nom": "Premium (sans engagement, 27€)",
+              "prixMensuelEuros": 27,
+              "engagement": "inconnu",
+              "cible": "societe"
+            },
+            {
+              "nom": "Premium (SCI à l'IR)",
+              "prixMensuelEuros": 24,
+              "engagement": "annuel",
+              "cible": "societe"
+            },
+            {
+              "nom": "Premium (SCI à l'IS)",
+              "prixMensuelEuros": 32,
+              "engagement": "annuel",
               "cible": "societe"
             }
           ]
@@ -940,29 +994,35 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20251001id_/https://www.indy.fr/prix",
           "confiance": "basse",
-          "remarque": "Les offres sont ambiguës et les cibles ne sont pas toujours claires.",
+          "remarque": "Les offres sont ambiguës et plusieurs Premium sont listées sans distinction claire.",
           "offres": [
             {
-              "nom": "Premium",
+              "nom": "Premium (societe)",
               "prixMensuelEuros": 12,
               "engagement": "annuel",
               "cible": "societe"
             },
             {
-              "nom": "Premium",
+              "nom": "Premium (EI à l'IR)",
+              "prixMensuelEuros": 22,
+              "engagement": "annuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Premium (EI à l'IS)",
               "prixMensuelEuros": 28,
               "engagement": "annuel",
-              "cible": "societe"
+              "cible": "independant"
             },
             {
-              "nom": "Premium",
-              "prixMensuelEuros": 59,
+              "nom": "Premium (SCI)",
+              "prixMensuelEuros": 24,
               "engagement": "annuel",
               "cible": "societe"
             },
             {
-              "nom": "Premium",
-              "prixMensuelEuros": 24,
+              "nom": "Premium (LMNP)",
+              "prixMensuelEuros": 32,
               "engagement": "annuel",
               "cible": "societe"
             }
@@ -974,7 +1034,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20260101id_/https://www.indy.fr/prix",
           "confiance": "basse",
-          "remarque": "Les informations sur les cibles des offres ne sont pas claires.",
+          "remarque": "Les offres ne sont pas clairement distinguées par leur cible ou engagement.",
           "offres": [
             {
               "nom": "Essentiel",
@@ -990,13 +1050,25 @@
             },
             {
               "nom": "Premium",
+              "prixMensuelEuros": 16,
+              "engagement": "inconnu",
+              "cible": "inconnu"
+            },
+            {
+              "nom": "Premium (EI à l'IR)",
               "prixMensuelEuros": 28,
               "engagement": "inconnu",
               "cible": "inconnu"
             },
             {
-              "nom": "Premium",
+              "nom": "Premium (EI à l'IS)",
               "prixMensuelEuros": 59,
+              "engagement": "inconnu",
+              "cible": "inconnu"
+            },
+            {
+              "nom": "Premium (SCI/LMNP)",
+              "prixMensuelEuros": 32,
               "engagement": "inconnu",
               "cible": "inconnu"
             }
@@ -1008,31 +1080,55 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20260401id_/https://www.indy.fr/prix",
           "confiance": "basse",
-          "remarque": "Les offres sont ambiguës et il y a des répétitions dans les noms.",
+          "remarque": "Les offres sont ambiguës et plusieurs prix pour Premium sans distinction claire.",
           "offres": [
             {
               "nom": "Essentiel",
               "prixMensuelEuros": 0,
               "engagement": "inconnu",
-              "cible": "independant"
+              "cible": "inconnu"
             },
             {
               "nom": "Plus",
               "prixMensuelEuros": 9,
               "engagement": "inconnu",
-              "cible": "independant"
+              "cible": "inconnu"
             },
             {
-              "nom": "Premium",
+              "nom": "Premium (annuel)",
+              "prixMensuelEuros": 12,
+              "engagement": "annuel",
+              "cible": "inconnu"
+            },
+            {
+              "nom": "Premium (mensuel)",
+              "prixMensuelEuros": 16,
+              "engagement": "mensuel",
+              "cible": "inconnu"
+            },
+            {
+              "nom": "Premium (EI à l'IR)",
               "prixMensuelEuros": 22,
               "engagement": "inconnu",
-              "cible": "independant"
+              "cible": "inconnu"
             },
             {
-              "nom": "Premium",
+              "nom": "Premium (EI à l'IS)",
               "prixMensuelEuros": 49,
               "engagement": "inconnu",
-              "cible": "independant"
+              "cible": "inconnu"
+            },
+            {
+              "nom": "Premium (annuel 264€)",
+              "prixMensuelEuros": 22,
+              "engagement": "annuel",
+              "cible": "inconnu"
+            },
+            {
+              "nom": "Premium (annuel 588€)",
+              "prixMensuelEuros": 49,
+              "engagement": "annuel",
+              "cible": "inconnu"
             }
           ]
         },
@@ -1042,7 +1138,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20260701id_/https://www.indy.fr/prix",
           "confiance": "basse",
-          "remarque": "Les offres sont ambiguës et il y a des répétitions dans les prix.",
+          "remarque": "Les offres sont ambiguës et les cibles ne sont pas clairement définies.",
           "offres": [
             {
               "nom": "Essentiel",
@@ -1053,19 +1149,31 @@
             {
               "nom": "Plus",
               "prixMensuelEuros": 9,
+              "engagement": "inconnu",
+              "cible": "inconnu"
+            },
+            {
+              "nom": "Premium (mensuel)",
+              "prixMensuelEuros": 19,
               "engagement": "mensuel",
               "cible": "inconnu"
             },
             {
-              "nom": "Premium",
-              "prixMensuelEuros": 22,
-              "engagement": "mensuel",
+              "nom": "Premium (annuel)",
+              "prixMensuelEuros": 15,
+              "engagement": "annuel",
               "cible": "inconnu"
             },
             {
-              "nom": "Premium",
+              "nom": "Premium (EI à l'IS)",
               "prixMensuelEuros": 49,
-              "engagement": "mensuel",
+              "engagement": "inconnu",
+              "cible": "inconnu"
+            },
+            {
+              "nom": "Premium (annuel, EI à l'IS)",
+              "prixMensuelEuros": 59,
+              "engagement": "annuel",
               "cible": "inconnu"
             }
           ]
@@ -2383,60 +2491,38 @@
     },
     {
       "banque": "Indy",
-      "offre": "Indy Premium",
-      "de": "2023-12-22",
-      "a": "2024-05-04",
-      "prixAvant": 20,
-      "prixApres": 49,
-      "ecartPourcent": 145,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
-    },
-    {
-      "banque": "Indy",
-      "offre": "Indy Premium",
-      "de": "2024-05-04",
-      "a": "2024-07-13",
-      "prixAvant": 49,
-      "prixApres": 12,
-      "ecartPourcent": 76,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
-    },
-    {
-      "banque": "Indy",
-      "offre": "Indy Premium",
-      "de": "2024-05-04",
-      "a": "2024-07-13",
-      "prixAvant": 49,
-      "prixApres": 22,
-      "ecartPourcent": 55,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
-    },
-    {
-      "banque": "Indy",
-      "offre": "Indy Premium",
-      "de": "2024-05-04",
-      "a": "2024-07-13",
-      "prixAvant": 49,
-      "prixApres": 20,
-      "ecartPourcent": 59,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
-    },
-    {
-      "banque": "Indy",
-      "offre": "indy",
+      "offre": "indy premium (déclarations obligatoires)",
       "de": "2024-05-04",
       "a": "2024-07-13",
       "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
     },
     {
       "banque": "Indy",
-      "offre": "Indy Premium",
+      "offre": "indy premium (liasse fiscale)",
+      "de": "2024-05-04",
+      "a": "2024-07-13",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "indy premium (profession liberale)",
       "de": "2024-07-13",
       "a": "2024-10-12",
-      "prixAvant": 20,
-      "prixApres": 49,
-      "ecartPourcent": 145,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "indy premium (société)",
+      "de": "2024-07-13",
+      "a": "2024-10-12",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "indy",
+      "de": "2024-07-13",
+      "a": "2024-10-12",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
     },
     {
       "banque": "Indy",
@@ -2447,23 +2533,24 @@
     },
     {
       "banque": "Indy",
-      "offre": "Premium",
-      "de": "2025-01-23",
-      "a": "2025-04-01",
-      "prixAvant": 27,
-      "prixApres": 12,
-      "ecartPourcent": 56,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
+      "offre": "indy premium (sans engagement)",
+      "de": "2024-10-12",
+      "a": "2025-01-23",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
     },
     {
       "banque": "Indy",
-      "offre": "Premium",
-      "de": "2025-01-23",
-      "a": "2025-04-01",
-      "prixAvant": 27,
-      "prixApres": 49,
-      "ecartPourcent": 81,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
+      "offre": "indy premium (sans engagement, sci)",
+      "de": "2024-10-12",
+      "a": "2025-01-23",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "indy premium (sans engagement, liasse fiscale)",
+      "de": "2024-10-12",
+      "a": "2025-01-23",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
     },
     {
       "banque": "Indy",
@@ -2474,83 +2561,195 @@
     },
     {
       "banque": "Indy",
-      "offre": "Premium",
+      "offre": "premium",
+      "de": "2025-01-23",
+      "a": "2025-04-01",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium (annuel 2)",
       "de": "2025-04-01",
       "a": "2025-07-11",
-      "prixAvant": 20,
-      "prixApres": 49,
-      "ecartPourcent": 145,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
     },
     {
       "banque": "Indy",
-      "offre": "Premium",
+      "offre": "premium (sans engagement 2)",
       "de": "2025-04-01",
       "a": "2025-07-11",
-      "prixAvant": 20,
-      "prixApres": 59,
-      "ecartPourcent": 195,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
     },
     {
       "banque": "Indy",
-      "offre": "Premium",
+      "offre": "premium (annuel 3)",
+      "de": "2025-04-01",
+      "a": "2025-07-11",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium (sans engagement 3)",
+      "de": "2025-04-01",
+      "a": "2025-07-11",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium sci à l'ir (annuel)",
+      "de": "2025-04-01",
+      "a": "2025-07-11",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium sci à l'ir (sans engagement)",
+      "de": "2025-04-01",
+      "a": "2025-07-11",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "basic",
       "de": "2025-07-11",
       "a": "2025-10-08",
-      "prixAvant": 59,
-      "prixApres": 12,
-      "ecartPourcent": 80,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
     },
     {
       "banque": "Indy",
-      "offre": "Premium",
+      "offre": "premium (annuel)",
       "de": "2025-07-11",
       "a": "2025-10-08",
-      "prixAvant": 59,
-      "prixApres": 28,
-      "ecartPourcent": 53,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
     },
     {
       "banque": "Indy",
-      "offre": "Premium",
+      "offre": "premium (sans engagement)",
       "de": "2025-07-11",
       "a": "2025-10-08",
-      "prixAvant": 59,
-      "prixApres": 24,
-      "ecartPourcent": 59,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
     },
     {
       "banque": "Indy",
-      "offre": "Premium",
+      "offre": "premium (annuel, 22€)",
+      "de": "2025-07-11",
+      "a": "2025-10-08",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium (sans engagement, 28€)",
+      "de": "2025-07-11",
+      "a": "2025-10-08",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium (annuel, 49€)",
+      "de": "2025-07-11",
+      "a": "2025-10-08",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium (sans engagement, 59€)",
+      "de": "2025-07-11",
+      "a": "2025-10-08",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium (annuel, 20€)",
+      "de": "2025-07-11",
+      "a": "2025-10-08",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium (sans engagement, 27€)",
+      "de": "2025-07-11",
+      "a": "2025-10-08",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium (sci à l'ir)",
+      "de": "2025-07-11",
+      "a": "2025-10-08",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium (sci à l'is)",
+      "de": "2025-07-11",
+      "a": "2025-10-08",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "Premium (EI à l'IS)",
       "de": "2025-10-08",
       "a": "2025-12-23",
-      "prixAvant": 24,
+      "prixAvant": 28,
       "prixApres": 59,
-      "ecartPourcent": 146,
+      "ecartPourcent": 111,
       "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
     },
     {
       "banque": "Indy",
-      "offre": "Premium",
+      "offre": "premium (societe)",
+      "de": "2025-10-08",
+      "a": "2025-12-23",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium (sci)",
+      "de": "2025-10-08",
+      "a": "2025-12-23",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium (lmnp)",
+      "de": "2025-10-08",
+      "a": "2025-12-23",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium",
       "de": "2025-12-23",
       "a": "2026-04-14",
-      "prixAvant": 59,
-      "prixApres": 22,
-      "ecartPourcent": 63,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
     },
     {
       "banque": "Indy",
-      "offre": "Premium",
+      "offre": "premium (sci/lmnp)",
+      "de": "2025-12-23",
+      "a": "2026-04-14",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium (ei à l'ir)",
       "de": "2026-04-14",
       "a": "2026-06-18",
-      "prixAvant": 49,
-      "prixApres": 22,
-      "ecartPourcent": 55,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium (annuel 264€)",
+      "de": "2026-04-14",
+      "a": "2026-06-18",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
+      "offre": "premium (annuel 588€)",
+      "de": "2026-04-14",
+      "a": "2026-06-18",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
     },
     {
       "banque": "Blank",
