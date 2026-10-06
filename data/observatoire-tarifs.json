@@ -1,5 +1,5 @@
 {
-  "genere": "2026-10-06T21:01:03.567Z",
+  "genere": "2026-10-06T21:02:49.055Z",
   "methode": "Releves des pages tarifaires publiques. Historique reconstitue depuis les archives publiques du web, releve courant depuis les pages en ligne. Chaque prix est date du jour ou la page a ete constatee.",
   "banques": {
     "qonto": {
@@ -12,7 +12,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20240101id_/https://qonto.com/fr/pricing",
           "confiance": "haute",
-          "remarque": "Les tarifs sont clairement indiqués, mais l'offre est limitée aux indépendants.",
+          "remarque": "Les tarifs sont clairement indiqués, mais l'offre est principalement pour les indépendants.",
           "offres": [
             {
               "nom": "Basic",
@@ -40,7 +40,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20240401id_/https://qonto.com/fr/pricing",
           "confiance": "haute",
-          "remarque": "Les tarifs sont clairement indiqués et les offres sont bien définies.",
+          "remarque": "Les tarifs sont clairs et bien définis pour chaque offre.",
           "offres": [
             {
               "nom": "Basic",
@@ -68,7 +68,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20240701id_/https://qonto.com/fr/pricing",
           "confiance": "haute",
-          "remarque": "Les tarifs sont clairement indiqués et les offres sont bien définies.",
+          "remarque": "Les tarifs sont clairement indiqués, mais l'offre spéciale de 3 mois gratuits pourrait prêter à confusion.",
           "offres": [
             {
               "nom": "Basic",
@@ -96,7 +96,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20241001id_/https://qonto.com/fr/pricing",
           "confiance": "haute",
-          "remarque": "Les tarifs sont clairement indiqués, mais il y a des mentions d'annuel qui peuvent prêter à confusion.",
+          "remarque": "Les tarifs sont clairs et bien définis pour chaque offre.",
           "offres": [
             {
               "nom": "Basic",
@@ -124,7 +124,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250201id_/https://qonto.com/fr/pricing",
           "confiance": "haute",
-          "remarque": "Les tarifs sont clairement indiqués pour chaque offre.",
+          "remarque": "Les tarifs sont clairement indiqués, mais il y a des mentions d'offres annuelles qui peuvent prêter à confusion.",
           "offres": [
             {
               "nom": "Basic",
@@ -179,8 +179,8 @@
           "periode": "202507",
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250701id_/https://qonto.com/fr/pricing",
-          "confiance": "haute",
-          "remarque": "Les tarifs sont clairement indiqués pour chaque offre.",
+          "confiance": "basse",
+          "remarque": "Les informations sur les tarifs sont incomplètes et certaines offres sont ambiguës.",
           "offres": [
             {
               "nom": "Basic",
@@ -259,12 +259,40 @@
           ]
         },
         {
+          "date": "2026-02-04",
+          "periode": "202601",
+          "source": "archive",
+          "urlReleve": "https://web.archive.org/web/20260101id_/https://qonto.com/fr/pricing",
+          "confiance": "haute",
+          "remarque": "Les tarifs sont clairement indiqués pour chaque offre.",
+          "offres": [
+            {
+              "nom": "Basic",
+              "prixMensuelEuros": 9,
+              "engagement": "mensuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Smart",
+              "prixMensuelEuros": 19,
+              "engagement": "mensuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Premium",
+              "prixMensuelEuros": 39,
+              "engagement": "mensuel",
+              "cible": "independant"
+            }
+          ]
+        },
+        {
           "date": "2026-04-07",
           "periode": "202604",
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20260401id_/https://qonto.com/fr/pricing",
           "confiance": "haute",
-          "remarque": "Les tarifs sont clairement indiqués, mais il y a des options et des détails supplémentaires qui pourraient prêter à confusion.",
+          "remarque": "Les tarifs sont clairement indiqués, mais il y a des mentions d'options et de services additionnels.",
           "offres": [
             {
               "nom": "Basic",
@@ -354,7 +382,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20240901id_/https://www.shine.fr/tarifs/",
           "confiance": "haute",
-          "remarque": "Les prix sont clairement indiqués, mais l'engagement n'est pas précisé.",
+          "remarque": "Les tarifs sont clairs, mais l'engagement n'est pas précisé.",
           "offres": [
             {
               "nom": "Shine Basic",
@@ -410,30 +438,30 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250401id_/https://www.shine.fr/tarifs/",
           "confiance": "moyenne",
-          "remarque": "Les prix sont affichés hors taxes et certains abonnements sont ambigus.",
+          "remarque": "Les prix sont affichés hors taxes et certains noms d'offres sont répétés.",
           "offres": [
             {
               "nom": "Start",
               "prixMensuelEuros": 9,
-              "engagement": "inconnu",
+              "engagement": "mensuel",
               "cible": "independant"
             },
             {
               "nom": "Plus",
               "prixMensuelEuros": 20,
-              "engagement": "inconnu",
+              "engagement": "mensuel",
               "cible": "independant"
             },
             {
               "nom": "Business",
               "prixMensuelEuros": 70,
-              "engagement": "inconnu",
+              "engagement": "mensuel",
               "cible": "societe"
             },
             {
               "nom": "Free",
               "prixMensuelEuros": 0,
-              "engagement": "inconnu",
+              "engagement": "mensuel",
               "cible": "independant"
             }
           ]
@@ -444,7 +472,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250701id_/https://www.shine.fr/tarifs/",
           "confiance": "haute",
-          "remarque": "Les tarifs sont clairs et bien présentés, mais il y a des répétitions dans le texte.",
+          "remarque": "Les tarifs sont clairs, mais l'engagement pour l'offre Free n'est pas précisé.",
           "offres": [
             {
               "nom": "Free",
@@ -478,7 +506,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20251001id_/https://www.shine.fr/tarifs/",
           "confiance": "haute",
-          "remarque": "Les prix sont clairs, mais les cibles ne sont pas toujours explicites.",
+          "remarque": "Les prix sont clairs, mais l'engagement n'est pas précisé pour chaque offre.",
           "offres": [
             {
               "nom": "Free",
@@ -489,19 +517,19 @@
             {
               "nom": "Start",
               "prixMensuelEuros": 9,
-              "engagement": "mensuel",
+              "engagement": "inconnu",
               "cible": "independant"
             },
             {
               "nom": "Plus",
               "prixMensuelEuros": 20,
-              "engagement": "mensuel",
+              "engagement": "inconnu",
               "cible": "independant"
             },
             {
               "nom": "Business",
               "prixMensuelEuros": 70,
-              "engagement": "mensuel",
+              "engagement": "inconnu",
               "cible": "societe"
             }
           ]
@@ -546,14 +574,8 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20260401id_/https://www.shine.fr/tarifs/",
           "confiance": "haute",
-          "remarque": "Les tarifs sont clairs, mais l'engagement pour l'offre Free est inconnu.",
+          "remarque": "Les tarifs sont clairs, mais les cibles ne sont pas toujours explicites.",
           "offres": [
-            {
-              "nom": "Free",
-              "prixMensuelEuros": 0,
-              "engagement": "inconnu",
-              "cible": "independant"
-            },
             {
               "nom": "Start",
               "prixMensuelEuros": 9,
@@ -571,6 +593,12 @@
               "prixMensuelEuros": 60,
               "engagement": "mensuel",
               "cible": "societe"
+            },
+            {
+              "nom": "Free",
+              "prixMensuelEuros": 0,
+              "engagement": "mensuel",
+              "cible": "independant"
             }
           ]
         },
@@ -580,7 +608,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20260801id_/https://www.shine.fr/tarifs/",
           "confiance": "haute",
-          "remarque": "Les tarifs sont clairs, mais l'engagement pour l'offre Free est inconnu.",
+          "remarque": "Les tarifs sont clairs, mais l'engagement pour certaines offres n'est pas précisé.",
           "offres": [
             {
               "nom": "Free",
@@ -653,25 +681,31 @@
           "periode": "202405",
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20240501id_/https://www.indy.fr/prix",
-          "confiance": "moyenne",
-          "remarque": "Les offres sont claires, mais le nom 'Indy Premium' est répété pour plusieurs niveaux de service.",
+          "confiance": "basse",
+          "remarque": "Les offres ne sont pas clairement définies pour chaque type d'abonnement.",
           "offres": [
             {
               "nom": "Indy Premium",
               "prixMensuelEuros": 12,
-              "engagement": "mensuel",
+              "engagement": "inconnu",
               "cible": "independant"
             },
             {
               "nom": "Indy Premium",
               "prixMensuelEuros": 22,
-              "engagement": "mensuel",
+              "engagement": "inconnu",
               "cible": "independant"
             },
             {
               "nom": "Indy Premium",
               "prixMensuelEuros": 49,
-              "engagement": "mensuel",
+              "engagement": "inconnu",
+              "cible": "independant"
+            },
+            {
+              "nom": "Indy",
+              "prixMensuelEuros": 0,
+              "engagement": "inconnu",
               "cible": "independant"
             }
           ]
@@ -682,30 +716,30 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20240701id_/https://www.indy.fr/prix",
           "confiance": "basse",
-          "remarque": "Les offres sont ambiguës et il y a plusieurs niveaux de prix sans clarté sur les différences.",
+          "remarque": "Les offres sont ambiguës et il y a des répétitions dans les noms.",
           "offres": [
             {
               "nom": "Indy Premium",
               "prixMensuelEuros": 12,
-              "engagement": "mensuel",
+              "engagement": "inconnu",
               "cible": "independant"
             },
             {
               "nom": "Indy Premium",
               "prixMensuelEuros": 22,
-              "engagement": "mensuel",
+              "engagement": "inconnu",
               "cible": "independant"
             },
             {
               "nom": "Indy Premium",
               "prixMensuelEuros": 49,
-              "engagement": "mensuel",
+              "engagement": "inconnu",
               "cible": "independant"
             },
             {
               "nom": "Indy Premium",
               "prixMensuelEuros": 20,
-              "engagement": "mensuel",
+              "engagement": "inconnu",
               "cible": "independant"
             }
           ]
@@ -716,7 +750,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20241001id_/https://www.indy.fr/prix",
           "confiance": "basse",
-          "remarque": "Les offres sont ambiguës et il y a des répétitions dans les noms.",
+          "remarque": "Les offres sont ambiguës et il y a plusieurs niveaux de prix sans clarté sur l'engagement.",
           "offres": [
             {
               "nom": "Indy Premium",
@@ -749,8 +783,8 @@
           "periode": "202501",
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250101id_/https://www.indy.fr/prix",
-          "confiance": "basse",
-          "remarque": "Les offres sont ambiguës et certaines valeurs sont répétées sans clarté sur la cible.",
+          "confiance": "moyenne",
+          "remarque": "Les offres Premium sont ambiguës et il y a plusieurs prix sans précision sur la cible.",
           "offres": [
             {
               "nom": "Essentiel",
@@ -826,73 +860,31 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250401id_/https://www.indy.fr/prix",
           "confiance": "basse",
-          "remarque": "Les offres sont ambiguës et certaines valeurs sont répétées sans clarté sur l'engagement.",
+          "remarque": "Les offres sont ambiguës et il y a plusieurs prix pour le même type d'abonnement.",
           "offres": [
-            {
-              "nom": "Basic",
-              "prixMensuelEuros": 0,
-              "engagement": "inconnu",
-              "cible": "independant"
-            },
             {
               "nom": "Premium",
               "prixMensuelEuros": 12,
               "engagement": "annuel",
-              "cible": "independant"
-            },
-            {
-              "nom": "Premium",
-              "prixMensuelEuros": 16,
-              "engagement": "inconnu",
-              "cible": "independant"
+              "cible": "societe"
             },
             {
               "nom": "Premium",
               "prixMensuelEuros": 22,
               "engagement": "annuel",
-              "cible": "independant"
-            },
-            {
-              "nom": "Premium",
-              "prixMensuelEuros": 28,
-              "engagement": "inconnu",
-              "cible": "independant"
+              "cible": "societe"
             },
             {
               "nom": "Premium",
               "prixMensuelEuros": 49,
               "engagement": "annuel",
-              "cible": "independant"
-            },
-            {
-              "nom": "Premium",
-              "prixMensuelEuros": 59,
-              "engagement": "inconnu",
-              "cible": "independant"
-            },
-            {
-              "nom": "Premium",
-              "prixMensuelEuros": 24,
-              "engagement": "annuel",
-              "cible": "independant"
-            },
-            {
-              "nom": "Premium",
-              "prixMensuelEuros": 32,
-              "engagement": "inconnu",
-              "cible": "independant"
+              "cible": "societe"
             },
             {
               "nom": "Premium",
               "prixMensuelEuros": 20,
               "engagement": "annuel",
-              "cible": "independant"
-            },
-            {
-              "nom": "Premium",
-              "prixMensuelEuros": 27,
-              "engagement": "inconnu",
-              "cible": "independant"
+              "cible": "societe"
             }
           ]
         },
@@ -948,7 +940,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20251001id_/https://www.indy.fr/prix",
           "confiance": "basse",
-          "remarque": "Les offres sont ambiguës et les cibles ne sont pas clairement définies.",
+          "remarque": "Les offres sont ambiguës et les cibles ne sont pas toujours claires.",
           "offres": [
             {
               "nom": "Premium",
@@ -1090,7 +1082,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20240401id_/https://www.blank.app/tarifs",
           "confiance": "moyenne",
-          "remarque": "Les cibles ne sont pas clairement définies pour chaque offre.",
+          "remarque": "Les offres sont destinées aux indépendants, mais l'engagement n'est pas précisé.",
           "offres": [
             {
               "nom": "Offre Simple",
@@ -1174,34 +1166,6 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250101id_/https://www.blank.app/tarifs",
           "confiance": "haute",
-          "remarque": "Les tarifs sont clairement indiqués et les offres sont bien définies.",
-          "offres": [
-            {
-              "nom": "Simple",
-              "prixMensuelEuros": 6,
-              "engagement": "mensuel",
-              "cible": "independant"
-            },
-            {
-              "nom": "Confort",
-              "prixMensuelEuros": 17,
-              "engagement": "mensuel",
-              "cible": "independant"
-            },
-            {
-              "nom": "Complète",
-              "prixMensuelEuros": 39,
-              "engagement": "mensuel",
-              "cible": "independant"
-            }
-          ]
-        },
-        {
-          "date": "2025-05-22",
-          "periode": "202505",
-          "source": "archive",
-          "urlReleve": "https://web.archive.org/web/20250501id_/https://www.blank.app/tarifs",
-          "confiance": "haute",
           "remarque": "Les tarifs sont clairement indiqués, mais l'engagement n'est pas précisé.",
           "offres": [
             {
@@ -1220,6 +1184,34 @@
               "nom": "Complète",
               "prixMensuelEuros": 39,
               "engagement": "inconnu",
+              "cible": "independant"
+            }
+          ]
+        },
+        {
+          "date": "2025-05-22",
+          "periode": "202505",
+          "source": "archive",
+          "urlReleve": "https://web.archive.org/web/20250501id_/https://www.blank.app/tarifs",
+          "confiance": "haute",
+          "remarque": "Les tarifs sont clairement indiqués et les offres sont bien définies.",
+          "offres": [
+            {
+              "nom": "Simple",
+              "prixMensuelEuros": 6,
+              "engagement": "mensuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Confort",
+              "prixMensuelEuros": 17,
+              "engagement": "mensuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Complète",
+              "prixMensuelEuros": 39,
+              "engagement": "mensuel",
               "cible": "independant"
             }
           ]
@@ -1385,8 +1377,8 @@
           "periode": "202501",
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250101id_/https://propulsebyca.fr/tarifs",
-          "confiance": "haute",
-          "remarque": "Les tarifs sont clairs, mais l'engagement n'est pas précisé.",
+          "confiance": "moyenne",
+          "remarque": "Les informations sur l'engagement ne sont pas claires.",
           "offres": [
             {
               "nom": "Start",
@@ -1451,8 +1443,8 @@
           "periode": "202511",
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20251101id_/https://propulsebyca.fr/tarifs",
-          "confiance": "moyenne",
-          "remarque": "Les informations sur l'engagement ne sont pas claires.",
+          "confiance": "haute",
+          "remarque": "Les tarifs sont clairs, mais l'engagement n'est pas précisé.",
           "offres": [
             {
               "nom": "Start",
@@ -1474,18 +1466,18 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20260101id_/https://propulsebyca.fr/tarifs",
           "confiance": "haute",
-          "remarque": "Les tarifs sont clairs, mais l'engagement n'est pas précisé.",
+          "remarque": "Les tarifs sont clairs, mais il y a beaucoup de répétitions dans le texte.",
           "offres": [
             {
               "nom": "Start",
               "prixMensuelEuros": 8,
-              "engagement": "inconnu",
+              "engagement": "mensuel",
               "cible": "independant"
             },
             {
               "nom": "Start+",
               "prixMensuelEuros": 17,
-              "engagement": "inconnu",
+              "engagement": "mensuel",
               "cible": "independant"
             }
           ]
@@ -1495,8 +1487,8 @@
           "periode": "202606",
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20260601id_/https://propulsebyca.fr/tarifs",
-          "confiance": "moyenne",
-          "remarque": "Les informations sur l'engagement ne sont pas claires.",
+          "confiance": "basse",
+          "remarque": "Les informations sur l'engagement ne sont pas claires et le texte est partiel.",
           "offres": [
             {
               "nom": "Start",
@@ -1524,7 +1516,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20240101id_/https://www.hellobank.fr/fr/tarifs",
           "confiance": "haute",
-          "remarque": "Les tarifs sont clairs et bien définis pour les offres professionnelles.",
+          "remarque": "Les tarifs sont clairs, mais l'engagement est mentionné comme 'sans engagement' ce qui peut prêter à confusion.",
           "offres": [
             {
               "nom": "Hello Prime",
@@ -1592,7 +1584,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250101id_/https://www.hellobank.fr/fr/tarifs",
           "confiance": "moyenne",
-          "remarque": "Les offres sont présentées sans précisions sur l'engagement.",
+          "remarque": "Les offres sont ambiguës et il n'est pas clair si elles s'adressent spécifiquement aux professionnels.",
           "offres": [
             {
               "nom": "Hello Prime",
@@ -1625,7 +1617,7 @@
           "periode": "202505",
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250501id_/https://www.hellobank.fr/fr/tarifs",
-          "confiance": "moyenne",
+          "confiance": "basse",
           "remarque": "Les informations sur l'engagement et la cible ne sont pas claires.",
           "offres": [
             {
@@ -1750,30 +1742,30 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20260601id_/https://www.hellobank.fr/fr/tarifs",
           "confiance": "moyenne",
-          "remarque": "Les cibles des offres ne sont pas clairement définies.",
+          "remarque": "Les cibles et engagements ne sont pas clairement définis.",
           "offres": [
             {
               "nom": "Hello Prime",
               "prixMensuelEuros": 5,
-              "engagement": "mensuel",
+              "engagement": "inconnu",
               "cible": "inconnu"
             },
             {
               "nom": "Hello Prime Duo",
               "prixMensuelEuros": 8,
-              "engagement": "mensuel",
+              "engagement": "inconnu",
               "cible": "inconnu"
             },
             {
               "nom": "Hello One",
               "prixMensuelEuros": 0,
-              "engagement": "mensuel",
+              "engagement": "inconnu",
               "cible": "inconnu"
             },
             {
               "nom": "Hello One Duo",
               "prixMensuelEuros": 0,
-              "engagement": "mensuel",
+              "engagement": "inconnu",
               "cible": "inconnu"
             }
           ]
@@ -1959,8 +1951,8 @@
           "periode": "202505",
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250501id_/https://finom.co/fr-fr/pricing/",
-          "confiance": "moyenne",
-          "remarque": "Les offres pour indépendants sont ambiguës et non incluses.",
+          "confiance": "haute",
+          "remarque": "Les offres sont clairement définies avec des prix mensuels explicites.",
           "offres": [
             {
               "nom": "Start",
@@ -1993,8 +1985,8 @@
           "periode": "202507",
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250701id_/https://finom.co/fr-fr/pricing/",
-          "confiance": "haute",
-          "remarque": "Les offres sont clairement définies avec des prix mensuels explicites.",
+          "confiance": "moyenne",
+          "remarque": "Les offres pour indépendants sont ambiguës et non incluses.",
           "offres": [
             {
               "nom": "Start",
@@ -2028,7 +2020,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20251001id_/https://finom.co/fr-fr/pricing/",
           "confiance": "moyenne",
-          "remarque": "Les offres sont présentées de manière complexe, ce qui rend difficile la distinction entre les cibles.",
+          "remarque": "Les noms des offres et les cibles ne sont pas toujours clairs.",
           "offres": [
             {
               "nom": "Basic",
@@ -2142,7 +2134,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20240601id_/https://www.anyti.me/fr/tarifs",
           "confiance": "moyenne",
-          "remarque": "Les informations sur les cibles sont parfois ambiguës.",
+          "remarque": "Les informations sur les cibles ne sont pas toujours claires.",
           "offres": [
             {
               "nom": "Start",
@@ -2222,7 +2214,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250101id_/https://www.anyti.me/fr/tarifs",
           "confiance": "moyenne",
-          "remarque": "Les informations sur les cibles sont parfois ambiguës.",
+          "remarque": "Les offres sont bien détaillées, mais il y a des répétitions et des informations non pertinentes.",
           "offres": [
             {
               "nom": "Start",
@@ -2262,7 +2254,7 @@
           "source": "archive",
           "urlReleve": "https://web.archive.org/web/20250401id_/https://www.anyti.me/fr/tarifs",
           "confiance": "moyenne",
-          "remarque": "Les informations sur les cibles ne sont pas toujours claires.",
+          "remarque": "Les offres sont claires mais il y a des répétitions et des informations non pertinentes.",
           "offres": [
             {
               "nom": "Start",
@@ -2431,6 +2423,13 @@
     },
     {
       "banque": "Indy",
+      "offre": "indy",
+      "de": "2024-05-04",
+      "a": "2024-07-13",
+      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Indy",
       "offre": "Indy Premium",
       "de": "2024-07-13",
       "a": "2024-10-12",
@@ -2468,16 +2467,6 @@
     },
     {
       "banque": "Indy",
-      "offre": "Premium",
-      "de": "2025-01-23",
-      "a": "2025-04-01",
-      "prixAvant": 27,
-      "prixApres": 59,
-      "ecartPourcent": 119,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
-    },
-    {
-      "banque": "Indy",
       "offre": "essentiel",
       "de": "2025-01-23",
       "a": "2025-04-01",
@@ -2488,19 +2477,9 @@
       "offre": "Premium",
       "de": "2025-04-01",
       "a": "2025-07-11",
-      "prixAvant": 27,
-      "prixApres": 12,
-      "ecartPourcent": 56,
-      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
-    },
-    {
-      "banque": "Indy",
-      "offre": "Premium",
-      "de": "2025-04-01",
-      "a": "2025-07-11",
-      "prixAvant": 27,
+      "prixAvant": 20,
       "prixApres": 49,
-      "ecartPourcent": 81,
+      "ecartPourcent": 145,
       "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
     },
     {
@@ -2508,17 +2487,10 @@
       "offre": "Premium",
       "de": "2025-04-01",
       "a": "2025-07-11",
-      "prixAvant": 27,
+      "prixAvant": 20,
       "prixApres": 59,
-      "ecartPourcent": 119,
+      "ecartPourcent": 195,
       "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
-    },
-    {
-      "banque": "Indy",
-      "offre": "basic",
-      "de": "2025-04-01",
-      "a": "2025-07-11",
-      "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
     },
     {
       "banque": "Indy",
