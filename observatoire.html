@@ -14,6 +14,30 @@
 <!-- Consentement : tout est refuse par defaut, jusqu a un choix explicite du visiteur. -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:600});</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1130243522190067" crossorigin="anonymous"></script>
+<style>
+.obs-tuiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.9rem;margin:1.6rem 0 2rem}
+.obs-tuile{background:#fff;border:1px solid #d7dfea;border-radius:16px;padding:1.1rem 1.2rem}
+.obs-tuile .v{font-size:1.9rem;font-weight:700;line-height:1.1;color:#0e1726;letter-spacing:-.02em}
+.obs-tuile .l{font-size:.82rem;color:#55647a;margin-top:.35rem;line-height:1.35}
+.obs-cartes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem;margin:1.2rem 0 2rem}
+.obs-carte{border-radius:14px;padding:.95rem 1.1rem;border:1px solid}
+.obs-carte .t{font-weight:650;font-size:.95rem;color:#0e1726}
+.obs-carte .p{font-size:1.35rem;font-weight:700;margin:.3rem 0;letter-spacing:-.01em}
+.obs-carte .d{font-size:.8rem;color:#55647a;line-height:1.5}
+.obs-etiq{display:inline-flex;align-items:center;gap:.3rem;font-size:.78rem;font-weight:650;padding:.12rem .5rem;border-radius:999px;border:1px solid}
+.obs-fig{margin:1.4rem 0 2rem;background:#fff;border:1px solid #d7dfea;border-radius:18px;padding:1.3rem 1.1rem .9rem}
+.obs-fig svg{width:100%;height:auto;display:block}
+.obs-leg{display:flex;flex-wrap:wrap;gap:.5rem .95rem;margin-top:.9rem;padding-top:.85rem;border-top:1px solid #eef2f7}
+.obs-leg span{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;color:#55647a}
+.obs-leg i{width:14px;height:4px;border-radius:2px;display:inline-block}
+.obs-cap{font-size:.84rem;color:#55647a;margin:.75rem 0 0;line-height:1.45}
+.obs-deux{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.1rem;margin:1.2rem 0 2rem}
+.obs-bloc{background:#fff;border:1px solid #d7dfea;border-radius:16px;padding:1.1rem 1.2rem}
+.obs-bloc h3{margin:0 0 .6rem;font-size:1rem}
+.obs-bloc ul{margin:0;padding-left:1.1rem}
+.obs-bloc li{margin:.3rem 0;font-size:.92rem}
+@media(max-width:560px){.obs-tuile .v{font-size:1.55rem}}
+</style>
 </head>
 <body>
 <div id="ca-prog"></div>
@@ -36,22 +60,33 @@
 <section><div class="wrap">
 <h1>Observatoire des tarifs bancaires pro</h1>
 <p class="intro">Les comparatifs de comptes pro vous disent ce qu’une banque coûte aujourd’hui. Aucun ne vous dit ce qu’elle coûtait l’an dernier. Nous relevons les tarifs publics de 6 banques et néobanques destinées aux indépendants, et nous gardons l’historique.</p>
-<p style="color:#55647a;font-size:.95rem">6 banques suivies · 54 relevés · du 6 janvier 2024 au 7 octobre 2026</p>
+<div class="obs-tuiles">
+<div class="obs-tuile"><div class="v">6</div><div class="l">banques suivies</div></div>
+<div class="obs-tuile"><div class="v">54</div><div class="l">relevés datés</div></div>
+<div class="obs-tuile"><div class="v" style="color:#b91c1c">7</div><div class="l">mouvements de tarif constatés</div></div>
+<div class="obs-tuile"><div class="v" style="color:#047857">4</div><div class="l">banques qui n’ont pas bougé</div></div>
+</div>
+<p style="color:#55647a;font-size:.95rem;margin-top:-1.2rem">Du 6 janvier 2024 au 7 octobre 2026.</p>
+<div class="obs-deux">
+<div class="obs-bloc"><h3><span class="obs-etiq" style="color:#b91c1c;background:#fef2f2;border-color:#fecaca">↑ ont bougé</span></h3><ul><li><a href="/observatoire-finom">Finom</a></li><li><a href="/observatoire-shine">Shine</a></li></ul></div>
+<div class="obs-bloc"><h3><span class="obs-etiq" style="color:#55647a;background:#f6f8fc;border-color:#d7dfea">• tarifs inchangés</span></h3><ul><li><a href="/observatoire-anytime">Anytime</a></li><li><a href="/observatoire-blank">Blank</a></li><li><a href="/observatoire-propulse">Propulse by CA</a></li><li><a href="/observatoire-qonto">Qonto</a></li></ul><p class="obs-cap">Sur toute la période suivie, pas un prix modifié. C’est une information en soi : ce marché bouge moins qu’on ne le croit.</p></div>
+</div>
 <h2>Ce qui a changé</h2>
-<p>Chaque ligne est une variation constatée entre deux relevés successifs de la même page tarifaire, pour la même offre et le même type d’engagement.</p>
-<table><thead><tr><th>Banque</th><th>Offre</th><th>Avant</th><th>Après</th><th>Variation</th><th>Entre</th></tr></thead><tbody>
-<tr><td><a href="/observatoire-shine">Shine</a></td><td>Business</td><td>60 €</td><td><strong>45 €</strong></td><td style="color:#047857">↘ -25 %</td><td style="font-size:.9rem">29 août 2026<br>et 7 octobre 2026</td></tr>
-<tr><td><a href="/observatoire-finom">Finom</a></td><td>Enterprise</td><td>249 €</td><td><strong>339 €</strong></td><td style="color:#b91c1c">↗ +36 %</td><td style="font-size:.9rem">21 août 2024<br>et 14 janvier 2025</td></tr>
-<tr><td><a href="/observatoire-finom">Finom</a></td><td>Corporate</td><td>119 €</td><td><strong>149 €</strong></td><td style="color:#b91c1c">↗ +25 %</td><td style="font-size:.9rem">21 août 2024<br>et 14 janvier 2025</td></tr>
-<tr><td><a href="/observatoire-finom">Finom</a></td><td>Premium</td><td>34 €</td><td><strong>40 €</strong></td><td style="color:#b91c1c">↗ +18 %</td><td style="font-size:.9rem">21 août 2024<br>et 14 janvier 2025</td></tr>
-<tr><td><a href="/observatoire-finom">Finom</a></td><td>Start</td><td>14 €</td><td><strong>17 €</strong></td><td style="color:#b91c1c">↗ +21 %</td><td style="font-size:.9rem">21 août 2024<br>et 14 janvier 2025</td></tr>
-</tbody></table>
+<p>Chaque carte est une variation constatée entre deux relevés successifs de la même page tarifaire, pour la même offre et le même type d’engagement.</p>
+<div class="obs-cartes">
+<div class="obs-carte" style="background:#ecfdf5;border-color:#a7f3d0"><div class="t"><a href="/observatoire-shine">Shine</a> — Business</div><div class="p" style="color:#047857">60 € → 45 €</div><div class="d"><span class="obs-etiq" style="color:#047857;background:#ecfdf5;border-color:#a7f3d0">↓ baisse de -25 %</span><br>entre les relevés du 29 août 2026 et du 7 octobre 2026</div></div>
+<div class="obs-carte" style="background:#fef2f2;border-color:#fecaca"><div class="t"><a href="/observatoire-finom">Finom</a> — Enterprise</div><div class="p" style="color:#b91c1c">249 € → 339 €</div><div class="d"><span class="obs-etiq" style="color:#b91c1c;background:#fef2f2;border-color:#fecaca">↑ hausse de +36 %</span><br>entre les relevés du 21 août 2024 et du 14 janvier 2025</div></div>
+<div class="obs-carte" style="background:#fef2f2;border-color:#fecaca"><div class="t"><a href="/observatoire-finom">Finom</a> — Corporate</div><div class="p" style="color:#b91c1c">119 € → 149 €</div><div class="d"><span class="obs-etiq" style="color:#b91c1c;background:#fef2f2;border-color:#fecaca">↑ hausse de +25 %</span><br>entre les relevés du 21 août 2024 et du 14 janvier 2025</div></div>
+<div class="obs-carte" style="background:#fef2f2;border-color:#fecaca"><div class="t"><a href="/observatoire-finom">Finom</a> — Premium</div><div class="p" style="color:#b91c1c">34 € → 40 €</div><div class="d"><span class="obs-etiq" style="color:#b91c1c;background:#fef2f2;border-color:#fecaca">↑ hausse de +18 %</span><br>entre les relevés du 21 août 2024 et du 14 janvier 2025</div></div>
+<div class="obs-carte" style="background:#fef2f2;border-color:#fecaca"><div class="t"><a href="/observatoire-finom">Finom</a> — Start</div><div class="p" style="color:#b91c1c">14 € → 17 €</div><div class="d"><span class="obs-etiq" style="color:#b91c1c;background:#fef2f2;border-color:#fecaca">↑ hausse de +21 %</span><br>entre les relevés du 21 août 2024 et du 14 janvier 2025</div></div>
+</div>
 <h2>Les refontes de gamme</h2>
 <p>Parfois une banque ne modifie pas ses prix : elle remplace toute sa gamme. Aucun nom d’offre ne survit, et comparer terme à terme n’aurait aucun sens. Ces mouvements sont pourtant ceux où la facture bouge le plus, et personne ne les documente. Nous les rapportons sans prétendre qu’une offre a remplacé une autre en particulier.</p>
 <p><b><a href="/observatoire-finom">Finom</a></b>, entre le relevé du 7 juillet 2025 et celui du 10 octobre 2025 :<br><span style="color:#55647a">avant</span> — Start 17 €, Premium 40 €, Corporate 149 €, Enterprise 339 €<br><span style="color:#55647a">après</span> — Basic 21 €, Smart 45 €, Pro 149 €, Grow 339 €</p>
 <p><b><a href="/observatoire-shine">Shine</a></b>, entre le relevé du 3 octobre 2024 et celui du 28 mars 2025 :<br><span style="color:#55647a">avant</span> — Shine Basic 7,9 €, Shine Plus 14,9 €, Shine Pro 29 €<br><span style="color:#55647a">après</span> — Start 9 €, Plus 20 €, Business 70 €, Free gratuit</p>
 <p style="font-size:.9rem;color:#55647a">À ne pas confondre avec un simple changement de libellés, à prix inchangés : Blank (19 janvier 2025).</p>
 <h2>L’offre la moins chère de chaque banque</h2>
+<figure class="obs-fig"><div style="display:grid;grid-template-columns:132px 1fr auto;align-items:center;gap:.7rem;margin:.55rem 0"><a href="/observatoire-shine" style="font-size:.9rem;font-weight:600">Shine</a><div style="background:#eef2f7;border-radius:4px;height:16px"><div style="width:2%;height:16px;border-radius:4px;background:#047857"></div></div><div style="font-size:.9rem;font-weight:700;min-width:64px;text-align:right">gratuit</div></div><div style="display:grid;grid-template-columns:132px 1fr auto;align-items:center;gap:.7rem;margin:.55rem 0"><a href="/observatoire-blank" style="font-size:.9rem;font-weight:600">Blank</a><div style="background:#eef2f7;border-radius:4px;height:16px"><div style="width:29%;height:16px;border-radius:4px;background:#6d5ce7"></div></div><div style="font-size:.9rem;font-weight:700;min-width:64px;text-align:right">6 €</div></div><div style="display:grid;grid-template-columns:132px 1fr auto;align-items:center;gap:.7rem;margin:.55rem 0"><a href="/observatoire-propulse" style="font-size:.9rem;font-weight:600">Propulse by CA</a><div style="background:#eef2f7;border-radius:4px;height:16px"><div style="width:38%;height:16px;border-radius:4px;background:#6d5ce7"></div></div><div style="font-size:.9rem;font-weight:700;min-width:64px;text-align:right">8 €</div></div><div style="display:grid;grid-template-columns:132px 1fr auto;align-items:center;gap:.7rem;margin:.55rem 0"><a href="/observatoire-qonto" style="font-size:.9rem;font-weight:600">Qonto</a><div style="background:#eef2f7;border-radius:4px;height:16px"><div style="width:43%;height:16px;border-radius:4px;background:#6d5ce7"></div></div><div style="font-size:.9rem;font-weight:700;min-width:64px;text-align:right">9 €</div></div><div style="display:grid;grid-template-columns:132px 1fr auto;align-items:center;gap:.7rem;margin:.55rem 0"><a href="/observatoire-anytime" style="font-size:.9rem;font-weight:600">Anytime</a><div style="background:#eef2f7;border-radius:4px;height:16px"><div style="width:69%;height:16px;border-radius:4px;background:#6d5ce7"></div></div><div style="font-size:.9rem;font-weight:700;min-width:64px;text-align:right">14,5 €</div></div><div style="display:grid;grid-template-columns:132px 1fr auto;align-items:center;gap:.7rem;margin:.55rem 0"><a href="/observatoire-finom" style="font-size:.9rem;font-weight:600">Finom</a><div style="background:#eef2f7;border-radius:4px;height:16px"><div style="width:100%;height:16px;border-radius:4px;background:#6d5ce7"></div></div><div style="font-size:.9rem;font-weight:700;min-width:64px;text-align:right">21 €</div></div><p class="obs-cap">Abonnement mensuel de l’offre la moins chère de chaque banque, au dernier relevé retenu. Le détail des offres et des dates figure dans le tableau ci-dessous.</p></figure>
 <table><thead><tr><th>Banque</th><th>Offre la moins chère</th><th>Prix par mois</th><th>Relevé le</th></tr></thead><tbody>
 <tr><td><a href="/observatoire-shine">Shine</a><br><span style="font-size:.85rem;color:#55647a">4 offres relevées</span></td><td>Free</td><td><strong>gratuit</strong></td><td>7 octobre 2026</td></tr>
 <tr><td><a href="/observatoire-blank">Blank</a><br><span style="font-size:.85rem;color:#55647a">3 offres relevées</span></td><td>Simple</td><td><strong>6 €</strong></td><td>7 octobre 2026</td></tr>
