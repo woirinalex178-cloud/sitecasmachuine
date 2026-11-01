@@ -1,5 +1,5 @@
 {
-  "genere": "2026-10-07T16:17:18.539Z",
+  "genere": "2026-11-01T06:01:59.535Z",
   "methode": "Releves des pages tarifaires publiques. Historique reconstitue depuis les archives publiques du web, releve courant depuis les pages en ligne. Chaque prix est date du jour ou la page a ete constatee.",
   "banques": {
     "qonto": {
@@ -369,6 +369,34 @@
               "cible": "independant"
             }
           ]
+        },
+        {
+          "date": "2026-11-01",
+          "periode": "202611",
+          "source": "direct",
+          "urlReleve": "https://qonto.com/fr/pricing",
+          "confiance": "haute",
+          "remarque": "Les offres sont clairement définies avec des prix explicites.",
+          "offres": [
+            {
+              "nom": "Basic",
+              "prixMensuelEuros": 9,
+              "engagement": "annuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Smart",
+              "prixMensuelEuros": 19,
+              "engagement": "annuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Premium",
+              "prixMensuelEuros": 39,
+              "engagement": "annuel",
+              "cible": "independant"
+            }
+          ]
         }
       ]
     },
@@ -671,6 +699,40 @@
           "urlReleve": "https://www.shine.fr/tarifs/",
           "confiance": "moyenne",
           "remarque": "Les offres sont claires mais certaines cibles ne sont pas spécifiées.",
+          "offres": [
+            {
+              "nom": "Start",
+              "prixMensuelEuros": 9,
+              "engagement": "mensuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Plus",
+              "prixMensuelEuros": 20,
+              "engagement": "mensuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Business",
+              "prixMensuelEuros": 45,
+              "engagement": "mensuel",
+              "cible": "societe"
+            },
+            {
+              "nom": "Free",
+              "prixMensuelEuros": 0,
+              "engagement": "mensuel",
+              "cible": "independant"
+            }
+          ]
+        },
+        {
+          "date": "2026-11-01",
+          "periode": "202611",
+          "source": "direct",
+          "urlReleve": "https://www.shine.fr/tarifs/",
+          "confiance": "haute",
+          "remarque": "Les offres sont clairement définies avec des prix explicites.",
           "offres": [
             {
               "nom": "Start",
@@ -1267,6 +1329,40 @@
               "cible": "inconnu"
             }
           ]
+        },
+        {
+          "date": "2026-11-01",
+          "periode": "202611",
+          "source": "direct",
+          "urlReleve": "https://www.indy.fr/prix",
+          "confiance": "basse",
+          "remarque": "Les offres sont ambiguës et il y a des variations de prix non clairement expliquées.",
+          "offres": [
+            {
+              "nom": "Essentiel",
+              "prixMensuelEuros": 0,
+              "engagement": "inconnu",
+              "cible": "societe"
+            },
+            {
+              "nom": "Plus",
+              "prixMensuelEuros": 9,
+              "engagement": "inconnu",
+              "cible": "societe"
+            },
+            {
+              "nom": "Autonomie",
+              "prixMensuelEuros": 24,
+              "engagement": "inconnu",
+              "cible": "societe"
+            },
+            {
+              "nom": "Sérénité",
+              "prixMensuelEuros": 63,
+              "engagement": "inconnu",
+              "cible": "societe"
+            }
+          ]
         }
       ]
     },
@@ -1525,6 +1621,34 @@
               "cible": "inconnu"
             }
           ]
+        },
+        {
+          "date": "2026-11-01",
+          "periode": "202611",
+          "source": "direct",
+          "urlReleve": "https://www.blank.app/tarifs",
+          "confiance": "haute",
+          "remarque": "Les offres sont clairement définies avec des prix explicites.",
+          "offres": [
+            {
+              "nom": "Simple",
+              "prixMensuelEuros": 6,
+              "engagement": "mensuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Confort",
+              "prixMensuelEuros": 17,
+              "engagement": "mensuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Complète",
+              "prixMensuelEuros": 39,
+              "engagement": "mensuel",
+              "cible": "independant"
+            }
+          ]
         }
       ]
     },
@@ -1733,6 +1857,28 @@
         {
           "date": "2026-10-07",
           "periode": "202610",
+          "source": "direct",
+          "urlReleve": "https://propulsebyca.fr/tarifs",
+          "confiance": "haute",
+          "remarque": "Les offres sont clairement définies avec des prix explicites.",
+          "offres": [
+            {
+              "nom": "Start",
+              "prixMensuelEuros": 8,
+              "engagement": "mensuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Start+",
+              "prixMensuelEuros": 17,
+              "engagement": "mensuel",
+              "cible": "independant"
+            }
+          ]
+        },
+        {
+          "date": "2026-11-01",
+          "periode": "202611",
           "source": "direct",
           "urlReleve": "https://propulsebyca.fr/tarifs",
           "confiance": "haute",
@@ -2369,6 +2515,46 @@
               "cible": "societe"
             }
           ]
+        },
+        {
+          "date": "2026-11-01",
+          "periode": "202611",
+          "source": "direct",
+          "urlReleve": "https://finom.co/fr-fr/pricing/",
+          "confiance": "basse",
+          "remarque": "Les offres ne sont pas clairement distinguées par engagement ou cible.",
+          "offres": [
+            {
+              "nom": "Solo",
+              "prixMensuelEuros": 0,
+              "engagement": "inconnu",
+              "cible": "independant"
+            },
+            {
+              "nom": "Basic",
+              "prixMensuelEuros": 21,
+              "engagement": "inconnu",
+              "cible": "independant"
+            },
+            {
+              "nom": "Smart",
+              "prixMensuelEuros": 45,
+              "engagement": "inconnu",
+              "cible": "inconnu"
+            },
+            {
+              "nom": "Pro",
+              "prixMensuelEuros": 149,
+              "engagement": "inconnu",
+              "cible": "inconnu"
+            },
+            {
+              "nom": "Grow",
+              "prixMensuelEuros": 339,
+              "engagement": "inconnu",
+              "cible": "inconnu"
+            }
+          ]
         }
       ]
     },
@@ -2667,6 +2853,34 @@
             {
               "nom": "Boost",
               "prixMensuelEuros": 29.5,
+              "engagement": "mensuel",
+              "cible": "independant"
+            }
+          ]
+        },
+        {
+          "date": "2026-11-01",
+          "periode": "202611",
+          "source": "direct",
+          "urlReleve": "https://www.anyti.me/fr/tarifs",
+          "confiance": "basse",
+          "remarque": "Les offres sont ambiguës et il y a des répétitions dans les noms.",
+          "offres": [
+            {
+              "nom": "Start",
+              "prixMensuelEuros": 14.5,
+              "engagement": "mensuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Easy",
+              "prixMensuelEuros": 29.5,
+              "engagement": "mensuel",
+              "cible": "independant"
+            },
+            {
+              "nom": "Boost",
+              "prixMensuelEuros": 39.5,
               "engagement": "mensuel",
               "cible": "independant"
             }
@@ -3091,6 +3305,26 @@
       "de": "2025-11-09",
       "a": "2026-03-23",
       "verdict": "offre absente du releve suivant : refonte de gamme ou extraction incomplete"
+    },
+    {
+      "banque": "Anytime",
+      "offre": "Start",
+      "de": "2026-10-07",
+      "a": "2026-11-01",
+      "prixAvant": 9.5,
+      "prixApres": 14.5,
+      "ecartPourcent": 53,
+      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
+    },
+    {
+      "banque": "Anytime",
+      "offre": "Easy",
+      "de": "2026-10-07",
+      "a": "2026-11-01",
+      "prixAvant": 19.5,
+      "prixApres": 29.5,
+      "ecartPourcent": 51,
+      "verdict": "variation superieure a 50 pour cent : a verifier a la main avant toute publication"
     }
   ]
 }
