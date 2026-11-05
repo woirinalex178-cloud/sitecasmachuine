@@ -1,0 +1,19 @@
+{
+  "cible": "Entreprise francaise immatriculee depuis moins de 12 mois, B2C locale, hors dept 54.",
+  "secteurs_prioritaires": ["restauration", "artisanat", "beaute-bien-etre", "batiment", "commerce de detail", "sante-liberal", "sport-loisirs"],
+  "secteurs_exclus": ["holding", "SCI", "marchand de biens", "conseil aux entreprises", "agence web", "agence de communication"],
+  "scoring": {
+    "pas_de_site": 40,
+    "site_obsolete_ou_non_mobile": 25,
+    "gbp_absente": 25,
+    "gbp_sans_photos": 10,
+    "reseaux_inactifs": 15,
+    "secteur_prioritaire": 10,
+    "creation_moins_6_mois": 10,
+    "carte_pdf_restaurant": 15,
+    "email_direct_trouve": 10,
+    "malus_deja_client_agence": -40
+  },
+  "seuil_qualifie": 50,
+  "seuil_prioritaire": 75
+}
