@@ -83,10 +83,19 @@ def cmd_add(a):
             # enrichit sans ecraser l'existant
             cur = index[p["cle"]]
             for k, v in p.items():
-                if k not in ("cle", "statut", "historique") and v not in (None, "", {}, []):
-                    cur.setdefault(k, v)
-            cur["signaux"] = {**p.get("signaux", {}), **cur.get("signaux", {})}
+                if k in ("cle", "statut", "historique", "signaux", "score", "ajoute_le"):
+                    continue
+                if v not in (None, "", {}, []) and cur.get(k) in (None, "", {}, []):
+                    cur[k] = v
+            # les signaux verifies les plus recents gagnent
+            cur["signaux"] = {**cur.get("signaux", {}), **p.get("signaux", {})}
+            avant = cur.get("score", 0)
             cur["score"] = score(cur)
+            if cur["score"] != avant:
+                cur.setdefault("historique", []).append(
+                    f"{now()} enrichi : score {avant} -> {cur['score']}")
+            if cur.get("statut") == "nouveau" and cur["score"] >= ICP["seuil_qualifie"]:
+                cur["statut"] = "qualifie"
             dup += 1
             continue
         p["score"] = score(p)
