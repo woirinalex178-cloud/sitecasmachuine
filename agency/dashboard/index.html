@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Pipeline agence</title><style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#1c2330;--mut:#667085;--line:#e3e6ec;--acc:#2b5fd9;--bar:#2b5fd9}
+@media(prefers-color-scheme:dark){:root{--bg:#12151b;--card:#1b2029;--fg:#e8ebf1;--mut:#9aa3b2;--line:#2a313d;--acc:#7da2ff;--bar:#7da2ff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:960px;margin:0 auto;padding:16px}
+h1{font-size:1.4rem;margin:0 0 4px}h2{font-size:1.05rem;margin:0 0 10px}
+.sub{color:var(--mut);font-size:.85rem;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:700px){.grid{grid-template-columns:1fr 1fr}.wide{grid-column:1/-1}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.kpi{text-align:center}.kpi b{display:block;font-size:1.6rem;font-variant-numeric:tabular-nums}.kpi span{color:var(--mut);font-size:.8rem}
+.row{display:grid;grid-template-columns:7rem 1fr 2.5rem;gap:8px;align-items:center;font-size:.9rem;margin:5px 0}
+.row i{display:block;height:10px;border-radius:5px;background:var(--bar);min-width:2px}
+.row em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums}
+.lbl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ol{margin:0;padding:0;list-style:none}
+li{display:flex;gap:10px;align-items:baseline;padding:8px 0;border-top:1px solid var(--line)}
+li:first-child{border-top:0}
+.sc{font-weight:700;color:var(--acc);min-width:2.2rem;font-variant-numeric:tabular-nums}
+.meta{color:var(--mut);font-size:.82rem}
+.tag{font-size:.75rem;border:1px solid var(--line);border-radius:999px;padding:1px 8px;color:var(--mut);white-space:nowrap}
+.empty{color:var(--mut)}
+</style></head>
+<body><main>
+<h1>Pipeline agence</h1>
+<div class="sub">Genere le 2026-11-05 15:30 &middot; source : data/prospects.ndjson</div>
+<div class="card" style="margin-bottom:12px"><div class="kpis">
+<div class="kpi"><b>0</b><span>prospects</span></div>
+<div class="kpi"><b>0</b><span>prioritaires</span></div>
+<div class="kpi"><b>0</b><span>gagnes</span></div></div></div>
+<div class="grid">
+<section class="card"><h2>Par statut</h2><p class="empty">Aucune donnee.</p></section>
+<section class="card"><h2>Par score</h2><p class="empty">Aucune donnee.</p></section>
+<section class="card wide"><h2>Par departement</h2><p class="empty">Aucune donnee.</p></section>
+<section class="card wide"><h2>20 prioritaires</h2><p class="empty">Aucun prospect actif.</p></section>
+</div></main></body></html>

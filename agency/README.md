@@ -52,3 +52,9 @@ avec ces chiffres, pas a l'intuition. Journal : `agency/state/pipeline.md`.
   ne repondent pas en direct ; la prospection passe par WebSearch / web-fetch. Ouvrir ces domaines
   rendrait la prospection beaucoup moins couteuse.
 - Aucun envoi d'email reel sans validation explicite dans la session.
+
+## Atelier : outils
+- `python3 agency/scripts/build_dashboard.py [--db f.ndjson] [--out index.html]` regenere `agency/dashboard/index.html` (statique, stdlib, lecture seule sur la base).
+- n8n `AGENCE - veille creations entreprises` (id KOQq0WGQ9o3fmYIL, INACTIF) : declencheur Schedule lundi 06h Europe/Paris ;
+  interroge recherche-entreprises.api.gouv.fr (sans cle, 10 depts x 3 pages, 54 exclu en dur, creations < 180 jours, secteurs cibles) ;
+  ecrit `/home/node/.n8n-files/agency/veille-AAAA-MM-JJ.ndjson` sur le VPS (a rapatrier puis `prospects.py add`). Aucun secret requis.
