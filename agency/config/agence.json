@@ -1,0 +1,10 @@
+{
+  "_consigne": "Rien n'est invente ici. Tant qu'un champ vaut A RENSEIGNER, build_courrier.py refuse de produire un courrier : une lettre signee d'une identite fausse est pire que pas de lettre.",
+  "nom": "A RENSEIGNER",
+  "signataire": "A RENSEIGNER",
+  "telephone": "A RENSEIGNER",
+  "email": "A RENSEIGNER",
+  "adresse": "A RENSEIGNER",
+  "siret": "A RENSEIGNER",
+  "base_url_demos": "A RENSEIGNER"
+}
