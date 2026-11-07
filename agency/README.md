@@ -55,15 +55,23 @@ teste, pas suppose :
 | Source | Depuis ce conteneur | Consequence |
 |---|---|---|
 | `recherche-entreprises.api.gouv.fr` | oui | gisement des creations recentes, gratuit, sans cle |
-| Overpass / OpenStreetMap | non (connexion reinitialisee) | `sonde_osm.py` est ecrit et pret, mais doit tourner ailleurs |
+| Overpass / OpenStreetMap | non, ici comme depuis le VPS n8n | injoignable |
+| Nominatim (memes donnees OSM) | oui, mais sans valeur | 0 correspondance sur 12 prospects : OSM ne cartographie pas des commerces de 1 a 6 mois |
+| Pages Jaunes | non (403) | malgre l'ouverture reseau |
 | `html.duckduckgo.com` | non (page anti-robot) | pas de recherche scriptee |
 | Google, Planity, Facebook, Instagram | non | fiche Google et activite reseaux invisibles en masse |
 | WebSearch / web-fetch des agents | oui | seule voie de verification fiable, mais elle coute des tokens |
 
-**Regle qui en decoule :** la verification en masse (site, telephone, fiche, reseaux) appartient au
-VPS n8n, qui n'a pas ces restrictions. Les agents de cette session verifient a la main les
-prospects a forte valeur, pas les 250 de la file. Ordre de grandeur mesure : environ 7 000 tokens
-par prospect verifie a la main.
+**Regle qui en decoule.** Il n'existe aucune source gratuite et scriptable de verification en
+masse, ni ici ni sur le VPS : tout a ete teste, rien ne passe. La verification reste donc
+manuelle, par les agents, a environ 7 000 tokens par prospect. Elle est reservee au haut du
+panier, et le reste de la file se vend sur ce que le registre prouve deja : nom, adresse, date
+de creation, activite. Une entreprise de trois mois n'a pas besoin qu'on prouve qu'elle n'a pas
+de site : la demo faite a son nom pose la question a sa place.
+
+**Le vrai goulot n'est pas la qualification, c'est le contact.** Le registre ne donne ni email ni
+telephone, et aucune source joignable ne les fournit : sur 25 prospects verifies a la main,
+0 email et 0 telephone trouves. Les adresses postales, elles, sont completes pour les 258.
 
 **Signaux jamais deduits.** Une etiquette absente d'une source incomplete ne prouve rien :
 `gbp_absente` et `reseaux_inactifs` restent vides tant qu'une source ne les a pas etablis, et

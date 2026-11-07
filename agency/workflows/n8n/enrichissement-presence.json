@@ -1,0 +1,204 @@
+{
+ "name": "AGENCE - enrichissement presence en ligne",
+ "nodes": [
+  {
+   "id": "e1",
+   "name": "Recevoir le lot",
+   "type": "n8n-nodes-base.webhook",
+   "typeVersion": 2,
+   "position": [
+    0,
+    0
+   ],
+   "webhookId": "agence-enrichissement-3f9a1c",
+   "parameters": {
+    "httpMethod": "POST",
+    "path": "agence-enrichissement-3f9a1c",
+    "responseMode": "lastNode",
+    "options": {}
+   }
+  },
+  {
+   "id": "e2",
+   "name": "Preparer les requetes",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    220,
+    0
+   ],
+   "parameters": {
+    "language": "javaScript",
+    "mode": "runOnceForAllItems",
+    "jsCode": "// Lot en entree : {ndjson:\"ligne\\nligne\"} ou {prospects:[...]}. 60 prospects max par appel.\nconst inp = $input.first().json;\nconst body = inp.body || inp;\nlet rows = [];\nif (Array.isArray(body.prospects)) rows = body.prospects;\nelse if (typeof body.ndjson === 'string') rows = body.ndjson.split('\\n').map(l => l.trim()).filter(Boolean).map(l => JSON.parse(l));\nconst MAX = 60;\nconst STOP = new Set(['le','la','les','de','du','des','sarl','sas','eurl','sasu','et','chez','sci','ei']);\nconst slug = s => (s || '').normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();\nconst accent = t => t.replace(/[aeiouc]/g, c => ({a:'[aàâä]',e:'[eéèêë]',i:'[iîï]',o:'[oôö]',u:'[uùûü]',c:'[cç]'}[c]));\nlet ignores = 0;\nconst out = [];\nfor (const r of rows.slice(0, MAX)) {\n  if (String(r.dept || '') === '54') { ignores++; continue; } // 54 reserve a Studio Celeste\n  let nom = r.nom_commercial;\n  if (!nom) { const m = /\\(([^)]+)\\)/.exec(r.nom || ''); nom = m ? m[1] : (r.nom || ''); }\n  const jetons = slug(nom).split(' ').filter(t => t.length >= 2 && !STOP.has(t));\n  const longest = [...jetons].sort((a, b) => b.length - a.length)[0] || '';\n  const ville = slug(r.ville).replace(/ /g, '[ -]');\n  const q = '[out:json][timeout:25];\\n' +\n    'area[\"name\"~\"^' + accent(ville) + '$\",i][\"boundary\"=\"administrative\"]->.a;\\n' +\n    'nwr(area.a)[\"name\"~\"' + accent(longest) + '\",i];\\nout tags center 20;';\n  out.push({ json: { siren: String(r.siren || ''), cle: r.cle || '', nom: r.nom || '', nom_recherche: nom, jetons, ville: r.ville || '',\n    dept: String(r.dept || ''), overpass_query: longest.length >= 3 ? q : '', web_query: '\"' + nom + '\" ' + (r.ville || ''), ignores_54: ignores } });\n}\nif (!out.length) return [{ json: { siren: '', overpass_query: '', web_query: '', vide: true, ignores_54: ignores } }];\nreturn out;"
+   }
+  },
+  {
+   "id": "e3",
+   "name": "Overpass OSM",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    440,
+    0
+   ],
+   "onError": "continueRegularOutput",
+   "parameters": {
+    "method": "POST",
+    "url": "https://overpass-api.de/api/interpreter",
+    "sendBody": true,
+    "contentType": "form-urlencoded",
+    "bodyParameters": {
+     "parameters": [
+      {
+       "name": "data",
+       "value": "={{ $json.overpass_query || '[out:json];out count;' }}"
+      }
+     ]
+    },
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "User-Agent",
+       "value": "agence-enrichissement/1.0 (contact: studioceleste81@gmail.com)"
+      }
+     ]
+    },
+    "options": {
+     "timeout": 40000,
+     "batching": {
+      "batch": {
+       "batchSize": 1,
+       "batchInterval": 1500
+      }
+     },
+     "response": {
+      "response": {
+       "neverError": true,
+       "responseFormat": "text"
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "e4",
+   "name": "Recherche web",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    660,
+    0
+   ],
+   "onError": "continueRegularOutput",
+   "parameters": {
+    "method": "POST",
+    "url": "https://html.duckduckgo.com/html/",
+    "sendBody": true,
+    "contentType": "form-urlencoded",
+    "bodyParameters": {
+     "parameters": [
+      {
+       "name": "q",
+       "value": "={{ $('Preparer les requetes').item.json.web_query }}"
+      },
+      {
+       "name": "kl",
+       "value": "fr-fr"
+      }
+     ]
+    },
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "User-Agent",
+       "value": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+      }
+     ]
+    },
+    "options": {
+     "timeout": 30000,
+     "batching": {
+      "batch": {
+       "batchSize": 1,
+       "batchInterval": 6000
+      }
+     },
+     "response": {
+      "response": {
+       "neverError": true,
+       "responseFormat": "text"
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "e5",
+   "name": "Assembler le NDJSON",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    880,
+    0
+   ],
+   "parameters": {
+    "language": "javaScript",
+    "mode": "runOnceForAllItems",
+    "jsCode": "// Assemble l'enrichissement. Regle : une etiquette presente est une preuve, une absence n'en est pas une.\n// Jamais de gbp_absente / reseaux_inactifs / pas_de_site=true produits ici.\nconst rows = $('Preparer les requetes').all().map(i => i.json);\nconst osmAll = $('Overpass OSM').all().map(i => i.json);\nconst webAll = $('Recherche web').all().map(i => i.json);\nconst today = new Date().toISOString().slice(0, 10);\nconst slug = s => (s || '').normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();\nconst EXCLUS = ['facebook.','instagram.','linkedin.','twitter.','x.com','tiktok.','youtube.','pappers.','societe.com','infogreffe.','pagesjaunes.','annuaire','verif.com','manageo.','bodacc','data.gouv','entreprises.gouv','gouv.fr','lefigaro','tripadvisor','yelp.','mappy.','google.','bing.','duckduckgo.','wikipedia.','indeed.','leboncoin.','planity.','doctolib.','ubereats.','justeat.','travauxbat','118218','cylex','kompass','europages','hoodspot','score3','lespagesjaunes','mon-artisan','starofservice','habitissimo','malt.','fr.linkedin','trustpilot','allobiz','entreprises.lefigaro','petitfute','bottin','journaldunet','dirigeant','rubypayeur','northdata','ellisphere','ouvert','horaires'];\nconst lines = [];\nlet osmOk = 0, webOk = 0, webBloque = 0;\nrows.forEach((p, idx) => {\n  if (p.vide || !p.siren) return;\n  let osm = osmAll[idx] || {};\n  let osmTxt = '';\n  if (typeof osm.data === 'string') { osmTxt = osm.data; try { osm = JSON.parse(osm.data); } catch (e) { osm = { error: 'reponse_non_json' }; } }\n  const web = webAll[idx] || {};\n  const diag = {};\n  const ev = { signaux: {} };\n  const src = [];\n  // --- OSM ---\n  if (!p.overpass_query) diag.osm = 'non_interroge';\n  else if (osm.error || !Array.isArray(osm.elements)) diag.osm = 'echec_requete : ' + ((osm.error && osm.error.message) || osm.error || '') + ' ' + osmTxt.replace(/<[^>]+>/g, ' ').replace(/\\s+/g, ' ').slice(0, 160);\n  else {\n    osmOk++;\n    const need = p.jetons.length;\n    const match = osm.elements.filter(e => {\n      const n = slug((e.tags || {}).name);\n      const hit = p.jetons.filter(t => n.split(' ').includes(t)).length;\n      return need > 0 && hit / need >= 0.8 && p.jetons.some(t => t.length >= 4 && n.split(' ').includes(t));\n    });\n    if (!match.length) diag.osm = 'aucun_objet_correspondant (ne prouve rien)';\n    else {\n      const t = match[0].tags;\n      diag.osm = 'trouve ' + match[0].type + '/' + match[0].id;\n      const site = t.website || t['contact:website'] || t.url;\n      const tel = t.phone || t['contact:phone'] || t['contact:mobile'];\n      if (site) { ev.site = site; ev.signaux.pas_de_site = false; src.push('OSM ' + match[0].type + '/' + match[0].id + ' tag website (overpass-api.de, ' + today + ')'); }\n      if (tel) { ev.telephone = tel; src.push('OSM ' + match[0].type + '/' + match[0].id + ' tag phone (overpass-api.de, ' + today + ')'); }\n    }\n  }\n  // --- Recherche web ---\n  const html = typeof web === 'string' ? web : (web.data || web.body || '');\n  if (!p.web_query) diag.web = 'non_interroge';\n  else if (web.error) diag.web = 'echec_requete';\n  else if (!/result__a/.test(html)) { diag.web = 'bloque_ou_vide : ' + html.replace(/<[^>]+>/g, ' ').replace(/\\s+/g, ' ').slice(0, 120); webBloque++; }\n  else {\n    webOk++;\n    const cands = [];\n    const parts = html.split('class=\"result__a\"').slice(1, 11);\n    for (const part of parts) {\n      const hm = /href=\"([^\"]+)\"/.exec(part); if (!hm) continue;\n      let href = hm[1].replace(/&amp;/g, '&');\n      const u = /uddg=([^&]+)/.exec(href); if (u) href = decodeURIComponent(u[1]);\n      let host; try { host = new URL(href.startsWith('//') ? 'https:' + href : href).hostname.replace(/^www\\./, ''); } catch (e) { continue; }\n      cands.push({ url: href, host, texte: slug(part.slice(0, 2500).replace(/<[^>]+>/g, ' ')) });\n    }\n    const villeSlug = slug(p.ville);\n    const ok = cands.filter(c => !EXCLUS.some(x => c.host.includes(x)) &&\n      p.jetons.some(t => t.length >= 4 && slug(c.host).replace(/ /g, '').includes(t)) && c.texte.includes(villeSlug));\n    diag.web = ok.length ? 'site_officiel_probable ' + ok[0].host : 'aucun_candidat_fiable (' + cands.length + ' resultats ecartes)';\n    if (ok.length && !ev.site) {\n      ev.site = ok[0].url; ev.signaux.pas_de_site = false;\n      src.push('recherche web duckduckgo ' + today + ' : domaine ' + ok[0].host + ' (nom + ville dans le resultat)');\n    }\n    if (!ok.length && cands.length) diag.web_candidats_non_retenus = cands.slice(0, 3).map(c => c.host);\n  }\n  const rec = { siren: p.siren, cle: p.cle || ('siren:' + p.siren), verif_sources: diag };\n  if (ev.site) rec.site = ev.site;\n  if (ev.telephone) rec.telephone = ev.telephone;\n  if (Object.keys(ev.signaux).length) rec.signaux = ev.signaux;\n  rec.source = src.length ? src.join(' ; ') : 'n8n VPS ' + today + ' : aucune preuve trouvee (osm: ' + diag.osm + ' ; web: ' + diag.web + ')';\n  lines.push(JSON.stringify(rec));\n});\nreturn [{ json: { count: lines.length, osm_interroge_ok: osmOk, web_ok: webOk, web_bloque: webBloque, ignores_54: rows[0] ? rows[0].ignores_54 : 0, ndjson: lines.join('\\n') + (lines.length ? '\\n' : '') } }];"
+   }
+  }
+ ],
+ "connections": {
+  "Recevoir le lot": {
+   "main": [
+    [
+     {
+      "node": "Preparer les requetes",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Preparer les requetes": {
+   "main": [
+    [
+     {
+      "node": "Overpass OSM",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Overpass OSM": {
+   "main": [
+    [
+     {
+      "node": "Recherche web",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Recherche web": {
+   "main": [
+    [
+     {
+      "node": "Assembler le NDJSON",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ },
+ "settings": {
+  "executionOrder": "v1",
+  "timezone": "Europe/Paris"
+ }
+}
