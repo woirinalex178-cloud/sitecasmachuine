@@ -9,15 +9,15 @@ Exemples :
 Le departement 54 est refuse par securite (reserve Studio Celeste).
 L'API ne filtre pas sur la date de creation : le filtre est applique ici, apres lecture.
 """
-import argparse, json, re, sys, time, urllib.parse, urllib.request
+import argparse, json, os, re, sys, time, urllib.parse, urllib.request
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from datetime import date
 
 API = "https://recherche-entreprises.api.gouv.fr/search"
 DEPT_INTERDITS = {"54"}
-# sections NAF utiles : I restauration/hebergement, G commerce, S autres services (coiffure, beaute),
-# F construction, Q sante, R arts-sport-loisirs, C industrie (artisanat de fabrication)
-SECTION_SECTEUR = {"I": "restauration", "G": "commerce de detail", "S": "beaute-bien-etre",
-                   "F": "batiment", "Q": "sante-liberal", "R": "sport-loisirs", "C": "artisanat"}
+import naf as naf_mod  # module local, voir agency/scripts/naf.py
+secteur_de = naf_mod.secteur_de
+
 EXCLUS_NOM = re.compile(r"\b(SCI|HOLDING|SAS SCI|MARCHAND DE BIENS)\b", re.I)
 
 
@@ -49,12 +49,16 @@ def ligne(e, section, depuis, dept_attendu=None):
     nom = e.get("nom_complet") or e.get("nom_raison_sociale") or ""
     if EXCLUS_NOM.search(nom):
         return None
+    secteur = secteur_de(s.get("activite_principale"))
+    if not secteur:
+        return None  # code NAF exclu par l'ICP ou hors cible
     mois = (date.today() - date(*map(int, creation.split("-")))).days / 30.4
     return {
         "nom": nom.title(),
+        "enseigne": (e.get("liste_enseignes") or [None])[0],
         "ville": (s.get("libelle_commune") or "").title(),
         "dept": dept,
-        "secteur": SECTION_SECTEUR.get(section, "commerce de detail"),
+        "secteur": secteur,
         "source": f"recherche-entreprises.api.gouv.fr siren {e.get('siren')}",
         "siren": e.get("siren"),
         "naf": s.get("activite_principale"),

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<meta name="theme-color" content="{{ACCENT}}" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1420" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="{{URL_SITE}}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="{{NOM}}">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:url" content="{{URL_SITE}}">
+<meta property="og:image" content="{{URL_SITE}}assets/og.svg">
+<meta property="og:image:type" content="image/svg+xml">
+<meta property="og:image:alt" content="{{NOM}} — {{METIER}} à {{VILLE}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{OG_TITLE}}">
+<meta name="twitter:description" content="{{DESCRIPTION}}">
+<meta name="twitter:image" content="{{URL_SITE}}assets/og.svg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-secteur="{{SECTEUR}}">
+<a class="skip" href="#principal">Aller au contenu</a>
+
+<header class="entete" id="entete">
+  <div class="shell entete-in">
+    <a class="marque" href="#accueil" aria-label="{{NOM}} — accueil">
+      <span class="sigle" aria-hidden="true">{{INITIALES}}</span>
+      <span class="marque-txt">
+        <strong>{{NOM}}</strong>
+        <small>{{METIER_COURT}} · {{VILLE}}</small>
+      </span>
+    </a>
+
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav-principal">
+      <span class="burger-ico" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="sr">Ouvrir le menu</span>
+    </button>
+
+    <nav class="nav" id="nav-principal" aria-label="Navigation principale">
+      <a href="#offre">{{NAV_OFFRE}}</a>
+      <a href="#apropos">À propos</a>
+      <a href="#horaires">Horaires &amp; accès</a>
+      <a href="#contact">Contact</a>
+      {{NAV_CTA}}
+    </nav>
+  </div>
+</header>
+
+<main id="principal">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="accueil">
+    <div class="hero-deco" aria-hidden="true">
+      <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+      <span class="grille"></span>
+    </div>
+    <div class="shell hero-in">
+      <div class="hero-txt">
+        <p class="eyebrow"><span class="pastille" aria-hidden="true"></span>{{EYEBROW}}</p>
+        <h1>{{ACCROCHE}}</h1>
+        <p class="lead">{{SOUS_TITRE}}</p>
+        <div class="actions">
+          {{CTA_PRIMAIRE}}
+          <a class="btn btn-ghost" href="{{MAPS_URL}}" target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Itinéraire
+          </a>
+        </div>
+        <ul class="preuves">{{PREUVES_HTML}}</ul>
+      </div>
+
+      <aside class="fiche" aria-label="Informations pratiques">
+        <div class="fiche-top">
+          <span class="statut" id="statut-ouvert" data-etat="inconnu">
+            <span class="dot" aria-hidden="true"></span><span id="statut-texte">Horaires</span>
+          </span>
+          <span class="fiche-tag">{{FICHE_TAG}}</span>
+        </div>
+        <dl class="fiche-liste">
+          <div>
+            <dt><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>Adresse</dt>
+            <dd>{{ADRESSE_RUE}}<br>{{CP}} {{VILLE}}</dd>
+          </div>
+          {{FICHE_TEL_HTML}}
+          <div>
+            <dt><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.4"/><path d="M12 7.6V12l3 1.9"/></svg>Aujourd’hui</dt>
+            <dd id="horaire-jour">—</dd>
+          </div>
+        </dl>
+        <a class="fiche-lien" href="#horaires">Voir tous les horaires
+          <svg class="ico ico-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6.5 18.5 12 13 17.5"/></svg>
+        </a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ OFFRE / SERVICES ============ -->
+  <section class="bloc" id="offre">
+    <div class="shell">
+      <header class="bloc-tete">
+        <p class="kicker">{{NAV_OFFRE}}</p>
+        <h2>{{SERVICES_TITRE}}</h2>
+        <p class="bloc-intro">{{SERVICES_INTRO}}</p>
+      </header>
+      <ul class="cartes" role="list">{{SERVICES_HTML}}</ul>
+      {{SERVICES_PIED}}
+    </div>
+  </section>
+
+  <!-- ============ À PROPOS ============ -->
+  <section class="bloc bloc-alt" id="apropos">
+    <div class="shell apropos">
+      <div class="apropos-txt">
+        <p class="kicker">À propos</p>
+        <h2>{{APROPOS_TITRE}}</h2>
+        {{APROPOS_HTML}}
+        <ul class="puces" role="list">{{APROPOS_PUCES}}</ul>
+      </div>
+      <div class="apropos-aside">
+        <figure class="citation">
+          <svg class="guillemets" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 6C6.4 7.5 5 10 5 13.2V18h5.2v-5.4H7.7c0-1.9.9-3.3 2.6-4.2L9.5 6Zm9 0C15.4 7.5 14 10 14 13.2V18h5.2v-5.4h-2.5c0-1.9.9-3.3 2.6-4.2L18.5 6Z"/></svg>
+          <blockquote>{{CITATION}}</blockquote>
+          <figcaption>{{CITATION_AUTEUR}}</figcaption>
+        </figure>
+        <dl class="chiffres">{{CHIFFRES_HTML}}</dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HORAIRES + ACCÈS ============ -->
+  <section class="bloc" id="horaires">
+    <div class="shell">
+      <header class="bloc-tete">
+        <p class="kicker">Pratique</p>
+        <h2>Horaires &amp; accès</h2>
+        <p class="bloc-intro">{{HORAIRES_INTRO}}</p>
+      </header>
+      <div class="duo">
+        <div class="panneau">
+          <h3 class="panneau-titre">Horaires d’ouverture</h3>
+          <ul class="horaires" id="liste-horaires" role="list">{{HORAIRES_HTML}}</ul>
+          <p class="note">{{HORAIRES_NOTE}}</p>
+        </div>
+        <div class="panneau">
+          <h3 class="panneau-titre">Nous trouver</h3>
+          <address class="reperage">
+            <span class="reperage-pin" aria-hidden="true">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            </span>
+            <span class="reperage-txt">
+              <strong>{{NOM}}</strong>
+              <span>{{ADRESSE_RUE}} · {{CP}} {{VILLE}}</span>
+            </span>
+          </address>
+          <ul class="acces" role="list">{{ACCES_HTML}}</ul>
+          <a class="btn btn-plein btn-bloc" href="{{MAPS_URL}}" target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5 9.5 5l5 2.5L20 5v11.5L14.5 19l-5-2.5L4 19V7.5Z"/><path d="M9.5 5v11.5M14.5 7.5V19"/></svg>
+            Ouvrir l’itinéraire
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="bloc bloc-contact" id="contact">
+    <div class="shell">
+      <div class="duo duo-contact">
+        <div class="contact-txt">
+          <p class="kicker">Contact</p>
+          <h2>{{CONTACT_TITRE}}</h2>
+          <p class="bloc-intro">{{CONTACT_INTRO}}</p>
+          <ul class="contact-liste" role="list">{{CONTACT_LISTE}}</ul>
+        </div>
+
+        <form class="form" id="form-contact" novalidate>
+          <div class="champ">
+            <label for="f-nom">Votre nom</label>
+            <input id="f-nom" name="nom" type="text" autocomplete="name" required placeholder="Prénom et nom">
+            <p class="err" data-pour="f-nom" hidden>Merci d’indiquer votre nom.</p>
+          </div>
+          <div class="champ-duo">
+            <div class="champ">
+              <label for="f-tel">Téléphone</label>
+              <input id="f-tel" name="telephone" type="tel" autocomplete="tel" inputmode="tel" placeholder="06 12 34 56 78">
+              <p class="err" data-pour="f-tel" hidden>Numéro incomplet.</p>
+            </div>
+            <div class="champ">
+              <label for="f-mail">E-mail</label>
+              <input id="f-mail" name="email" type="email" autocomplete="email" required placeholder="vous@exemple.fr">
+              <p class="err" data-pour="f-mail" hidden>Adresse e-mail invalide.</p>
+            </div>
+          </div>
+          <div class="champ">
+            <label for="f-objet">Votre demande</label>
+            <select id="f-objet" name="objet">{{OBJETS_HTML}}</select>
+          </div>
+          <div class="champ">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="message" rows="4" required placeholder="{{PLACEHOLDER_MSG}}"></textarea>
+            <p class="err" data-pour="f-msg" hidden>Merci d’écrire quelques mots.</p>
+          </div>
+          <button class="btn btn-plein btn-bloc" type="submit">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v13H4z"/><path d="m4.6 6.3 7.4 6 7.4-6"/></svg>
+            Envoyer la demande
+          </button>
+          <p class="form-note">{{FORM_NOTE}}</p>
+          <p class="form-retour" id="form-retour" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="shell pied-in">
+    <div class="pied-marque">
+      <span class="sigle" aria-hidden="true">{{INITIALES}}</span>
+      <div>
+        <strong>{{NOM}}</strong>
+        <p>{{ADRESSE_RUE}} · {{CP}} {{VILLE}}{{PIED_TEL}}</p>
+      </div>
+    </div>
+    <nav class="pied-nav" aria-label="Pied de page">
+      <a href="#offre">{{NAV_OFFRE}}</a>
+      <a href="#apropos">À propos</a>
+      <a href="#horaires">Horaires</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="shell pied-bas">
+    <p>© {{ANNEE}} {{NOM}}{{SIREN_TXT}}. Tous droits réservés.</p>
+    <p class="pied-demo">{{MENTION_DEMO}}</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">{{JSONLD}}</script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

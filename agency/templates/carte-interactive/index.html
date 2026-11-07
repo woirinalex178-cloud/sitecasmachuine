@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<meta name="theme-color" content="{{ACCENT}}" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1420" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="{{URL_SITE}}">
+<meta property="og:type" content="restaurant.menu">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="{{NOM}}">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:url" content="{{URL_SITE}}">
+<meta property="og:image" content="{{URL_SITE}}assets/og.svg">
+<meta property="og:image:type" content="image/svg+xml">
+<meta property="og:image:alt" content="La carte de {{NOM}} à {{VILLE}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{OG_TITLE}}">
+<meta name="twitter:description" content="{{DESCRIPTION}}">
+<meta name="twitter:image" content="{{URL_SITE}}assets/og.svg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-secteur="{{SECTEUR}}">
+<a class="skip" href="#carte">Aller à la carte</a>
+
+<header class="entete" id="entete">
+  <div class="shell entete-in">
+    <a class="marque" href="#accueil" aria-label="{{NOM}} — accueil">
+      <span class="sigle" aria-hidden="true">{{INITIALES}}</span>
+      <span class="marque-txt">
+        <strong>{{NOM}}</strong>
+        <small>{{METIER_COURT}} · {{VILLE}}</small>
+      </span>
+    </a>
+    <div class="entete-actions">
+      <button class="btn btn-ghost btn-compact" id="ouvrir-qr" type="button">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/><path d="M14 14h2v2h-2zM18 14h2v2h-2zM16 16h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z" stroke-width="1.2"/></svg>
+        <span class="long">QR code de table</span><span class="court">QR code</span>
+      </button>
+      {{NAV_CTA}}
+    </div>
+  </div>
+</header>
+
+<main id="principal">
+
+  <!-- ============ EN-TETE DE CARTE ============ -->
+  <section class="hero" id="accueil">
+    <div class="hero-deco" aria-hidden="true">
+      <span class="blob b1"></span><span class="blob b2"></span><span class="grille"></span>
+    </div>
+    <div class="shell hero-in">
+      <p class="eyebrow"><span class="pastille" aria-hidden="true"></span>{{EYEBROW}}</p>
+      <h1>{{ACCROCHE}}</h1>
+      <p class="lead">{{SOUS_TITRE}}</p>
+      <ul class="preuves" role="list">{{PREUVES_HTML}}</ul>
+      <dl class="bandeau-info">
+        <div>
+          <dt>Aujourd’hui</dt>
+          <dd><span class="statut" id="statut-ouvert" data-etat="inconnu"><span class="dot" aria-hidden="true"></span><span id="statut-texte">Horaires</span></span></dd>
+        </div>
+        <div>
+          <dt>Service</dt>
+          <dd id="horaire-jour">—</dd>
+        </div>
+        <div>
+          <dt>Adresse</dt>
+          <dd><a href="{{MAPS_URL}}" target="_blank" rel="noopener">{{ADRESSE_RUE}}, {{VILLE}}</a></dd>
+        </div>
+        {{BANDEAU_TEL}}
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ BARRE DE FILTRES ============ -->
+  <div class="barre" id="barre">
+    <div class="shell">
+      <div class="barre-haut">
+        <div class="recherche">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.4"/><path d="m16 16 4.2 4.2"/></svg>
+          <label class="sr" for="q">Rechercher un plat</label>
+          <input id="q" type="search" placeholder="Rechercher un plat, un ingrédient…" autocomplete="off" enterkeyhint="search">
+          <button class="vider" id="vider-q" type="button" hidden>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg>
+            <span class="sr">Effacer la recherche</span>
+          </button>
+        </div>
+        <div class="options">
+          <label class="bascule">
+            <input type="checkbox" id="f-vege">
+            <span class="bascule-piste" aria-hidden="true"><span class="bascule-pouce"></span></span>
+            <span class="bascule-txt">Végétarien</span>
+          </label>
+          <div class="champ-allerg">
+            <label class="sr" for="f-allerg">Masquer un allergène</label>
+            <select id="f-allerg">
+              <option value="">Tous les allergènes</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="chips" id="chips" role="tablist" aria-label="Catégories de la carte"></div>
+      <p class="compte" id="compte" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <!-- ============ CARTE ============ -->
+  <section class="bloc" id="carte">
+    <div class="shell">
+      <div id="menu-cible" class="menu"></div>
+      <p class="vide" id="vide" hidden>
+        <strong>Aucun plat ne correspond.</strong>
+        <span>Essayez un autre mot ou réinitialisez les filtres.</span>
+        <button class="btn btn-ghost" id="reinit" type="button">Réinitialiser</button>
+      </p>
+      <footer class="carte-pied">
+        <p class="note">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.4"/><path d="M12 11v5.2M12 7.9h.01"/></svg>
+          <span id="legende-allergenes">{{NOTE_ALLERGENES}}</span>
+        </p>
+        <p class="maj">Carte mise à jour le <time id="maj-date">{{DATE_MAJ}}</time> · <span id="compte-plats"></span></p>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ============ PRATIQUE ============ -->
+  <section class="bloc bloc-alt" id="pratique">
+    <div class="shell">
+      <header class="bloc-tete">
+        <p class="kicker">Pratique</p>
+        <h2>Horaires &amp; accès</h2>
+      </header>
+      <div class="duo">
+        <div class="panneau">
+          <h3 class="panneau-titre">Horaires de service</h3>
+          <ul class="horaires" id="liste-horaires" role="list">{{HORAIRES_HTML}}</ul>
+          <p class="note">{{HORAIRES_NOTE}}</p>
+        </div>
+        <div class="panneau">
+          <h3 class="panneau-titre">Nous trouver</h3>
+          <address class="adresse">
+            <strong>{{NOM}}</strong><br>
+            {{ADRESSE_RUE}}<br>{{CP}} {{VILLE}}
+          </address>
+          <ul class="acces" role="list">{{ACCES_HTML}}</ul>
+          <div class="duo-btn">
+            <a class="btn btn-plein" href="{{MAPS_URL}}" target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5 9.5 5l5 2.5L20 5v11.5L14.5 19l-5-2.5L4 19V7.5Z"/><path d="M9.5 5v11.5M14.5 7.5V19"/></svg>
+              Itinéraire
+            </a>
+            {{CTA_SECONDAIRE}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="shell pied-in">
+    <div class="pied-marque">
+      <span class="sigle" aria-hidden="true">{{INITIALES}}</span>
+      <div>
+        <strong>{{NOM}}</strong>
+        <p>{{ADRESSE_RUE}} · {{CP}} {{VILLE}}{{PIED_TEL}}</p>
+      </div>
+    </div>
+    <nav class="pied-nav" aria-label="Pied de page">
+      <a href="#carte">La carte</a>
+      <a href="#pratique">Horaires</a>
+      <a href="{{MAPS_URL}}" target="_blank" rel="noopener">Itinéraire</a>
+    </nav>
+  </div>
+  <div class="shell pied-bas">
+    <p>© {{ANNEE}} {{NOM}}{{SIREN_TXT}}. Prix en euros, taxes et service compris.</p>
+    <p class="pied-demo">{{MENTION_DEMO}}</p>
+  </div>
+</footer>
+
+<!-- ============ MODALE QR ============ -->
+<div class="modale" id="modale-qr" hidden>
+  <div class="modale-fond" data-fermer></div>
+  <div class="modale-boite" role="dialog" aria-modal="true" aria-labelledby="qr-titre">
+    <button class="modale-x" type="button" data-fermer>
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg>
+      <span class="sr">Fermer</span>
+    </button>
+    <h2 id="qr-titre">QR code de table</h2>
+    <p class="modale-intro">Généré ici, dans votre navigateur. Aucun service externe, aucun suivi : le code reste valable tant que l’adresse ne change pas.</p>
+
+    <div class="qr-zone">
+      <div class="qr-cadre" id="qr-cadre">
+        <canvas id="qr-canvas" aria-label="QR code vers la carte"></canvas>
+        <p class="qr-legende"><strong>{{NOM}}</strong><span id="qr-sous">Scannez pour voir la carte</span></p>
+      </div>
+      <div class="qr-reglages">
+        <div class="champ">
+          <label for="qr-url">Adresse encodée</label>
+          <input id="qr-url" type="url" value="{{URL_SITE}}" spellcheck="false">
+        </div>
+        <div class="champ">
+          <label for="qr-table">Mention sous le code <span class="facultatif">(facultatif)</span></label>
+          <input id="qr-table" type="text" placeholder="Table 12" maxlength="28">
+        </div>
+        <p class="qr-etat" id="qr-etat" role="status" aria-live="polite"></p>
+        <div class="qr-btns">
+          <button class="btn btn-plein" id="qr-png" type="button">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5v10M8 10.8l4 3.8 4-3.8M5 19h14"/></svg>
+            Télécharger en PNG
+          </button>
+          <button class="btn btn-ghost" id="qr-print" type="button">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V4h10v5M7 18H5V9h14v9h-2M7 14h10v6H7z"/></svg>
+            Imprimer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="application/json" id="menu-inline">{{MENU_INLINE}}</script>
+<script type="application/ld+json">{{JSONLD}}</script>
+<script src="assets/qr.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

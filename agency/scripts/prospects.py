@@ -171,6 +171,37 @@ def cmd_check(a):
     sys.exit(1 if err else 0)
 
 
+def cmd_retag(a):
+    """Reclasse les secteurs depuis le code NAF. Exclut les codes hors cible, et
+    reintegre ceux qu'une passe precedente avait exclus a tort."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import naf as naf_mod
+    rows, corriges, sortis, repris = load(), 0, [], []
+    for r in rows:
+        sect = naf_mod.secteur_de(r.get("naf"))
+        tag = f"{r.get('nom')} ({r.get('naf')})"
+        if sect is None:
+            if r.get("statut") not in ("exclu", "gagne", "rdv", "repondu"):
+                r["statut"] = "exclu"
+                r.setdefault("historique", []).append(
+                    f"{now()} exclu : {naf_mod.motif_exclusion(r.get('naf'))} (NAF {r.get('naf')})")
+                sortis.append(tag)
+            continue
+        if sect != r.get("secteur"):
+            r.setdefault("historique", []).append(
+                f"{now()} secteur corrige : {r.get('secteur')} -> {sect} (NAF {r.get('naf')})")
+            r["secteur"] = sect
+            corriges += 1
+        if r.get("statut") == "exclu" and any("exclu : " in h for h in r.get("historique", [])):
+            r["statut"] = "qualifie" if score(r) >= ICP["seuil_qualifie"] else "nouveau"
+            r.setdefault("historique", []).append(f"{now()} reintegre : NAF {r.get('naf')} dans la cible")
+            repris.append(tag)
+        r["score"] = score(r)
+    save(rows)
+    print(json.dumps({"secteurs_corriges": corriges, "exclus": sortis, "reintegres": repris},
+                     ensure_ascii=False, indent=2))
+
+
 def cmd_export(a):
     rows = load()
     cols = ["cle", "nom", "ville", "dept", "secteur", "score", "statut", "email", "telephone", "site", "offre_cible", "source", "ajoute_le"]
@@ -189,5 +220,6 @@ s = sub.add_parser("stats"); s.set_defaults(f=cmd_stats)
 s = sub.add_parser("next"); s.add_argument("--n", type=int, default=10); s.add_argument("--zone"); s.set_defaults(f=cmd_next)
 s = sub.add_parser("set"); s.add_argument("ident"); s.add_argument("--statut", required=True, choices=STATUTS); s.add_argument("--note"); s.set_defaults(f=cmd_set)
 s = sub.add_parser("check"); s.set_defaults(f=cmd_check)
+s = sub.add_parser("retag"); s.set_defaults(f=cmd_retag)
 s = sub.add_parser("export"); s.add_argument("--out", default="prospects.csv"); s.set_defaults(f=cmd_export)
 a = p.parse_args(); a.f(a)

@@ -1,0 +1,245 @@
+{
+  "_schema": "Carte interactive — une seule source de verite. Le client modifie CE fichier, la page se met a jour au rechargement. Champs d'un plat : nom (obligatoire), description, prix (nombre), categorie (id d'une categorie), vegetarien (bool), signature (bool), allergenes (liste de cles de l'objet allergenes).",
+  "restaurant": {
+    "nom": "La Casa Demir",
+    "ville": "Faulquemont",
+    "note_allergenes": "Les 14 allergènes réglementaires sont indiqués plat par plat. En cas d’allergie, prévenez-nous à la commande."
+  },
+  "devise": "€",
+  "maj": "2026-11-06",
+  "allergenes": {
+    "gluten": "Gluten",
+    "lait": "Lait",
+    "oeuf": "Œuf",
+    "poisson": "Poisson",
+    "crustaces": "Crustacés",
+    "mollusques": "Mollusques",
+    "fruits-coque": "Fruits à coque",
+    "arachide": "Arachide",
+    "soja": "Soja",
+    "moutarde": "Moutarde",
+    "celeri": "Céleri",
+    "sesame": "Sésame",
+    "sulfites": "Sulfites",
+    "lupin": "Lupin"
+  },
+  "categories": [
+    {
+      "id": "formules",
+      "nom": "Formules",
+      "description": "Servies midi et soir, à consommer sur place ou à emporter."
+    },
+    {
+      "id": "sandwichs",
+      "nom": "Sandwichs & galettes",
+      "description": "Pains et galettes préparés sur place."
+    },
+    {
+      "id": "assiettes",
+      "nom": "Assiettes",
+      "description": "Servies avec frites maison et crudités."
+    },
+    {
+      "id": "accompagnements",
+      "nom": "Accompagnements",
+      "description": null
+    },
+    {
+      "id": "desserts",
+      "nom": "Desserts",
+      "description": null
+    },
+    {
+      "id": "boissons",
+      "nom": "Boissons",
+      "description": null
+    }
+  ],
+  "plats": [
+    {
+      "nom": "Formule sandwich",
+      "description": "Sandwich au choix, frites maison et boisson 33 cl.",
+      "prix": 11.0,
+      "categorie": "formules",
+      "signature": true,
+      "allergenes": [
+        "gluten",
+        "sesame"
+      ]
+    },
+    {
+      "nom": "Formule assiette",
+      "description": "Assiette au choix, boisson 33 cl et dessert du jour.",
+      "prix": 15.5,
+      "categorie": "formules",
+      "allergenes": [
+        "gluten",
+        "lait"
+      ]
+    },
+    {
+      "nom": "Formule enfant",
+      "description": "Petit sandwich ou nuggets, frites, compote et sirop.",
+      "prix": 7.5,
+      "categorie": "formules",
+      "allergenes": [
+        "gluten",
+        "oeuf"
+      ]
+    },
+    {
+      "nom": "Galette viande",
+      "description": "Viande marinée, crudités, sauce au choix, galette chaude.",
+      "prix": 8.5,
+      "categorie": "sandwichs",
+      "signature": true,
+      "allergenes": [
+        "gluten",
+        "lait",
+        "sesame"
+      ]
+    },
+    {
+      "nom": "Sandwich poulet",
+      "description": "Poulet mariné grillé, crudités, sauce blanche maison.",
+      "prix": 8.0,
+      "categorie": "sandwichs",
+      "allergenes": [
+        "gluten",
+        "lait",
+        "oeuf"
+      ]
+    },
+    {
+      "nom": "Sandwich végétarien",
+      "description": "Falafels maison, houmous, crudités, sauce au sésame.",
+      "prix": 7.5,
+      "categorie": "sandwichs",
+      "vegetarien": true,
+      "allergenes": [
+        "gluten",
+        "sesame"
+      ]
+    },
+    {
+      "nom": "Burger maison",
+      "description": "Steak haché frais, cheddar, oignons confits, sauce maison.",
+      "prix": 9.5,
+      "categorie": "sandwichs",
+      "allergenes": [
+        "gluten",
+        "lait",
+        "oeuf",
+        "moutarde"
+      ]
+    },
+    {
+      "nom": "Assiette mixte",
+      "description": "Deux viandes au choix, frites maison, crudités, sauce.",
+      "prix": 14.5,
+      "categorie": "assiettes",
+      "allergenes": [
+        "lait",
+        "sesame"
+      ]
+    },
+    {
+      "nom": "Assiette poulet",
+      "description": "Poulet mariné grillé, frites maison, crudités.",
+      "prix": 12.5,
+      "categorie": "assiettes",
+      "allergenes": [
+        "lait"
+      ]
+    },
+    {
+      "nom": "Assiette végétarienne",
+      "description": "Falafels, houmous, salade, frites maison.",
+      "prix": 11.5,
+      "categorie": "assiettes",
+      "vegetarien": true,
+      "allergenes": [
+        "sesame"
+      ]
+    },
+    {
+      "nom": "Frites maison",
+      "description": "Pommes de terre fraîches, coupées sur place.",
+      "prix": 3.5,
+      "categorie": "accompagnements",
+      "vegetarien": true
+    },
+    {
+      "nom": "Salade de saison",
+      "description": "Crudités du jour, vinaigrette maison.",
+      "prix": 3.5,
+      "categorie": "accompagnements",
+      "vegetarien": true,
+      "allergenes": [
+        "moutarde"
+      ]
+    },
+    {
+      "nom": "Nuggets maison",
+      "description": "Six pièces, panure préparée sur place.",
+      "prix": 5.0,
+      "categorie": "accompagnements",
+      "allergenes": [
+        "gluten",
+        "oeuf"
+      ]
+    },
+    {
+      "nom": "Tiramisu",
+      "description": "Préparé le matin même.",
+      "prix": 4.0,
+      "categorie": "desserts",
+      "vegetarien": true,
+      "allergenes": [
+        "lait",
+        "oeuf",
+        "gluten"
+      ]
+    },
+    {
+      "nom": "Salade de fruits",
+      "description": "Fruits frais de saison.",
+      "prix": 3.5,
+      "categorie": "desserts",
+      "vegetarien": true
+    },
+    {
+      "nom": "Crêpe sucrée",
+      "description": "Sucre, chocolat ou confiture.",
+      "prix": 3.0,
+      "categorie": "desserts",
+      "vegetarien": true,
+      "allergenes": [
+        "gluten",
+        "lait",
+        "oeuf"
+      ]
+    },
+    {
+      "nom": "Boisson 33 cl",
+      "description": "Sodas, eau plate ou gazeuse.",
+      "prix": 2.0,
+      "categorie": "boissons",
+      "vegetarien": true
+    },
+    {
+      "nom": "Thé à la menthe",
+      "description": "Servi en verre, préparé à la commande.",
+      "prix": 2.5,
+      "categorie": "boissons",
+      "vegetarien": true
+    },
+    {
+      "nom": "Café",
+      "description": "Expresso ou allongé.",
+      "prix": 1.8,
+      "categorie": "boissons",
+      "vegetarien": true
+    }
+  ]
+}

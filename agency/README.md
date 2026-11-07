@@ -54,6 +54,10 @@ avec ces chiffres, pas a l'intuition. Journal : `agency/state/pipeline.md`.
 - Aucun envoi d'email reel sans validation explicite dans la session.
 
 ## Atelier : outils
+- `python3 agency/scripts/build_demo.py --cle <cle> [--type vitrine|carte] [--tel "…"] [--email "…"]`
+  genere une demo personnalisee au nom du prospect dans `agency/clients/<cle>[-carte]/`
+  (gabarits `agency/templates/site-vitrine` et `agency/templates/carte-interactive`, stdlib seule,
+  lecture seule sur la base, idempotent, README de maintenance inclus).
 - `python3 agency/scripts/build_dashboard.py [--db f.ndjson] [--out index.html]` regenere `agency/dashboard/index.html` (statique, stdlib, lecture seule sur la base).
 - n8n `AGENCE - veille creations entreprises` (id KOQq0WGQ9o3fmYIL, INACTIF) : declencheur Schedule lundi 06h Europe/Paris ;
   interroge recherche-entreprises.api.gouv.fr (sans cle, 10 depts x 3 pages, 54 exclu en dur, creations < 180 jours, secteurs cibles) ;
