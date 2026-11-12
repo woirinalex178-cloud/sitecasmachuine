@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carte de La Casa Demir — Restaurant à Faulquemont</title>
+<meta name="description" content="La carte de La Casa Demir à Faulquemont : plats, prix et allergènes, mise à jour en direct. Filtres végétarien et allergènes, lisible sur mobile.">
+<meta name="theme-color" content="#b23c17" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1420" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://la-casa-demir.fr/">
+<meta property="og:type" content="restaurant.menu">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="La Casa Demir">
+<meta property="og:title" content="La carte de La Casa Demir">
+<meta property="og:description" content="La carte de La Casa Demir à Faulquemont : plats, prix et allergènes, mise à jour en direct. Filtres végétarien et allergènes, lisible sur mobile.">
+<meta property="og:url" content="https://la-casa-demir.fr/">
+<meta property="og:image" content="https://la-casa-demir.fr/assets/og.svg">
+<meta property="og:image:type" content="image/svg+xml">
+<meta property="og:image:alt" content="La carte de La Casa Demir à Faulquemont">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La carte de La Casa Demir">
+<meta name="twitter:description" content="La carte de La Casa Demir à Faulquemont : plats, prix et allergènes, mise à jour en direct. Filtres végétarien et allergènes, lisible sur mobile.">
+<meta name="twitter:image" content="https://la-casa-demir.fr/assets/og.svg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-secteur="restauration">
+<a class="skip" href="#carte">Aller à la carte</a>
+
+<header class="entete" id="entete">
+  <div class="shell entete-in">
+    <a class="marque" href="#accueil" aria-label="La Casa Demir — accueil">
+      <span class="sigle" aria-hidden="true">CD</span>
+      <span class="marque-txt">
+        <strong>La Casa Demir</strong>
+        <small>Restaurant · Faulquemont</small>
+      </span>
+    </a>
+    <div class="entete-actions">
+      <button class="btn btn-ghost btn-compact" id="ouvrir-qr" type="button">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/><path d="M14 14h2v2h-2zM18 14h2v2h-2zM16 16h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z" stroke-width="1.2"/></svg>
+        <span class="long">QR code de table</span><span class="court">QR code</span>
+      </button>
+      <a class="btn btn-plein btn-compact" href="#pratique"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v13H4z"/><path d="m4.6 6.3 7.4 6 7.4-6"/></svg><span class="long">Réserver une table</span><span class="court">Réserver</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="principal">
+
+  <!-- ============ EN-TETE DE CARTE ============ -->
+  <section class="hero" id="accueil">
+    <div class="hero-deco" aria-hidden="true">
+      <span class="blob b1"></span><span class="blob b2"></span><span class="grille"></span>
+    </div>
+    <div class="shell hero-in">
+      <p class="eyebrow"><span class="pastille" aria-hidden="true"></span>Carte mise à jour le 6 novembre 2026</p>
+      <h1>La carte</h1>
+      <p class="lead">Tous nos plats, leurs prix et leurs allergènes. Filtrez, cherchez, et commandez en salle ou à emporter.</p>
+      <ul class="preuves" role="list"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><circle cx="12" cy="12" r="4.2"/></svg>Fait maison</li>
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>Au cœur de Faulquemont</li>
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20c0-6 3.6-10 8-10.6C19.4 15 16 20 12 20Z"/><path d="M12 20C7.6 19.4 4 15 4 9.4 8.4 10 12 14 12 20Z"/></svg>Options végétariennes</li></ul>
+      <dl class="bandeau-info">
+        <div>
+          <dt>Aujourd’hui</dt>
+          <dd><span class="statut" id="statut-ouvert" data-etat="inconnu"><span class="dot" aria-hidden="true"></span><span id="statut-texte">Horaires</span></span></dd>
+        </div>
+        <div>
+          <dt>Service</dt>
+          <dd id="horaire-jour">—</dd>
+        </div>
+        <div>
+          <dt>Adresse</dt>
+          <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=La+Casa+Demir+17+Rue+de+Metz+57380+Faulquemont" target="_blank" rel="noopener">17 Rue de Metz, Faulquemont</a></dd>
+        </div>
+        <div><dt>Contact</dt><dd><a href="#pratique">Voir les coordonnées</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ BARRE DE FILTRES ============ -->
+  <div class="barre" id="barre">
+    <div class="shell">
+      <div class="barre-haut">
+        <div class="recherche">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.4"/><path d="m16 16 4.2 4.2"/></svg>
+          <label class="sr" for="q">Rechercher un plat</label>
+          <input id="q" type="search" placeholder="Rechercher un plat, un ingrédient…" autocomplete="off" enterkeyhint="search">
+          <button class="vider" id="vider-q" type="button" hidden>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg>
+            <span class="sr">Effacer la recherche</span>
+          </button>
+        </div>
+        <div class="options">
+          <label class="bascule">
+            <input type="checkbox" id="f-vege">
+            <span class="bascule-piste" aria-hidden="true"><span class="bascule-pouce"></span></span>
+            <span class="bascule-txt">Végétarien</span>
+          </label>
+          <div class="champ-allerg">
+            <label class="sr" for="f-allerg">Masquer un allergène</label>
+            <select id="f-allerg">
+              <option value="">Tous les allergènes</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="chips" id="chips" role="tablist" aria-label="Catégories de la carte"></div>
+      <p class="compte" id="compte" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <!-- ============ CARTE ============ -->
+  <section class="bloc" id="carte">
+    <div class="shell">
+      <div id="menu-cible" class="menu"></div>
+      <p class="vide" id="vide" hidden>
+        <strong>Aucun plat ne correspond.</strong>
+        <span>Essayez un autre mot ou réinitialisez les filtres.</span>
+        <button class="btn btn-ghost" id="reinit" type="button">Réinitialiser</button>
+      </p>
+      <footer class="carte-pied">
+        <p class="note">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.4"/><path d="M12 11v5.2M12 7.9h.01"/></svg>
+          <span id="legende-allergenes">Les 14 allergènes réglementaires sont indiqués plat par plat. En cas d’allergie, prévenez-nous à la commande : certaines préparations partagent le même plan de travail.</span>
+        </p>
+        <p class="maj">Carte mise à jour le <time id="maj-date">6 novembre 2026</time> · <span id="compte-plats"></span></p>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ============ PRATIQUE ============ -->
+  <section class="bloc bloc-alt" id="pratique">
+    <div class="shell">
+      <header class="bloc-tete">
+        <p class="kicker">Pratique</p>
+        <h2>Horaires &amp; accès</h2>
+      </header>
+      <div class="duo">
+        <div class="panneau">
+          <h3 class="panneau-titre">Horaires de service</h3>
+          <ul class="horaires" id="liste-horaires" role="list"><li data-jour="1" data-ferme="1"><span class="jour">Lundi</span><span class="heures">Fermé</span></li>
+        <li data-jour="2" data-creneaux="11:45-14:00,19:00-21:30"><span class="jour">Mardi</span><span class="heures">11h45 – 14h · 19h – 21h30</span></li>
+        <li data-jour="3" data-creneaux="11:45-14:00,19:00-21:30"><span class="jour">Mercredi</span><span class="heures">11h45 – 14h · 19h – 21h30</span></li>
+        <li data-jour="4" data-creneaux="11:45-14:00,19:00-21:30"><span class="jour">Jeudi</span><span class="heures">11h45 – 14h · 19h – 21h30</span></li>
+        <li data-jour="5" data-creneaux="11:45-14:00,19:00-22:00"><span class="jour">Vendredi</span><span class="heures">11h45 – 14h · 19h – 22h</span></li>
+        <li data-jour="6" data-creneaux="11:45-14:00,19:00-22:00"><span class="jour">Samedi</span><span class="heures">11h45 – 14h · 19h – 22h</span></li>
+        <li data-jour="7" data-creneaux="11:45-14:30"><span class="jour">Dimanche</span><span class="heures">11h45 – 14h30</span></li></ul>
+          <p class="note">Fermeture exceptionnelle annoncée sur la fiche Google et sur cette page.</p>
+        </div>
+        <div class="panneau">
+          <h3 class="panneau-titre">Nous trouver</h3>
+          <address class="adresse">
+            <strong>La Casa Demir</strong><br>
+            17 Rue de Metz<br>57380 Faulquemont
+          </address>
+          <ul class="acces" role="list"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="4.5" width="15" height="15" rx="3.4"/><path d="M10 16V8.5h2.6a2.4 2.4 0 0 1 0 4.8H10"/></svg><span>Stationnement possible à proximité immédiate</span></li>
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4.8" width="14" height="11.4" rx="2.4"/><path d="M5 11h14M8.5 19.2v-3M15.5 19.2v-3"/><circle cx="8.6" cy="13.6" r=".9" fill="currentColor" stroke="none"/><circle cx="15.4" cy="13.6" r=".9" fill="currentColor" stroke="none"/></svg><span>Desservi par les transports en commun de Faulquemont</span></li>
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.4"/><path d="M12 8.2v4.2l2.8 1.8"/></svg><span>Rez-de-chaussée, accès de plain-pied</span></li></ul>
+          <div class="duo-btn">
+            <a class="btn btn-plein" href="https://www.google.com/maps/search/?api=1&amp;query=La+Casa+Demir+17+Rue+de+Metz+57380+Faulquemont" target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5 9.5 5l5 2.5L20 5v11.5L14.5 19l-5-2.5L4 19V7.5Z"/><path d="M9.5 5v11.5M14.5 7.5V19"/></svg>
+              Itinéraire
+            </a>
+            <a class="btn btn-ghost" href="#carte"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><circle cx="12" cy="12" r="4.2"/></svg>Voir la carte</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="shell pied-in">
+    <div class="pied-marque">
+      <span class="sigle" aria-hidden="true">CD</span>
+      <div>
+        <strong>La Casa Demir</strong>
+        <p>17 Rue de Metz · 57380 Faulquemont</p>
+      </div>
+    </div>
+    <nav class="pied-nav" aria-label="Pied de page">
+      <a href="#carte">La carte</a>
+      <a href="#pratique">Horaires</a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=La+Casa+Demir+17+Rue+de+Metz+57380+Faulquemont" target="_blank" rel="noopener">Itinéraire</a>
+    </nav>
+  </div>
+  <div class="shell pied-bas">
+    <p>© 2026 La Casa Demir · SIREN 104221718. Prix en euros, taxes et service compris.</p>
+    <p class="pied-demo">Démonstration réalisée par Studio Cas Machuine — contenus et horaires à valider avant mise en ligne.</p>
+  </div>
+</footer>
+
+<!-- ============ MODALE QR ============ -->
+<div class="modale" id="modale-qr" hidden>
+  <div class="modale-fond" data-fermer></div>
+  <div class="modale-boite" role="dialog" aria-modal="true" aria-labelledby="qr-titre">
+    <button class="modale-x" type="button" data-fermer>
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg>
+      <span class="sr">Fermer</span>
+    </button>
+    <h2 id="qr-titre">QR code de table</h2>
+    <p class="modale-intro">Généré ici, dans votre navigateur. Aucun service externe, aucun suivi : le code reste valable tant que l’adresse ne change pas.</p>
+
+    <div class="qr-zone">
+      <div class="qr-cadre" id="qr-cadre">
+        <canvas id="qr-canvas" aria-label="QR code vers la carte"></canvas>
+        <p class="qr-legende"><strong>La Casa Demir</strong><span id="qr-sous">Scannez pour voir la carte</span></p>
+      </div>
+      <div class="qr-reglages">
+        <div class="champ">
+          <label for="qr-url">Adresse encodée</label>
+          <input id="qr-url" type="url" value="https://la-casa-demir.fr/" spellcheck="false">
+        </div>
+        <div class="champ">
+          <label for="qr-table">Mention sous le code <span class="facultatif">(facultatif)</span></label>
+          <input id="qr-table" type="text" placeholder="Table 12" maxlength="28">
+        </div>
+        <p class="qr-etat" id="qr-etat" role="status" aria-live="polite"></p>
+        <div class="qr-btns">
+          <button class="btn btn-plein" id="qr-png" type="button">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5v10M8 10.8l4 3.8 4-3.8M5 19h14"/></svg>
+            Télécharger en PNG
+          </button>
+          <button class="btn btn-ghost" id="qr-print" type="button">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V4h10v5M7 18H5V9h14v9h-2M7 14h10v6H7z"/></svg>
+            Imprimer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="application/json" id="menu-inline">{"_schema": "Carte interactive — une seule source de verite. Le client modifie CE fichier, la page se met a jour au rechargement. Champs d'un plat : nom (obligatoire), description, prix (nombre), categorie (id d'une categorie), vegetarien (bool), signature (bool), allergenes (liste de cles de l'objet allergenes).", "restaurant": {"nom": "La Casa Demir", "ville": "Faulquemont", "note_allergenes": "Les 14 allergènes réglementaires sont indiqués plat par plat. En cas d’allergie, prévenez-nous à la commande."}, "devise": "€", "maj": "2026-11-06", "allergenes": {"gluten": "Gluten", "lait": "Lait", "oeuf": "Œuf", "poisson": "Poisson", "crustaces": "Crustacés", "mollusques": "Mollusques", "fruits-coque": "Fruits à coque", "arachide": "Arachide", "soja": "Soja", "moutarde": "Moutarde", "celeri": "Céleri", "sesame": "Sésame", "sulfites": "Sulfites", "lupin": "Lupin"}, "categories": [{"id": "formules", "nom": "Formules", "description": "Servies midi et soir, à consommer sur place ou à emporter."}, {"id": "sandwichs", "nom": "Sandwichs & galettes", "description": "Pains et galettes préparés sur place."}, {"id": "assiettes", "nom": "Assiettes", "description": "Servies avec frites maison et crudités."}, {"id": "accompagnements", "nom": "Accompagnements", "description": null}, {"id": "desserts", "nom": "Desserts", "description": null}, {"id": "boissons", "nom": "Boissons", "description": null}], "plats": [{"nom": "Formule sandwich", "description": "Sandwich au choix, frites maison et boisson 33 cl.", "prix": 11.0, "categorie": "formules", "signature": true, "allergenes": ["gluten", "sesame"]}, {"nom": "Formule assiette", "description": "Assiette au choix, boisson 33 cl et dessert du jour.", "prix": 15.5, "categorie": "formules", "allergenes": ["gluten", "lait"]}, {"nom": "Formule enfant", "description": "Petit sandwich ou nuggets, frites, compote et sirop.", "prix": 7.5, "categorie": "formules", "allergenes": ["gluten", "oeuf"]}, {"nom": "Galette viande", "description": "Viande marinée, crudités, sauce au choix, galette chaude.", "prix": 8.5, "categorie": "sandwichs", "signature": true, "allergenes": ["gluten", "lait", "sesame"]}, {"nom": "Sandwich poulet", "description": "Poulet mariné grillé, crudités, sauce blanche maison.", "prix": 8.0, "categorie": "sandwichs", "allergenes": ["gluten", "lait", "oeuf"]}, {"nom": "Sandwich végétarien", "description": "Falafels maison, houmous, crudités, sauce au sésame.", "prix": 7.5, "categorie": "sandwichs", "vegetarien": true, "allergenes": ["gluten", "sesame"]}, {"nom": "Burger maison", "description": "Steak haché frais, cheddar, oignons confits, sauce maison.", "prix": 9.5, "categorie": "sandwichs", "allergenes": ["gluten", "lait", "oeuf", "moutarde"]}, {"nom": "Assiette mixte", "description": "Deux viandes au choix, frites maison, crudités, sauce.", "prix": 14.5, "categorie": "assiettes", "allergenes": ["lait", "sesame"]}, {"nom": "Assiette poulet", "description": "Poulet mariné grillé, frites maison, crudités.", "prix": 12.5, "categorie": "assiettes", "allergenes": ["lait"]}, {"nom": "Assiette végétarienne", "description": "Falafels, houmous, salade, frites maison.", "prix": 11.5, "categorie": "assiettes", "vegetarien": true, "allergenes": ["sesame"]}, {"nom": "Frites maison", "description": "Pommes de terre fraîches, coupées sur place.", "prix": 3.5, "categorie": "accompagnements", "vegetarien": true}, {"nom": "Salade de saison", "description": "Crudités du jour, vinaigrette maison.", "prix": 3.5, "categorie": "accompagnements", "vegetarien": true, "allergenes": ["moutarde"]}, {"nom": "Nuggets maison", "description": "Six pièces, panure préparée sur place.", "prix": 5.0, "categorie": "accompagnements", "allergenes": ["gluten", "oeuf"]}, {"nom": "Tiramisu", "description": "Préparé le matin même.", "prix": 4.0, "categorie": "desserts", "vegetarien": true, "allergenes": ["lait", "oeuf", "gluten"]}, {"nom": "Salade de fruits", "description": "Fruits frais de saison.", "prix": 3.5, "categorie": "desserts", "vegetarien": true}, {"nom": "Crêpe sucrée", "description": "Sucre, chocolat ou confiture.", "prix": 3.0, "categorie": "desserts", "vegetarien": true, "allergenes": ["gluten", "lait", "oeuf"]}, {"nom": "Boisson 33 cl", "description": "Sodas, eau plate ou gazeuse.", "prix": 2.0, "categorie": "boissons", "vegetarien": true}, {"nom": "Thé à la menthe", "description": "Servi en verre, préparé à la commande.", "prix": 2.5, "categorie": "boissons", "vegetarien": true}, {"nom": "Café", "description": "Expresso ou allongé.", "prix": 1.8, "categorie": "boissons", "vegetarien": true}]}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "La Casa Demir",
+  "description": "Une cuisine de produits frais, préparée sur place chaque jour. Midi et soir, sur place ou à emporter.",
+  "url": "https://la-casa-demir.fr/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "17 Rue de Metz",
+    "postalCode": "57380",
+    "addressLocality": "Faulquemont",
+    "addressCountry": "FR"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Faulquemont"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "https://schema.org/Tuesday",
+      "opens": "11:45",
+      "closes": "14:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "https://schema.org/Tuesday",
+      "opens": "19:00",
+      "closes": "21:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "https://schema.org/Wednesday",
+      "opens": "11:45",
+      "closes": "14:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "https://schema.org/Wednesday",
+      "opens": "19:00",
+      "closes": "21:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "https://schema.org/Thursday",
+      "opens": "11:45",
+      "closes": "14:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "https://schema.org/Thursday",
+      "opens": "19:00",
+      "closes": "21:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "https://schema.org/Friday",
+      "opens": "11:45",
+      "closes": "14:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "https://schema.org/Friday",
+      "opens": "19:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "https://schema.org/Saturday",
+      "opens": "11:45",
+      "closes": "14:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "https://schema.org/Saturday",
+      "opens": "19:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "https://schema.org/Sunday",
+      "opens": "11:45",
+      "closes": "14:30"
+    }
+  ],
+  "currenciesAccepted": "EUR",
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "SIREN",
+    "value": "104221718"
+  },
+  "servesCuisine": "Française",
+  "priceRange": "€€",
+  "acceptsReservations": "True",
+  "hasMenu": {
+    "@type": "Menu",
+    "name": "Carte de La Casa Demir",
+    "inLanguage": "fr",
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection",
+        "name": "Formules",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Formule sandwich",
+            "description": "Sandwich au choix, frites maison et boisson 33 cl.",
+            "offers": {
+              "@type": "Offer",
+              "price": "11.00",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Formule assiette",
+            "description": "Assiette au choix, boisson 33 cl et dessert du jour.",
+            "offers": {
+              "@type": "Offer",
+              "price": "15.50",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Formule enfant",
+            "description": "Petit sandwich ou nuggets, frites, compote et sirop.",
+            "offers": {
+              "@type": "Offer",
+              "price": "7.50",
+              "priceCurrency": "EUR"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Sandwichs & galettes",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Galette viande",
+            "description": "Viande marinée, crudités, sauce au choix, galette chaude.",
+            "offers": {
+              "@type": "Offer",
+              "price": "8.50",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Sandwich poulet",
+            "description": "Poulet mariné grillé, crudités, sauce blanche maison.",
+            "offers": {
+              "@type": "Offer",
+              "price": "8.00",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Sandwich végétarien",
+            "description": "Falafels maison, houmous, crudités, sauce au sésame.",
+            "offers": {
+              "@type": "Offer",
+              "price": "7.50",
+              "priceCurrency": "EUR"
+            },
+            "suitableForDiet": "https://schema.org/VegetarianDiet"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Burger maison",
+            "description": "Steak haché frais, cheddar, oignons confits, sauce maison.",
+            "offers": {
+              "@type": "Offer",
+              "price": "9.50",
+              "priceCurrency": "EUR"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Assiettes",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Assiette mixte",
+            "description": "Deux viandes au choix, frites maison, crudités, sauce.",
+            "offers": {
+              "@type": "Offer",
+              "price": "14.50",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Assiette poulet",
+            "description": "Poulet mariné grillé, frites maison, crudités.",
+            "offers": {
+              "@type": "Offer",
+              "price": "12.50",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Assiette végétarienne",
+            "description": "Falafels, houmous, salade, frites maison.",
+            "offers": {
+              "@type": "Offer",
+              "price": "11.50",
+              "priceCurrency": "EUR"
+            },
+            "suitableForDiet": "https://schema.org/VegetarianDiet"
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Accompagnements",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Frites maison",
+            "description": "Pommes de terre fraîches, coupées sur place.",
+            "offers": {
+              "@type": "Offer",
+              "price": "3.50",
+              "priceCurrency": "EUR"
+            },
+            "suitableForDiet": "https://schema.org/VegetarianDiet"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Salade de saison",
+            "description": "Crudités du jour, vinaigrette maison.",
+            "offers": {
+              "@type": "Offer",
+              "price": "3.50",
+              "priceCurrency": "EUR"
+            },
+            "suitableForDiet": "https://schema.org/VegetarianDiet"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Nuggets maison",
+            "description": "Six pièces, panure préparée sur place.",
+            "offers": {
+              "@type": "Offer",
+              "price": "5.00",
+              "priceCurrency": "EUR"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Desserts",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Tiramisu",
+            "description": "Préparé le matin même.",
+            "offers": {
+              "@type": "Offer",
+              "price": "4.00",
+              "priceCurrency": "EUR"
+            },
+            "suitableForDiet": "https://schema.org/VegetarianDiet"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Salade de fruits",
+            "description": "Fruits frais de saison.",
+            "offers": {
+              "@type": "Offer",
+              "price": "3.50",
+              "priceCurrency": "EUR"
+            },
+            "suitableForDiet": "https://schema.org/VegetarianDiet"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Crêpe sucrée",
+            "description": "Sucre, chocolat ou confiture.",
+            "offers": {
+              "@type": "Offer",
+              "price": "3.00",
+              "priceCurrency": "EUR"
+            },
+            "suitableForDiet": "https://schema.org/VegetarianDiet"
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Boissons",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Boisson 33 cl",
+            "description": "Sodas, eau plate ou gazeuse.",
+            "offers": {
+              "@type": "Offer",
+              "price": "2.00",
+              "priceCurrency": "EUR"
+            },
+            "suitableForDiet": "https://schema.org/VegetarianDiet"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Thé à la menthe",
+            "description": "Servi en verre, préparé à la commande.",
+            "offers": {
+              "@type": "Offer",
+              "price": "2.50",
+              "priceCurrency": "EUR"
+            },
+            "suitableForDiet": "https://schema.org/VegetarianDiet"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Café",
+            "description": "Expresso ou allongé.",
+            "offers": {
+              "@type": "Offer",
+              "price": "1.80",
+              "priceCurrency": "EUR"
+            },
+            "suitableForDiet": "https://schema.org/VegetarianDiet"
+          }
+        ]
+      }
+    ]
+  }
+}</script>
+<script src="assets/qr.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

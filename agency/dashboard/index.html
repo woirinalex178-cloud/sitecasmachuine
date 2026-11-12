@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Pipeline agence</title><style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#1c2330;--mut:#667085;--line:#e3e6ec;--acc:#2b5fd9;--bar:#2b5fd9}
+@media(prefers-color-scheme:dark){:root{--bg:#12151b;--card:#1b2029;--fg:#e8ebf1;--mut:#9aa3b2;--line:#2a313d;--acc:#7da2ff;--bar:#7da2ff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:960px;margin:0 auto;padding:16px}
+h1{font-size:1.4rem;margin:0 0 4px}h2{font-size:1.05rem;margin:0 0 10px}
+.sub{color:var(--mut);font-size:.85rem;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:700px){.grid{grid-template-columns:1fr 1fr}.wide{grid-column:1/-1}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.kpi{text-align:center}.kpi b{display:block;font-size:1.6rem;font-variant-numeric:tabular-nums}.kpi span{color:var(--mut);font-size:.8rem}
+.row{display:grid;grid-template-columns:7rem 1fr 2.5rem;gap:8px;align-items:center;font-size:.9rem;margin:5px 0}
+.row i{display:block;height:10px;border-radius:5px;background:var(--bar);min-width:2px}
+.row em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums}
+.lbl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ol{margin:0;padding:0;list-style:none}
+li{display:flex;gap:10px;align-items:baseline;padding:8px 0;border-top:1px solid var(--line)}
+li:first-child{border-top:0}
+.sc{font-weight:700;color:var(--acc);min-width:2.2rem;font-variant-numeric:tabular-nums}
+.meta{color:var(--mut);font-size:.82rem}
+.tag{font-size:.75rem;border:1px solid var(--line);border-radius:999px;padding:1px 8px;color:var(--mut);white-space:nowrap}
+.empty{color:var(--mut)}
+</style></head>
+<body><main>
+<h1>Pipeline agence</h1>
+<div class="sub">Genere le 2026-11-07 12:45 &middot; source : data/prospects.ndjson</div>
+<div class="card" style="margin-bottom:12px"><div class="kpis">
+<div class="kpi"><b>258</b><span>prospects</span></div>
+<div class="kpi"><b>0</b><span>prioritaires</span></div>
+<div class="kpi"><b>0</b><span>gagnes</span></div></div></div>
+<div class="grid">
+<section class="card"><h2>Par statut</h2><div class="row"><span class="lbl">nouveau</span><span><i style="width:100%"></i></span><em>214</em></div><div class="row"><span class="lbl">qualifie</span><span><i style="width:10%"></i></span><em>21</em></div><div class="row"><span class="lbl">exclu</span><span><i style="width:11%"></i></span><em>23</em></div></section>
+<section class="card"><h2>Par score</h2><div class="row"><span class="lbl">Prioritaire (&gt;= 75)</span><span><i style="width:0%"></i></span><em>0</em></div><div class="row"><span class="lbl">Qualifie (50-74)</span><span><i style="width:10%"></i></span><em>24</em></div><div class="row"><span class="lbl">Faible (&lt; 50)</span><span><i style="width:100%"></i></span><em>234</em></div></section>
+<section class="card wide"><h2>Par departement</h2><div class="row"><span class="lbl">57</span><span><i style="width:100%"></i></span><em>258</em></div></section>
+<section class="card wide"><h2>20 prioritaires</h2><ol><li><span class="sc">60</span><div style="flex:1;min-width:0"><strong>Chloe Lazzaretti</strong><div class="meta">Metz (57) &middot; beaute-bien-etre</div></div><span class="tag">qualifie</span></li><li><span class="sc">60</span><div style="flex:1;min-width:0"><strong>Eric Blechschmidt (Eric Loisirs Nature Et Multi-Services)</strong><div class="meta">Saint-Avold (57) &middot; artisanat</div></div><span class="tag">qualifie</span></li><li><span class="sc">60</span><div style="flex:1;min-width:0"><strong>Fixphone</strong><div class="meta">Knutange (57) &middot; artisanat</div></div><span class="tag">qualifie</span></li><li><span class="sc">60</span><div style="flex:1;min-width:0"><strong>Laetitia Bruni (Nail House By Laeti)</strong><div class="meta">Montigny-Les-Metz (57) &middot; beaute-bien-etre</div></div><span class="tag">qualifie</span></li><li><span class="sc">60</span><div style="flex:1;min-width:0"><strong>Sandro Pelini (Fensch-Reparation-Pc)</strong><div class="meta">Fameck (57) &middot; artisanat</div></div><span class="tag">qualifie</span></li><li><span class="sc">60</span><div style="flex:1;min-width:0"><strong>Tft Laser</strong><div class="meta">Thionville (57) &middot; beaute-bien-etre</div></div><span class="tag">qualifie</span></li><li><span class="sc">50</span><div style="flex:1;min-width:0"><strong>A Point</strong><div class="meta">Montigny-Les-Metz (57) &middot; services aux particuliers</div></div><span class="tag">qualifie</span></li><li><span class="sc">50</span><div style="flex:1;min-width:0"><strong>Briac Materne (Materne)</strong><div class="meta">Metz (57) &middot; services aux particuliers</div></div><span class="tag">qualifie</span></li><li><span class="sc">50</span><div style="flex:1;min-width:0"><strong>Camille Bizzaglia (Equiglia)</strong><div class="meta">Metz (57) &middot; services aux particuliers</div></div><span class="tag">qualifie</span></li><li><span class="sc">50</span><div style="flex:1;min-width:0"><strong>Camille Hocquart (Hocquart Camille)</strong><div class="meta">Metz (57) &middot; services aux particuliers</div></div><span class="tag">qualifie</span></li><li><span class="sc">50</span><div style="flex:1;min-width:0"><strong>Charlotte Pham-Dinh (Mamie Cha)</strong><div class="meta">Bazoncourt (57) &middot; services aux particuliers</div></div><span class="tag">qualifie</span></li><li><span class="sc">50</span><div style="flex:1;min-width:0"><strong>Doggy Mousse</strong><div class="meta">Sierck-Les-Bains (57) &middot; services aux particuliers</div></div><span class="tag">qualifie</span></li><li><span class="sc">50</span><div style="flex:1;min-width:0"><strong>Echappees Lorraines</strong><div class="meta">Metz (57) &middot; services aux particuliers</div></div><span class="tag">qualifie</span></li><li><span class="sc">50</span><div style="flex:1;min-width:0"><strong>Kristyna Hanzlova</strong><div class="meta">Metz (57) &middot; services aux particuliers</div></div><span class="tag">qualifie</span></li><li><span class="sc">50</span><div style="flex:1;min-width:0"><strong>Laetitia Iglic (George) (Laeti&#x27; Image Conseil)</strong><div class="meta">Hattigny (57) &middot; services aux particuliers</div></div><span class="tag">qualifie</span></li><li><span class="sc">50</span><div style="flex:1;min-width:0"><strong>Lina Belhakem</strong><div class="meta">Moulins-Les-Metz (57) &middot; services aux particuliers</div></div><span class="tag">qualifie</span></li><li><span class="sc">50</span><div style="flex:1;min-width:0"><strong>Nabil Moula</strong><div class="meta">Metz (57) &middot; services aux particuliers</div></div><span class="tag">qualifie</span></li><li><span class="sc">50</span><div style="flex:1;min-width:0"><strong>Oceane Carlier</strong><div class="meta">Sarreguemines (57) &middot; services aux particuliers</div></div><span class="tag">qualifie</span></li><li><span class="sc">50</span><div style="flex:1;min-width:0"><strong>Rosalie Lanza</strong><div class="meta">Marange-Silvange (57) &middot; services aux particuliers</div></div><span class="tag">qualifie</span></li><li><span class="sc">50</span><div style="flex:1;min-width:0"><strong>Virginie Lafon (Weber) (Virginie Marie Lafon)</strong><div class="meta">Faulquemont (57) &middot; services aux particuliers</div></div><span class="tag">qualifie</span></li></ol></section>
+</div></main></body></html>

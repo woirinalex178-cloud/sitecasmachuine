@@ -1,0 +1,18 @@
+{
+  "devise": "EUR",
+  "principe": "Production 100% interne via IA. Cout de revient = temps. Prix plancher = valeur percue, jamais le cout.",
+  "offres": [
+    {"code": "SITE-VITRINE", "nom": "Site vitrine 3-5 pages", "prix": 790, "delai_j": 5,
+     "declencheur": "aucun site web", "livrables": ["design", "redaction SEO", "mise en ligne", "formulaire contact"]},
+    {"code": "GBP", "nom": "Fiche Google Business optimisee", "prix": 190, "delai_j": 2,
+     "declencheur": "fiche absente / incomplete / sans photos", "livrables": ["creation ou revendication", "categories", "10 photos", "3 posts"]},
+    {"code": "CARTE-INTER", "nom": "Carte interactive restaurant", "prix": 490, "delai_j": 4,
+     "declencheur": "restaurant avec carte PDF ou photo", "livrables": ["carte mobile", "allergenes", "QR code table", "maj autonome"]},
+    {"code": "SOCIAL-PACK", "nom": "Pack reseaux 1 mois", "prix": 390, "delai_j": 30,
+     "declencheur": "0 ou <1 post/mois", "livrables": ["12 visuels", "calendrier", "2 reels motion"]},
+    {"code": "MOTION-TEASER", "nom": "Teaser motion design 15s", "prix": 290, "delai_j": 3,
+     "declencheur": "ouverture recente a annoncer", "livrables": ["script", "animation", "formats 9:16 + 1:1"]},
+    {"code": "PACK-OUVERTURE", "nom": "Pack ouverture (site + GBP + teaser)", "prix": 1190, "delai_j": 7,
+     "declencheur": "entreprise creee < 6 mois sans presence en ligne", "livrables": ["SITE-VITRINE", "GBP", "MOTION-TEASER"]}
+  ]
+}

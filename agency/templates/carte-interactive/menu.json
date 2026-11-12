@@ -1,0 +1,63 @@
+{
+  "_schema": "Carte interactive — une seule source de verite. Le client modifie CE fichier, la page se met a jour au rechargement. Champs d'un plat : nom (obligatoire), description, prix (nombre), categorie (id d'une categorie), vegetarien (bool), signature (bool), allergenes (liste de cles de l'objet allergenes).",
+  "restaurant": {
+    "nom": "{{NOM}}",
+    "ville": "{{VILLE}}",
+    "note_allergenes": "{{NOTE_ALLERGENES}}"
+  },
+  "devise": "€",
+  "maj": "{{DATE_MAJ}}",
+  "allergenes": {
+    "gluten": "Gluten",
+    "lait": "Lait",
+    "oeuf": "Œuf",
+    "poisson": "Poisson",
+    "crustaces": "Crustacés",
+    "mollusques": "Mollusques",
+    "fruits-coque": "Fruits à coque",
+    "arachide": "Arachide",
+    "soja": "Soja",
+    "moutarde": "Moutarde",
+    "celeri": "Céleri",
+    "sesame": "Sésame",
+    "sulfites": "Sulfites",
+    "lupin": "Lupin"
+  },
+  "categories": [
+    { "id": "entrees", "nom": "Entrées", "description": "Servies jusqu’à la fin du service." },
+    { "id": "plats", "nom": "Plats", "description": "Viandes et poissons accompagnés au choix : frites maison, gratin ou légumes du jour." },
+    { "id": "vegetarien", "nom": "Sans viande", "description": "Préparés sans viande ni bouillon animal." },
+    { "id": "desserts", "nom": "Desserts", "description": "Faits maison, en quantité limitée chaque jour." },
+    { "id": "boissons", "nom": "Boissons", "description": "Carte des vins complète disponible en salle." }
+  ],
+  "plats": [
+    { "nom": "Velouté de saison", "description": "Légumes du marché, crème fraîche, huile de noisette.", "prix": 6.5, "categorie": "entrees", "vegetarien": true, "allergenes": ["lait", "fruits-coque"] },
+    { "nom": "Œuf parfait", "description": "Œuf basse température, lardons fumés, croûtons à l’ail.", "prix": 8.5, "categorie": "entrees", "allergenes": ["oeuf", "gluten", "lait"] },
+    { "nom": "Terrine de campagne", "description": "Terrine maison, cornichons, pain de campagne grillé.", "prix": 7.9, "categorie": "entrees", "signature": true, "allergenes": ["gluten", "moutarde", "sulfites"] },
+    { "nom": "Salade de chèvre chaud", "description": "Mesclun, toasts de chèvre, miel, noix.", "prix": 9.5, "categorie": "entrees", "vegetarien": true, "allergenes": ["lait", "gluten", "fruits-coque"] },
+    { "nom": "Entrée du jour", "description": "Annoncée en salle, selon le marché.", "prix": 7.5, "categorie": "entrees" },
+
+    { "nom": "Entrecôte grillée", "description": "Pièce de 300 g, beurre maître d’hôtel, frites maison.", "prix": 21.5, "categorie": "plats", "signature": true, "allergenes": ["lait"] },
+    { "nom": "Suprême de volaille", "description": "Volaille fermière, jus corsé, gratin dauphinois.", "prix": 17.5, "categorie": "plats", "allergenes": ["lait", "celeri"] },
+    { "nom": "Dos de cabillaud", "description": "Cabillaud rôti, beurre blanc, légumes du jour.", "prix": 19.0, "categorie": "plats", "allergenes": ["poisson", "lait", "sulfites"] },
+    { "nom": "Burger de la maison", "description": "Bœuf charolais, cheddar affiné, oignons confits, frites maison.", "prix": 16.5, "categorie": "plats", "allergenes": ["gluten", "lait", "oeuf", "moutarde", "sesame"] },
+    { "nom": "Joue de bœuf confite", "description": "Cuisson 7 heures, purée maison, carottes glacées.", "prix": 18.5, "categorie": "plats", "allergenes": ["lait", "celeri", "sulfites"] },
+    { "nom": "Plat du jour", "description": "Ardoise du midi, du mardi au vendredi.", "prix": 13.5, "categorie": "plats" },
+
+    { "nom": "Risotto aux champignons", "description": "Riz carnaroli, champignons de saison, parmesan.", "prix": 15.5, "categorie": "vegetarien", "vegetarien": true, "allergenes": ["lait", "sulfites", "celeri"] },
+    { "nom": "Gratin de légumes", "description": "Légumes rôtis, béchamel légère, chapelure dorée.", "prix": 14.0, "categorie": "vegetarien", "vegetarien": true, "allergenes": ["lait", "gluten"] },
+    { "nom": "Buddha bowl", "description": "Quinoa, pois chiches rôtis, avocat, sauce sésame.", "prix": 14.5, "categorie": "vegetarien", "vegetarien": true, "signature": true, "allergenes": ["sesame", "soja"] },
+
+    { "nom": "Crème brûlée", "description": "Vanille de Madagascar, caramel craquant.", "prix": 7.0, "categorie": "desserts", "vegetarien": true, "allergenes": ["lait", "oeuf"] },
+    { "nom": "Fondant au chocolat", "description": "Chocolat noir 70 %, cœur coulant, glace vanille.", "prix": 7.5, "categorie": "desserts", "vegetarien": true, "signature": true, "allergenes": ["lait", "oeuf", "gluten", "soja"] },
+    { "nom": "Tarte du jour", "description": "Pâte sablée maison, fruits de saison.", "prix": 6.5, "categorie": "desserts", "vegetarien": true, "allergenes": ["gluten", "lait", "oeuf"] },
+    { "nom": "Café gourmand", "description": "Expresso et trois mignardises du moment.", "prix": 8.0, "categorie": "desserts", "vegetarien": true, "allergenes": ["lait", "gluten", "oeuf"] },
+    { "nom": "Sorbets artisanaux", "description": "Deux boules, parfums annoncés en salle.", "prix": 5.5, "categorie": "desserts", "vegetarien": true },
+
+    { "nom": "Café / expresso", "prix": 2.2, "categorie": "boissons", "vegetarien": true },
+    { "nom": "Limonade artisanale", "description": "Produite à 30 km, 33 cl.", "prix": 4.2, "categorie": "boissons", "vegetarien": true },
+    { "nom": "Bière pression", "description": "Blonde de la brasserie locale, 25 cl.", "prix": 3.8, "categorie": "boissons", "vegetarien": true, "allergenes": ["gluten"] },
+    { "nom": "Verre de vin", "description": "Rouge, blanc ou rosé, 12 cl.", "prix": 4.5, "categorie": "boissons", "vegetarien": true, "allergenes": ["sulfites"] },
+    { "nom": "Eau minérale", "description": "Plate ou gazeuse, 50 cl / 1 l.", "prix": 3.0, "categorie": "boissons", "vegetarien": true }
+  ]
+}

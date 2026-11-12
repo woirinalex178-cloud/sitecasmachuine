@@ -1,0 +1,18 @@
+{
+  "exclusions": {
+    "54": "Meurthe-et-Moselle — reserve exclusive Studio Celeste. Aucun demarchage."
+  },
+  "regle": "Une seule zone active a la fois. Une zone est 'epuisee' quand 3 passes consecutives ne donnent aucun prospect nouveau.",
+  "zones": [
+    {"id": "57-metz",      "dept": "57", "label": "Metz / Moselle",        "statut": "active",   "passes": 0},
+    {"id": "88-epinal",    "dept": "88", "label": "Epinal / Vosges",       "statut": "file",     "passes": 0},
+    {"id": "55-verdun",    "dept": "55", "label": "Verdun / Meuse",        "statut": "file",     "passes": 0},
+    {"id": "67-strasbourg","dept": "67", "label": "Strasbourg / Bas-Rhin", "statut": "file",     "passes": 0},
+    {"id": "68-mulhouse",  "dept": "68", "label": "Mulhouse / Haut-Rhin",  "statut": "file",     "passes": 0},
+    {"id": "51-reims",     "dept": "51", "label": "Reims / Marne",         "statut": "file",     "passes": 0},
+    {"id": "21-dijon",     "dept": "21", "label": "Dijon / Cote-d-Or",     "statut": "file",     "passes": 0},
+    {"id": "25-besancon",  "dept": "25", "label": "Besancon / Doubs",      "statut": "file",     "passes": 0},
+    {"id": "10-troyes",    "dept": "10", "label": "Troyes / Aube",         "statut": "file",     "passes": 0},
+    {"id": "52-chaumont",  "dept": "52", "label": "Chaumont / Haute-Marne","statut": "file",     "passes": 0}
+  ]
+}
